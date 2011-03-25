@@ -1,0 +1,33 @@
+
+<?xml version="1.0"?>
+<project name="finchFrameworkLib" basedir="." default="jar">
+    <property name="androidlibs" value="ant-source"/>
+    <property name="output" value="classes"/>
+
+    <target name="compile" depends="create">
+        <javac destdir="classes">
+            <src path="src"/>
+            <classpath refid="javalibs"/>
+        </javac>
+    </target>
+
+    <path id="javalibs">
+        <fileset dir="D:\Jars\Hibernate">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="jar" depends="compile">
+        <jar destfile="test.jar">
+            <fileset dir="bin"/>
+        </jar>
+    </target>
+
+    <target name="clean">
+        <delete dir="${output}"/>
+    </target>
+
+    <target name="create" depends="clean">
+        <mkdir dir="${output}"/>
+    </target>
+</project>

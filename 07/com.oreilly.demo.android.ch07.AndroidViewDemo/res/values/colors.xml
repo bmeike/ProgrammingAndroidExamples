@@ -1,0 +1,10 @@
+<resources>
+    <drawable name="bg0">#ffffffff</drawable>
+    <drawable name="throbber_f0">#11ff0000</drawable>
+    <drawable name="throbber_f1">#33ff0000</drawable>
+    <drawable name="throbber_f2">#77ff0000</drawable>
+    <drawable name="throbber_f3">#ccff0000</drawable>
+    <drawable name="throbber_f4">#77ff0000</drawable>
+    <drawable name="throbber_f5">#33ff0000</drawable>
+    <drawable name="throbber_f6">#11ff0000</drawable>
+</resources>

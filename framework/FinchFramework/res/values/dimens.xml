@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="reload_size">60px</dimen>
+    <dimen name="thumb_size">60px</dimen>
+</resources>

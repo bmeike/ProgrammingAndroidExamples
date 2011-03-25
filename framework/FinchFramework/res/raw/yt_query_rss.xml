@@ -1,0 +1,1506 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom'
+      xmlns:media='http://search.yahoo.com/mrss/'
+      xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/'
+      xmlns:gd='http://schemas.google.com/g/2005'
+      xmlns:gml='http://www.opengis.net/gml'
+      xmlns:yt='http://gdata.youtube.com/schemas/2007'
+      xmlns:georss='http://www.georss.org/georss'>
+    <id>http://gdata.youtube.com/feeds/api/videos</id>
+    <updated>2010-11-29T00:46:38.021Z</updated>
+    <category scheme='http://schemas.google.com/g/2005#kind'
+              term='http://gdata.youtube.com/schemas/2007#video'/>
+    <title type='text'>YouTube Videos matching query: funny birds</title>
+    <logo>http://www.youtube.com/img/pic_youtubelogo_123x63.gif</logo>
+    <link rel='alternate' type='text/html' href='http://www.youtube.com'/>
+    <link rel='http://schemas.google.com/g/2005#feed'
+          type='application/atom+xml'
+          href='http://gdata.youtube.com/feeds/api/videos'/>
+    <link rel='http://schemas.google.com/g/2005#batch'
+          type='application/atom+xml'
+          href='http://gdata.youtube.com/feeds/api/videos/batch'/>
+    <link rel='self' type='application/atom+xml'
+          href='http://gdata.youtube.com/feeds/api/videos?q=funny+birds&amp;start-index=1&amp;max-results=15&amp;format=1'/>
+    <link rel='next' type='application/atom+xml'
+          href='http://gdata.youtube.com/feeds/api/videos?q=funny+birds&amp;start-index=16&amp;max-results=15&amp;format=1'/>
+    <author>
+        <name>YouTube</name>
+        <uri>http://www.youtube.com/</uri>
+    </author>
+    <generator version='2.0' uri='http://gdata.youtube.com/'>YouTube data API
+    </generator>
+    <openSearch:totalResults>74055</openSearch:totalResults>
+    <openSearch:startIndex>1</openSearch:startIndex>
+    <openSearch:itemsPerPage>15</openSearch:itemsPerPage>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/2G9fkvBzzQE</id>
+        <published>2007-02-11T01:28:27.000Z</published>
+        <updated>2010-11-28T20:51:14.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind'
+                  term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat'
+                  term='Animals' label='Pets &amp; Animals'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='PUNJABI'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='BIRD'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='FUNNY'/>
+        <title type='text'>funny bird</title>
+        <content type='text'>myspace.com/dashingpunjabi11</content>
+        <link rel='alternate' type='text/html'
+              href='http://www.youtube.com/watch?v=2G9fkvBzzQE&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/2G9fkvBzzQE/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/2G9fkvBzzQE/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile'
+              type='text/html'
+              href='http://m.youtube.com/details?v=2G9fkvBzzQE'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/2G9fkvBzzQE'/>
+        <author>
+            <name>punjabiis12</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/punjabiis12</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink
+                    href='http://gdata.youtube.com/feeds/api/videos/2G9fkvBzzQE/comments'
+                    countHint='7246'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='Pets &amp; Animals'
+                            scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>
+                Animals
+            </media:category>
+            <media:content
+                    url='http://www.youtube.com/v/2G9fkvBzzQE?f=videos&amp;app=youtube_gdata'
+                    type='application/x-shockwave-flash' medium='video'
+                    isDefault='true' expression='full' duration='213'
+                    yt:format='5'/>
+            <media:content
+                    url='rtsp://v4.cache4.c.youtube.com/CiILENy73wIaGQkBzXPwkl9v2BMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='213' yt:format='1'/>
+            <media:content
+                    url='rtsp://v3.cache2.c.youtube.com/CiILENy73wIaGQkBzXPwkl9v2BMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='213' yt:format='6'/>
+            <media:description type='plain'>myspace.com/dashingpunjabi11
+            </media:description>
+            <media:keywords>PUNJABI, BIRD, FUNNY</media:keywords>
+            <media:player
+                    url='http://www.youtube.com/watch?v=2G9fkvBzzQE&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/2G9fkvBzzQE/2.jpg'
+                             height='90' width='120' time='00:01:46.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/2G9fkvBzzQE/1.jpg'
+                             height='90' width='120' time='00:00:53.250'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/2G9fkvBzzQE/3.jpg'
+                             height='90' width='120' time='00:02:39.750'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/2G9fkvBzzQE/0.jpg'
+                             height='240' width='320' time='00:01:46.500'/>
+            <media:title type='plain'>funny bird</media:title>
+            <yt:duration seconds='213'/>
+        </media:group>
+        <gd:rating average='4.914731' max='5' min='1' numRaters='16618'
+                   rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='37019' viewCount='6721904'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/0bt9xBuGWgw</id>
+        <published>2009-02-02T04:22:59.000Z</published>
+        <updated>2010-11-28T22:08:01.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind'
+                  term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat'
+                  term='Animals' label='Pets &amp; Animals'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='el'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='baile'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='del'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='loro'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Frostie'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='movistar'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='salvador'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='telefonica'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='bird'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='parrot'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='cockatoo'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='dance'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='dancing'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='funny'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='funniest'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='hilarious'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='clip'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='on'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='youtube'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Ray'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Charles'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Blues'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Brothers'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Loves'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Egyptian'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Music'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Karla'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='K.'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Larsson'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='corella'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='dnb'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='dubstep'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='flying'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='flapping'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='wings'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='twisting'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='head'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='spinning'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='perch'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='飛び出せ！科学くん'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='TBS'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='TV'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Japan'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Whip'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='My'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Hair'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Willow'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Smith'/>
+        <title type='text'>Whip Your Hair Parrot! Frostie The Cockatoo Dancing
+            To Shake Your Tail Feather! Movistar Parrot!
+        </title>
+        <content type='text'>Frostie can dance the socks off any bird on this
+            planet! Frostie's Facebook Fan Page: www.facebook.com Frostie is a
+            21-year-old Bare-Eyed Cockatoo, otherwise known as a Little Corella,
+            a parrot native to Australia. (Video by Karla K. Larsson - Paradise
+            - California - USA - February 1, 2009.)
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.youtube.com/watch?v=0bt9xBuGWgw&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/0bt9xBuGWgw/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/0bt9xBuGWgw/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile'
+              type='text/html'
+              href='http://m.youtube.com/details?v=0bt9xBuGWgw'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/0bt9xBuGWgw'/>
+        <author>
+            <name>OnePickieChickie</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/onepickiechickie</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink
+                    href='http://gdata.youtube.com/feeds/api/videos/0bt9xBuGWgw/comments'
+                    countHint='7276'/>
+        </gd:comments>
+        <yt:location>Magalia, Paradise, California USA</yt:location>
+        <media:group>
+            <media:category label='Pets &amp; Animals'
+                            scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>
+                Animals
+            </media:category>
+            <media:content
+                    url='http://www.youtube.com/v/0bt9xBuGWgw?f=videos&amp;app=youtube_gdata'
+                    type='application/x-shockwave-flash' medium='video'
+                    isDefault='true' expression='full' duration='163'
+                    yt:format='5'/>
+            <media:content
+                    url='rtsp://v3.cache6.c.youtube.com/CiILENy73wIaGQkMWoYbxH270RMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='163' yt:format='1'/>
+            <media:content
+                    url='rtsp://v1.cache7.c.youtube.com/CiILENy73wIaGQkMWoYbxH270RMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='163' yt:format='6'/>
+            <media:description type='plain'>Frostie can dance the socks off any
+                bird on this planet! Frostie's Facebook Fan Page:
+                www.facebook.com Frostie is a 21-year-old Bare-Eyed Cockatoo,
+                otherwise known as a Little Corella, a parrot native to
+                Australia. (Video by Karla K. Larsson - Paradise - California -
+                USA - February 1, 2009.)
+            </media:description>
+            <media:keywords>el, baile, del, loro, Frostie, movistar, salvador,
+                telefonica, bird, parrot, cockatoo, dance, dancing, funny,
+                funniest, hilarious, video, clip, on, youtube, Ray, Charles,
+                Blues, Brothers, Loves, Egyptian, Music, Karla, K., Larsson,
+                corella, dnb, dubstep, flying, flapping, wings, twisting, head,
+                spinning, perch, 飛び出せ！科学くん, TBS, TV, Japan, Whip, My, Hair,
+                Willow, Smith
+            </media:keywords>
+            <media:player
+                    url='http://www.youtube.com/watch?v=0bt9xBuGWgw&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/0bt9xBuGWgw/2.jpg'
+                             height='90' width='120' time='00:01:21.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/0bt9xBuGWgw/1.jpg'
+                             height='90' width='120' time='00:00:40.750'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/0bt9xBuGWgw/3.jpg'
+                             height='90' width='120' time='00:02:02.250'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/0bt9xBuGWgw/0.jpg'
+                             height='240' width='320' time='00:01:21.500'/>
+            <media:title type='plain'>Whip Your Hair Parrot! Frostie The
+                Cockatoo Dancing To Shake Your Tail Feather! Movistar Parrot!
+            </media:title>
+            <yt:duration seconds='163'/>
+        </media:group>
+        <gd:rating average='4.957966' max='5' min='1' numRaters='16439'
+                   rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:recorded>2009-02-02</yt:recorded>
+        <yt:statistics favoriteCount='12655' viewCount='3482642'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/CqPuAJLVgNk</id>
+        <published>2007-10-14T13:19:07.000Z</published>
+        <updated>2010-11-21T18:19:14.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind'
+                  term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat'
+                  term='Animals' label='Pets &amp; Animals'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='dancing'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='bird'/>
+        <title type='text'>Funny Bird</title>
+        <content type='text'>Funny Bird dancing</content>
+        <link rel='alternate' type='text/html'
+              href='http://www.youtube.com/watch?v=CqPuAJLVgNk&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/CqPuAJLVgNk/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/CqPuAJLVgNk/related'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/CqPuAJLVgNk'/>
+        <author>
+            <name>leahwieder</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/leahwieder</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink
+                    href='http://gdata.youtube.com/feeds/api/videos/CqPuAJLVgNk/comments'
+                    countHint='168'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='Pets &amp; Animals'
+                            scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>
+                Animals
+            </media:category>
+            <media:content
+                    url='http://www.youtube.com/v/CqPuAJLVgNk?f=videos&amp;app=youtube_gdata'
+                    type='application/x-shockwave-flash' medium='video'
+                    isDefault='true' expression='full' duration='77'
+                    yt:format='5'/>
+            <media:content
+                    url='rtsp://v7.cache4.c.youtube.com/CiILENy73wIaGQnZgNWSAO6jChMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='77' yt:format='1'/>
+            <media:content
+                    url='rtsp://v2.cache2.c.youtube.com/CiILENy73wIaGQnZgNWSAO6jChMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='77' yt:format='6'/>
+            <media:description type='plain'>Funny Bird dancing
+            </media:description>
+            <media:keywords>dancing, bird</media:keywords>
+            <media:player
+                    url='http://www.youtube.com/watch?v=CqPuAJLVgNk&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/CqPuAJLVgNk/2.jpg'
+                             height='90' width='120' time='00:00:38.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/CqPuAJLVgNk/1.jpg'
+                             height='90' width='120' time='00:00:19.250'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/CqPuAJLVgNk/3.jpg'
+                             height='90' width='120' time='00:00:57.750'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/CqPuAJLVgNk/0.jpg'
+                             height='240' width='320' time='00:00:38.500'/>
+            <media:title type='plain'>Funny Bird</media:title>
+            <yt:duration seconds='77'/>
+        </media:group>
+        <gd:rating average='4.9305553' max='5' min='1' numRaters='288'
+                   rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='577' viewCount='88461'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/m1s3PiJBDBY</id>
+        <published>2009-04-04T19:37:17.000Z</published>
+        <updated>2010-11-26T17:14:27.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind'
+                  term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat'
+                  term='Comedy' label='Comedy'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='AFV'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Americas'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='America&apos;s'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Funniest'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Home'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Videos'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Animals'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Attacking'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Birds'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Special'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Part'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='253'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Laughs'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Pranks'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Bloopers'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='999cryptic'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='999crypticafv'/>
+        <title type='text'>★ Americas Funniest Home Videos - When Birds Attack
+            part 253
+        </title>
+        <content type='text'>DID YOU LIKE IT? Cryptic has a great funchannel
+            with days (!) of fun like this. A funny home video attacking birds
+            special with clips from all over the world part 253.
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.youtube.com/watch?v=m1s3PiJBDBY&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/m1s3PiJBDBY/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/m1s3PiJBDBY/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile'
+              type='text/html'
+              href='http://m.youtube.com/details?v=m1s3PiJBDBY'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/m1s3PiJBDBY'/>
+        <author>
+            <name>999crypticAFV</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/999crypticafv</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink
+                    href='http://gdata.youtube.com/feeds/api/videos/m1s3PiJBDBY/comments'
+                    countHint='132'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='Comedy'
+                            scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>
+                Comedy
+            </media:category>
+            <media:content
+                    url='http://www.youtube.com/v/m1s3PiJBDBY?f=videos&amp;app=youtube_gdata'
+                    type='application/x-shockwave-flash' medium='video'
+                    isDefault='true' expression='full' duration='129'
+                    yt:format='5'/>
+            <media:content
+                    url='rtsp://v6.cache4.c.youtube.com/CiILENy73wIaGQkWDEEiPjdbmxMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='129' yt:format='1'/>
+            <media:content
+                    url='rtsp://v6.cache4.c.youtube.com/CiILENy73wIaGQkWDEEiPjdbmxMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='129' yt:format='6'/>
+            <media:description type='plain'>DID YOU LIKE IT? Cryptic has a great
+                funchannel with days (!) of fun like this. A funny home video
+                attacking birds special with clips from all over the world part
+                253.
+            </media:description>
+            <media:keywords>AFV, Americas, America's, Funniest, Home, Videos,
+                Animals, Attacking, Birds, Special, Part, 253, Laughs, Pranks,
+                Bloopers, 999cryptic, 999crypticafv
+            </media:keywords>
+            <media:player
+                    url='http://www.youtube.com/watch?v=m1s3PiJBDBY&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/m1s3PiJBDBY/2.jpg'
+                             height='90' width='120' time='00:01:04.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/m1s3PiJBDBY/1.jpg'
+                             height='90' width='120' time='00:00:32.250'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/m1s3PiJBDBY/3.jpg'
+                             height='90' width='120' time='00:01:36.750'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/m1s3PiJBDBY/0.jpg'
+                             height='240' width='320' time='00:01:04.500'/>
+            <media:title type='plain'>★ Americas Funniest Home Videos - When
+                Birds Attack part 253
+            </media:title>
+            <yt:duration seconds='129'/>
+        </media:group>
+        <gd:rating average='4.869565' max='5' min='1' numRaters='253'
+                   rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='276' viewCount='74864'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/tKdGJwcgsQA</id>
+        <published>2007-06-03T22:27:50.000Z</published>
+        <updated>2010-11-21T23:35:50.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind'
+                  term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat'
+                  term='Animals' label='Pets &amp; Animals'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Funny'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Bird'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='youtube'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Autipooh626'/>
+        <title type='text'>Funny Birds!</title>
+        <content type='text'>ohmigosh. look at all those views! O_O *amazed*
+            Thank you all you bird lovers
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.youtube.com/watch?v=tKdGJwcgsQA&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/tKdGJwcgsQA/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/tKdGJwcgsQA/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile'
+              type='text/html'
+              href='http://m.youtube.com/details?v=tKdGJwcgsQA'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/tKdGJwcgsQA'/>
+        <author>
+            <name>Autipooh626</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/autipooh626</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink
+                    href='http://gdata.youtube.com/feeds/api/videos/tKdGJwcgsQA/comments'
+                    countHint='140'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='Pets &amp; Animals'
+                            scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>
+                Animals
+            </media:category>
+            <media:content
+                    url='http://www.youtube.com/v/tKdGJwcgsQA?f=videos&amp;app=youtube_gdata'
+                    type='application/x-shockwave-flash' medium='video'
+                    isDefault='true' expression='full' duration='189'
+                    yt:format='5'/>
+            <media:content
+                    url='rtsp://v3.cache4.c.youtube.com/CiILENy73wIaGQkAsSAHJ0antBMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='189' yt:format='1'/>
+            <media:content
+                    url='rtsp://v3.cache7.c.youtube.com/CiILENy73wIaGQkAsSAHJ0antBMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='189' yt:format='6'/>
+            <media:description type='plain'>ohmigosh. look at all those views!
+                O_O *amazed* Thank you all you bird lovers
+            </media:description>
+            <media:keywords>Funny, Bird, youtube, Autipooh626</media:keywords>
+            <media:player
+                    url='http://www.youtube.com/watch?v=tKdGJwcgsQA&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/tKdGJwcgsQA/2.jpg'
+                             height='90' width='120' time='00:01:34.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/tKdGJwcgsQA/1.jpg'
+                             height='90' width='120' time='00:00:47.250'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/tKdGJwcgsQA/3.jpg'
+                             height='90' width='120' time='00:02:21.750'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/tKdGJwcgsQA/0.jpg'
+                             height='240' width='320' time='00:01:34.500'/>
+            <media:title type='plain'>Funny Birds!</media:title>
+            <yt:duration seconds='189'/>
+        </media:group>
+        <gd:rating average='3.6470587' max='5' min='1' numRaters='187'
+                   rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='121' viewCount='167389'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/gTkUHdCF848</id>
+        <published>2007-11-27T10:22:14.000Z</published>
+        <updated>2010-11-22T16:23:23.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind'
+                  term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat'
+                  term='Animals' label='Pets &amp; Animals'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='bird'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='mc'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='hammer'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='can'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='touch'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='this'/>
+        <title type='text'>Funny birds mating (Mc Hammer)</title>
+        <content type='text'>Birds mating accompanied with MC Hammer</content>
+        <link rel='alternate' type='text/html'
+              href='http://www.youtube.com/watch?v=gTkUHdCF848&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/gTkUHdCF848/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/gTkUHdCF848/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile'
+              type='text/html'
+              href='http://m.youtube.com/details?v=gTkUHdCF848'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/gTkUHdCF848'/>
+        <author>
+            <name>coneso</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/coneso</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink
+                    href='http://gdata.youtube.com/feeds/api/videos/gTkUHdCF848/comments'
+                    countHint='40'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='Pets &amp; Animals'
+                            scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>
+                Animals
+            </media:category>
+            <media:content
+                    url='http://www.youtube.com/v/gTkUHdCF848?f=videos&amp;app=youtube_gdata'
+                    type='application/x-shockwave-flash' medium='video'
+                    isDefault='true' expression='full' duration='35'
+                    yt:format='5'/>
+            <media:content
+                    url='rtsp://v7.cache1.c.youtube.com/CiILENy73wIaGQmP84XQHRQ5gRMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='35' yt:format='1'/>
+            <media:content
+                    url='rtsp://v1.cache7.c.youtube.com/CiILENy73wIaGQmP84XQHRQ5gRMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='35' yt:format='6'/>
+            <media:description type='plain'>Birds mating accompanied with MC
+                Hammer
+            </media:description>
+            <media:keywords>bird, mc, hammer, can, touch, this</media:keywords>
+            <media:player
+                    url='http://www.youtube.com/watch?v=gTkUHdCF848&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/gTkUHdCF848/2.jpg'
+                             height='90' width='120' time='00:00:17.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/gTkUHdCF848/1.jpg'
+                             height='90' width='120' time='00:00:08.750'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/gTkUHdCF848/3.jpg'
+                             height='90' width='120' time='00:00:26.250'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/gTkUHdCF848/0.jpg'
+                             height='240' width='320' time='00:00:17.500'/>
+            <media:title type='plain'>Funny birds mating (Mc Hammer)
+            </media:title>
+            <yt:duration seconds='35'/>
+        </media:group>
+        <gd:rating average='4.84' max='5' min='1' numRaters='50'
+                   rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='138' viewCount='55704'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/5DwcYl-_BA8</id>
+        <published>2006-12-22T13:11:37.000Z</published>
+        <updated>2010-11-21T23:35:50.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind'
+                  term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat'
+                  term='Animals' label='Pets &amp; Animals'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='funny'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='bird'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='birds'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='pet'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='pets'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='animal'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='animals'/>
+        <title type='text'>My funny birds</title>
+        <content type='text'>Everytime when friends come to visit me, they ask
+            about my birds if they're kissing. I made a video from their
+            acting^^. They are so lovely! ♥
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.youtube.com/watch?v=5DwcYl-_BA8&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/5DwcYl-_BA8/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/5DwcYl-_BA8/related'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/5DwcYl-_BA8'/>
+        <author>
+            <name>Gapfruit</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/gapfruit</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink
+                    href='http://gdata.youtube.com/feeds/api/videos/5DwcYl-_BA8/comments'
+                    countHint='88'/>
+        </gd:comments>
+        <georss:where>
+            <gml:Point>
+                <gml:pos>51.87710189819336 8.606457710266113</gml:pos>
+            </gml:Point>
+        </georss:where>
+        <media:group>
+            <media:category label='Pets &amp; Animals'
+                            scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>
+                Animals
+            </media:category>
+            <media:content
+                    url='http://www.youtube.com/v/5DwcYl-_BA8?f=videos&amp;app=youtube_gdata'
+                    type='application/x-shockwave-flash' medium='video'
+                    isDefault='true' expression='full' duration='150'
+                    yt:format='5'/>
+            <media:content
+                    url='rtsp://v7.cache3.c.youtube.com/CiILENy73wIaGQkPBL9fYhw85BMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='150' yt:format='1'/>
+            <media:content
+                    url='rtsp://v8.cache4.c.youtube.com/CiILENy73wIaGQkPBL9fYhw85BMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='150' yt:format='6'/>
+            <media:description type='plain'>Everytime when friends come to visit
+                me, they ask about my birds if they're kissing. I made a video
+                from their acting^^. They are so lovely! ♥
+            </media:description>
+            <media:keywords>funny, bird, birds, pet, pets, animal, animals
+            </media:keywords>
+            <media:player
+                    url='http://www.youtube.com/watch?v=5DwcYl-_BA8&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/5DwcYl-_BA8/2.jpg'
+                             height='90' width='120' time='00:01:15'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/5DwcYl-_BA8/1.jpg'
+                             height='90' width='120' time='00:00:37.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/5DwcYl-_BA8/3.jpg'
+                             height='90' width='120' time='00:01:52.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/5DwcYl-_BA8/0.jpg'
+                             height='240' width='320' time='00:01:15'/>
+            <media:title type='plain'>My funny birds</media:title>
+            <yt:duration seconds='150'/>
+        </media:group>
+        <gd:rating average='4.095238' max='5' min='1' numRaters='84'
+                   rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='67' viewCount='61774'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/rSFQO46qPlI</id>
+        <published>2009-02-18T10:30:40.000Z</published>
+        <updated>2010-08-27T09:18:14.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind'
+                  term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat'
+                  term='Howto' label='Howto &amp; Style'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='marionette'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='bird'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='guitar'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='pingpong'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='shoelace'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='funny'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='dancing'/>
+        <title type='text'>Funny birds dancing hard</title>
+        <content type='text'>Watch these mad birds dancing to my guitar music.
+            Take only three minutes to learn how to make such a marionette then
+            make a surprise for your friends or children with your own
+            performance. Very funny!
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.youtube.com/watch?v=rSFQO46qPlI&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/rSFQO46qPlI/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/rSFQO46qPlI/related'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/rSFQO46qPlI'/>
+        <author>
+            <name>phaybk</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/phaybk</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink
+                    href='http://gdata.youtube.com/feeds/api/videos/rSFQO46qPlI/comments'
+                    countHint='2'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='Howto &amp; Style'
+                            scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>
+                Howto
+            </media:category>
+            <media:content
+                    url='http://www.youtube.com/v/rSFQO46qPlI?f=videos&amp;app=youtube_gdata'
+                    type='application/x-shockwave-flash' medium='video'
+                    isDefault='true' expression='full' duration='186'
+                    yt:format='5'/>
+            <media:content
+                    url='rtsp://v7.cache8.c.youtube.com/CiILENy73wIaGQlSPqqOO1AhrRMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='186' yt:format='1'/>
+            <media:content
+                    url='rtsp://v4.cache7.c.youtube.com/CiILENy73wIaGQlSPqqOO1AhrRMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='186' yt:format='6'/>
+            <media:description type='plain'>Watch these mad birds dancing to my
+                guitar music. Take only three minutes to learn how to make such
+                a marionette then make a surprise for your friends or children
+                with your own performance. Very funny!
+            </media:description>
+            <media:keywords>marionette, bird, guitar, pingpong, shoelace, funny,
+                dancing
+            </media:keywords>
+            <media:player
+                    url='http://www.youtube.com/watch?v=rSFQO46qPlI&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/rSFQO46qPlI/2.jpg'
+                             height='90' width='120' time='00:01:33'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/rSFQO46qPlI/1.jpg'
+                             height='90' width='120' time='00:00:46.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/rSFQO46qPlI/3.jpg'
+                             height='90' width='120' time='00:02:19.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/rSFQO46qPlI/0.jpg'
+                             height='240' width='320' time='00:01:33'/>
+            <media:title type='plain'>Funny birds dancing hard</media:title>
+            <yt:duration seconds='186'/>
+        </media:group>
+        <gd:rating average='5.0' max='5' min='1' numRaters='4'
+                   rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='5' viewCount='2015'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/4uA2vKBh1Rg</id>
+        <published>2009-09-17T14:07:13.000Z</published>
+        <updated>2010-11-27T15:34:19.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind'
+                  term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat'
+                  term='Animals' label='Pets &amp; Animals'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='funny'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='animal'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='bird'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='parrot'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='playing'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='tricks'/>
+        <title type='text'>very funny cool parrot tricks</title>
+        <content type='text'>trick compilation of some really cool parrots
+            performing their tricks
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.youtube.com/watch?v=4uA2vKBh1Rg&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/4uA2vKBh1Rg/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/4uA2vKBh1Rg/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile'
+              type='text/html'
+              href='http://m.youtube.com/details?v=4uA2vKBh1Rg'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/4uA2vKBh1Rg'/>
+        <author>
+            <name>funniestanimals</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/funniestanimals</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink
+                    href='http://gdata.youtube.com/feeds/api/videos/4uA2vKBh1Rg/comments'
+                    countHint='34'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='Pets &amp; Animals'
+                            scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>
+                Animals
+            </media:category>
+            <media:content
+                    url='http://www.youtube.com/v/4uA2vKBh1Rg?f=videos&amp;app=youtube_gdata'
+                    type='application/x-shockwave-flash' medium='video'
+                    isDefault='true' expression='full' duration='234'
+                    yt:format='5'/>
+            <media:content
+                    url='rtsp://v6.cache3.c.youtube.com/CiILENy73wIaGQkY1WGgvDbg4hMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='234' yt:format='1'/>
+            <media:content
+                    url='rtsp://v7.cache7.c.youtube.com/CiILENy73wIaGQkY1WGgvDbg4hMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='234' yt:format='6'/>
+            <media:description type='plain'>trick compilation of some really
+                cool parrots performing their tricks
+            </media:description>
+            <media:keywords>funny, animal, bird, parrot, playing, tricks
+            </media:keywords>
+            <media:player
+                    url='http://www.youtube.com/watch?v=4uA2vKBh1Rg&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/4uA2vKBh1Rg/2.jpg'
+                             height='90' width='120' time='00:01:57'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/4uA2vKBh1Rg/1.jpg'
+                             height='90' width='120' time='00:00:58.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/4uA2vKBh1Rg/3.jpg'
+                             height='90' width='120' time='00:02:55.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/4uA2vKBh1Rg/0.jpg'
+                             height='240' width='320' time='00:01:57'/>
+            <media:title type='plain'>very funny cool parrot tricks
+            </media:title>
+            <yt:duration seconds='234'/>
+        </media:group>
+        <gd:rating average='4.821918' max='5' min='1' numRaters='73'
+                   rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='93' viewCount='39921'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/-i2AZXuDRQ4</id>
+        <published>2010-03-20T01:27:42.000Z</published>
+        <updated>2010-08-10T16:30:27.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind'
+                  term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat'
+                  term='Animals' label='Pets &amp; Animals'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='bird'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='funny birds'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='birds fighting'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='funny bird'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='funny animals'/>
+        <title type='text'>Birds Fighting Funny - Flamingo VS. Ibis</title>
+        <content type='text'>tinyurl.com Watch 3500 HD TV channels on your PC A
+            Flamingo tries to pick on a little Ibis... The Ibis has other ideas.
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.youtube.com/watch?v=-i2AZXuDRQ4&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/-i2AZXuDRQ4/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/-i2AZXuDRQ4/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile'
+              type='text/html'
+              href='http://m.youtube.com/details?v=-i2AZXuDRQ4'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/-i2AZXuDRQ4'/>
+        <author>
+            <name>jguilbaut</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/jguilbaut</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink
+                    href='http://gdata.youtube.com/feeds/api/videos/-i2AZXuDRQ4/comments'
+                    countHint='0'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='Pets &amp; Animals'
+                            scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>
+                Animals
+            </media:category>
+            <media:content
+                    url='http://www.youtube.com/v/-i2AZXuDRQ4?f=videos&amp;app=youtube_gdata'
+                    type='application/x-shockwave-flash' medium='video'
+                    isDefault='true' expression='full' duration='17'
+                    yt:format='5'/>
+            <media:content
+                    url='rtsp://v2.cache1.c.youtube.com/CiILENy73wIaGQkORYN7ZYAt-hMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='17' yt:format='1'/>
+            <media:content
+                    url='rtsp://v3.cache5.c.youtube.com/CiILENy73wIaGQkORYN7ZYAt-hMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='17' yt:format='6'/>
+            <media:description type='plain'>tinyurl.com Watch 3500 HD TV
+                channels on your PC A Flamingo tries to pick on a little Ibis...
+                The Ibis has other ideas.
+            </media:description>
+            <media:keywords>bird, funny birds, birds fighting, funny bird, funny
+                animals
+            </media:keywords>
+            <media:player
+                    url='http://www.youtube.com/watch?v=-i2AZXuDRQ4&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/-i2AZXuDRQ4/2.jpg'
+                             height='90' width='120' time='00:00:08.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/-i2AZXuDRQ4/1.jpg'
+                             height='90' width='120' time='00:00:04.250'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/-i2AZXuDRQ4/3.jpg'
+                             height='90' width='120' time='00:00:12.750'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/-i2AZXuDRQ4/0.jpg'
+                             height='240' width='320' time='00:00:08.500'/>
+            <media:title type='plain'>Birds Fighting Funny - Flamingo VS. Ibis
+            </media:title>
+            <yt:duration seconds='17'/>
+        </media:group>
+        <yt:statistics favoriteCount='0' viewCount='233'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/2papLHXhSx8</id>
+        <published>2009-01-22T20:05:12.000Z</published>
+        <updated>2010-08-27T19:58:13.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind'
+                  term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat'
+                  term='Comedy' label='Comedy'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Funny'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='kids'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='animals'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='birds'/>
+        <title type='text'>Funny kids, animals, birds</title>
+        <content type='text'>Funny kids, animals, birds</content>
+        <link rel='alternate' type='text/html'
+              href='http://www.youtube.com/watch?v=2papLHXhSx8&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/2papLHXhSx8/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/2papLHXhSx8/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile'
+              type='text/html'
+              href='http://m.youtube.com/details?v=2papLHXhSx8'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/2papLHXhSx8'/>
+        <author>
+            <name>dwadmendwadmen</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/dwadmendwadmen</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink
+                    href='http://gdata.youtube.com/feeds/api/videos/2papLHXhSx8/comments'
+                    countHint='2'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='Comedy'
+                            scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>
+                Comedy
+            </media:category>
+            <media:content
+                    url='http://www.youtube.com/v/2papLHXhSx8?f=videos&amp;app=youtube_gdata'
+                    type='application/x-shockwave-flash' medium='video'
+                    isDefault='true' expression='full' duration='600'
+                    yt:format='5'/>
+            <media:content
+                    url='rtsp://v3.cache5.c.youtube.com/CiILENy73wIaGQkfS-F1LKmW2hMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='600' yt:format='1'/>
+            <media:content
+                    url='rtsp://v3.cache2.c.youtube.com/CiILENy73wIaGQkfS-F1LKmW2hMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='600' yt:format='6'/>
+            <media:description type='plain'>Funny kids, animals, birds
+            </media:description>
+            <media:keywords>Funny, kids, animals, birds</media:keywords>
+            <media:player
+                    url='http://www.youtube.com/watch?v=2papLHXhSx8&amp;feature=youtube_gdata_player'/>
+            <media:restriction type='country' relationship='deny'>JP
+            </media:restriction>
+            <media:thumbnail url='http://i.ytimg.com/vi/2papLHXhSx8/2.jpg'
+                             height='90' width='120' time='00:05:00'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/2papLHXhSx8/1.jpg'
+                             height='90' width='120' time='00:02:30'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/2papLHXhSx8/3.jpg'
+                             height='90' width='120' time='00:07:30'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/2papLHXhSx8/0.jpg'
+                             height='240' width='320' time='00:05:00'/>
+            <media:title type='plain'>Funny kids, animals, birds</media:title>
+            <yt:duration seconds='600'/>
+        </media:group>
+        <gd:rating average='5.0' max='5' min='1' numRaters='4'
+                   rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='10' viewCount='6118'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/__x7GEn_sRI</id>
+        <published>2009-03-23T06:58:39.000Z</published>
+        <updated>2010-11-28T05:32:51.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind'
+                  term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat'
+                  term='Comedy' label='Comedy'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Funny Videos'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='FAIL Toys'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Barbie'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Doll'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Funniest Video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='lol'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Toy'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Review'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Funny'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Epic'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Failure'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='jeepersmedia'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Mike'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Mozart'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Alfred'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Hitchcock'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='the Birds'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='lmao'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Tippi'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Hendren'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Parody'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Comedy'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Vids'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='50th'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='hilarious'/>
+        <title type='text'>Funny Videos- Barbie Alfred Hitchcock Birds "Fail
+            Toy" Video Review Mike Mozart JeepersMedia YouTube
+        </title>
+        <content type='text'>"Funny lol Videos" Barbie Doll "Fail Toys" Review
+            video by Mike Mozart of JeepersMedia the "Funniest Video Ever"
+            Channel on YouTube. The Hilarious Doll failure in this Video is
+            Based on Alfred Hitchcocks "The Birds". The Epic Fail Barbie Doll
+            toy in this funny video is based on Tippi Hendren in this Famous
+            Horror Movie Thriller Classic. What a Funny lol FAIL Doll to review
+            in Honor of Barbies 50th Annivesary!
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.youtube.com/watch?v=__x7GEn_sRI&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/__x7GEn_sRI/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/__x7GEn_sRI/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile'
+              type='text/html'
+              href='http://m.youtube.com/details?v=__x7GEn_sRI'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/__x7GEn_sRI'/>
+        <author>
+            <name>JeepersMedia</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/jeepersmedia</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink
+                    href='http://gdata.youtube.com/feeds/api/videos/__x7GEn_sRI/comments'
+                    countHint='7969'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='Comedy'
+                            scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>
+                Comedy
+            </media:category>
+            <media:content
+                    url='http://www.youtube.com/v/__x7GEn_sRI?f=videos&amp;app=youtube_gdata'
+                    type='application/x-shockwave-flash' medium='video'
+                    isDefault='true' expression='full' duration='133'
+                    yt:format='5'/>
+            <media:content
+                    url='rtsp://v8.cache6.c.youtube.com/CiILENy73wIaGQkSsf9JGHv8_xMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='133' yt:format='1'/>
+            <media:content
+                    url='rtsp://v5.cache8.c.youtube.com/CiILENy73wIaGQkSsf9JGHv8_xMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='133' yt:format='6'/>
+            <media:description type='plain'>"Funny lol Videos" Barbie Doll "Fail
+                Toys" Review video by Mike Mozart of JeepersMedia the "Funniest
+                Video Ever" Channel on YouTube. The Hilarious Doll failure in
+                this Video is Based on Alfred Hitchcocks "The Birds". The Epic
+                Fail Barbie Doll toy in this funny video is based on Tippi
+                Hendren in this Famous Horror Movie Thriller Classic. What a
+                Funny lol FAIL Doll to review in Honor of Barbies 50th
+                Annivesary!
+            </media:description>
+            <media:keywords>Funny Videos, FAIL Toys, Barbie, Doll, Funniest
+                Video, lol, Toy, Review, Funny, Epic, Failure, jeepersmedia,
+                Mike, Mozart, Alfred, Hitchcock, the Birds, lmao, Tippi,
+                Hendren, Parody, Video, Comedy, Vids, 50th, hilarious
+            </media:keywords>
+            <media:player
+                    url='http://www.youtube.com/watch?v=__x7GEn_sRI&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/__x7GEn_sRI/2.jpg'
+                             height='90' width='120' time='00:01:06.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/__x7GEn_sRI/1.jpg'
+                             height='90' width='120' time='00:00:33.250'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/__x7GEn_sRI/3.jpg'
+                             height='90' width='120' time='00:01:39.750'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/__x7GEn_sRI/0.jpg'
+                             height='240' width='320' time='00:01:06.500'/>
+            <media:title type='plain'>Funny Videos- Barbie Alfred Hitchcock
+                Birds "Fail Toy" Video Review Mike Mozart JeepersMedia YouTube
+            </media:title>
+            <yt:duration seconds='133'/>
+        </media:group>
+        <gd:rating average='4.800508' max='5' min='1' numRaters='12592'
+                   rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='1410' viewCount='450243'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/GJTR2IdV_Y4</id>
+        <published>2007-09-06T17:57:49.000Z</published>
+        <updated>2010-11-27T13:09:36.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind'
+                  term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat'
+                  term='Animals' label='Pets &amp; Animals'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='birds'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='parots'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='talking'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='funny'/>
+        <title type='text'>birds parots talking funny</title>
+        <content type='text'>birds parots talking funny</content>
+        <link rel='alternate' type='text/html'
+              href='http://www.youtube.com/watch?v=GJTR2IdV_Y4&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/GJTR2IdV_Y4/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/GJTR2IdV_Y4/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile'
+              type='text/html'
+              href='http://m.youtube.com/details?v=GJTR2IdV_Y4'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/GJTR2IdV_Y4'/>
+        <author>
+            <name>cityMARKUS</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/citymarkus</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink
+                    href='http://gdata.youtube.com/feeds/api/videos/GJTR2IdV_Y4/comments'
+                    countHint='263'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='Pets &amp; Animals'
+                            scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>
+                Animals
+            </media:category>
+            <media:content
+                    url='http://www.youtube.com/v/GJTR2IdV_Y4?f=videos&amp;app=youtube_gdata'
+                    type='application/x-shockwave-flash' medium='video'
+                    isDefault='true' expression='full' duration='33'
+                    yt:format='5'/>
+            <media:content
+                    url='rtsp://v8.cache4.c.youtube.com/CiILENy73wIaGQmO_VWH2NGUGBMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='33' yt:format='1'/>
+            <media:content
+                    url='rtsp://v2.cache3.c.youtube.com/CiILENy73wIaGQmO_VWH2NGUGBMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='33' yt:format='6'/>
+            <media:description type='plain'>birds parots talking funny
+            </media:description>
+            <media:keywords>birds, parots, talking, funny</media:keywords>
+            <media:player
+                    url='http://www.youtube.com/watch?v=GJTR2IdV_Y4&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/GJTR2IdV_Y4/2.jpg'
+                             height='90' width='120' time='00:00:16.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/GJTR2IdV_Y4/1.jpg'
+                             height='90' width='120' time='00:00:08.250'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/GJTR2IdV_Y4/3.jpg'
+                             height='90' width='120' time='00:00:24.750'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/GJTR2IdV_Y4/0.jpg'
+                             height='240' width='320' time='00:00:16.500'/>
+            <media:title type='plain'>birds parots talking funny</media:title>
+            <yt:duration seconds='33'/>
+        </media:group>
+        <gd:rating average='4.6570916' max='5' min='1' numRaters='557'
+                   rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='1137' viewCount='601038'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/tVV0ScyGdKI</id>
+        <published>2009-12-03T20:57:59.000Z</published>
+        <updated>2010-11-21T23:35:50.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind'
+                  term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat'
+                  term='Animals' label='Pets &amp; Animals'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='african greys'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Parrots very funny'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='talking'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='whistling'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='oink oink'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='birds birds'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='good bird'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Scooby Doo'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='Dance'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='wild bird'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='what cha doing?'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='peek a boo'/>
+        <title type='text'>very funny birds talking and whistling Pink Panther
+        </title>
+        <content type='text'>african greys, Parrots very funny, talking,
+            whistling, oink oink, birds birds, good bird, Scooby Doo, Dance,
+            wild bird, what cha doing?, peek a boo
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.youtube.com/watch?v=tVV0ScyGdKI&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/tVV0ScyGdKI/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/tVV0ScyGdKI/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile'
+              type='text/html'
+              href='http://m.youtube.com/details?v=tVV0ScyGdKI'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/tVV0ScyGdKI'/>
+        <author>
+            <name>jeane921</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/jeane921</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink
+                    href='http://gdata.youtube.com/feeds/api/videos/tVV0ScyGdKI/comments'
+                    countHint='4'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='Pets &amp; Animals'
+                            scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>
+                Animals
+            </media:category>
+            <media:content
+                    url='http://www.youtube.com/v/tVV0ScyGdKI?f=videos&amp;app=youtube_gdata'
+                    type='application/x-shockwave-flash' medium='video'
+                    isDefault='true' expression='full' duration='92'
+                    yt:format='5'/>
+            <media:content
+                    url='rtsp://v7.cache2.c.youtube.com/CiILENy73wIaGQmidIbMSXRVtRMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='92' yt:format='1'/>
+            <media:content
+                    url='rtsp://v6.cache4.c.youtube.com/CiILENy73wIaGQmidIbMSXRVtRMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='92' yt:format='6'/>
+            <media:description type='plain'>african greys, Parrots very funny,
+                talking, whistling, oink oink, birds birds, good bird, Scooby
+                Doo, Dance, wild bird, what cha doing?, peek a boo
+            </media:description>
+            <media:keywords>african greys, Parrots very funny, talking,
+                whistling, oink oink, birds birds, good bird, Scooby Doo, Dance,
+                wild bird, what cha doing?, peek a boo
+            </media:keywords>
+            <media:player
+                    url='http://www.youtube.com/watch?v=tVV0ScyGdKI&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/tVV0ScyGdKI/2.jpg'
+                             height='90' width='120' time='00:00:46'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/tVV0ScyGdKI/1.jpg'
+                             height='90' width='120' time='00:00:23'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/tVV0ScyGdKI/3.jpg'
+                             height='90' width='120' time='00:01:09'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/tVV0ScyGdKI/0.jpg'
+                             height='240' width='320' time='00:00:46'/>
+            <media:title type='plain'>very funny birds talking and whistling
+                Pink Panther
+            </media:title>
+            <yt:duration seconds='92'/>
+        </media:group>
+        <gd:rating average='5.0' max='5' min='1' numRaters='1'
+                   rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='2' viewCount='2176'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/n0sTuUYWyTs</id>
+        <published>2007-12-14T17:20:02.000Z</published>
+        <updated>2010-11-19T17:28:39.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind'
+                  term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat'
+                  term='Animals' label='Pets &amp; Animals'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='SEA'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='GULL'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='TAP-DANCING'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='FUNNIES'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='BIRD'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='JOKE'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='GUL'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+                  term='SEAGUL'/>
+        <title type='text'>FUNNY TAP DANCING SEAGULL BIRDS</title>
+        <content type='text'>I think Gulls have learnt to dance on the earth,
+            worms think its raining come to the surface and meet there doom.
+        </content>
+        <link rel='alternate' type='text/html'
+              href='http://www.youtube.com/watch?v=n0sTuUYWyTs&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/n0sTuUYWyTs/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related'
+              type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/n0sTuUYWyTs/related'/>
+        <link rel='self' type='application/atom+xml'
+              href='http://gdata.youtube.com/feeds/api/videos/n0sTuUYWyTs'/>
+        <author>
+            <name>colliad</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/colliad</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink
+                    href='http://gdata.youtube.com/feeds/api/videos/n0sTuUYWyTs/comments'
+                    countHint='39'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='Pets &amp; Animals'
+                            scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>
+                Animals
+            </media:category>
+            <media:content
+                    url='http://www.youtube.com/v/n0sTuUYWyTs?f=videos&amp;app=youtube_gdata'
+                    type='application/x-shockwave-flash' medium='video'
+                    isDefault='true' expression='full' duration='30'
+                    yt:format='5'/>
+            <media:content
+                    url='rtsp://v2.cache3.c.youtube.com/CiILENy73wIaGQk7yRZGuRNLnxMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='30' yt:format='1'/>
+            <media:content
+                    url='rtsp://v1.cache7.c.youtube.com/CiILENy73wIaGQk7yRZGuRNLnxMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+                    type='video/3gpp' medium='video' expression='full'
+                    duration='30' yt:format='6'/>
+            <media:description type='plain'>I think Gulls have learnt to dance
+                on the earth, worms think its raining come to the surface and
+                meet there doom.
+            </media:description>
+            <media:keywords>SEA, GULL, TAP-DANCING, FUNNIES, BIRD, JOKE, GUL,
+                SEAGUL
+            </media:keywords>
+            <media:player
+                    url='http://www.youtube.com/watch?v=n0sTuUYWyTs&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/n0sTuUYWyTs/2.jpg'
+                             height='90' width='120' time='00:00:15'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/n0sTuUYWyTs/1.jpg'
+                             height='90' width='120' time='00:00:07.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/n0sTuUYWyTs/3.jpg'
+                             height='90' width='120' time='00:00:22.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/n0sTuUYWyTs/0.jpg'
+                             height='240' width='320' time='00:00:15'/>
+            <media:title type='plain'>FUNNY TAP DANCING SEAGULL BIRDS
+            </media:title>
+            <yt:duration seconds='30'/>
+        </media:group>
+        <gd:rating average='4.9333334' max='5' min='1' numRaters='45'
+                   rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='62' viewCount='13785'/>
+    </entry>
+</feed>

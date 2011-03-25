@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="pa.ch16"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/icon" android:label="chapter 16">
+        <provider android:name=".geo.SiteContentProvider"
+                  android:authorities=
+                          "com.finchframework.finch.geo.Sites"
+                />
+        <activity android:name=".MapSelectActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SiteViewerActivity"
+                  android:label="@string/site_viewer_label">
+        </activity>
+    </application>
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+</manifest> 

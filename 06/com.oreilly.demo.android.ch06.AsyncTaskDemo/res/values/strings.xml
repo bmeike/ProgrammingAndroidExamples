@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AsyncTaskDemo</string>
+    <string name="start">Start Game</string>
+    <string name="waiting">Start a game!!</string>
+</resources>

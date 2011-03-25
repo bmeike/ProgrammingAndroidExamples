@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Demonstrates the ease of changing styles on Android components -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:id="@+id/star"
+              style="?android:attr/starStyle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="" />
+    <CheckBox android:id="@+id/check"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="" />
+</LinearLayout>
