@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:id="@+id/xform_v"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+      <LinearLayout
+          android:id="@+id/xform_v_left"
+          android:orientation="vertical"
+          android:background="@drawable/bg0"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+      <LinearLayout
+          android:id="@+id/xform_v_right"
+          android:orientation="vertical"
+          android:background="@drawable/bg0"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/efx_v"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+      <LinearLayout
+          android:id="@+id/efx_v_left"
+          android:orientation="vertical"
+          android:background="@drawable/bg0"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+      <LinearLayout
+          android:id="@+id/efx_v_right"
+          android:orientation="vertical"
+          android:background="@drawable/bg0"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+    </LinearLayout>
+</FrameLayout>
