@@ -23,7 +23,7 @@
         </activity>
 
         <provider android:name=".TestProvider"
-                  android:authorities= "com.oreilly.demo.pa.ch11.video.FinchVideo"
+                  android:authorities= "com.oreilly.demo.pa.ch03.TestProvider"
                 />
 
         <service android:name=".TestService"

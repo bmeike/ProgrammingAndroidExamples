@@ -1,0 +1,26 @@
+{
+	"users" : [
+		{
+			"id" : 0,
+			"username" : "bob",			
+			"name" : "Bob",
+			"password" : "password",
+			"phone" : "2125551234",
+			"friends" : [
+				1
+			]
+		},
+		{
+			"id" : 1,
+			"username" : "mary",		
+			"name" : "Mary",
+			"password" : "password",
+			"phone" : "8285552334",
+			"friends" : [
+				0
+			]
+		},
+	],
+	"lastid" : 1
+}
+

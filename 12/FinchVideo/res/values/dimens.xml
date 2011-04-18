@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="reload_size">60px</dimen>
+    <dimen name="insert_button_size">60px</dimen>
+    <dimen name="thumb_size">60px</dimen>
+    <dimen name="insert_size">60px</dimen>
+    <dimen name="text_edit_height">40px</dimen>
+</resources>

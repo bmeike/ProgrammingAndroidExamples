@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/animate_container"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  <ImageView
+  android:id="@+id/animate_me"
+  android:layout_alignParentTop="true" 
+  android:layout_alignParentLeft="true" 
+  android:layout_width="100dip"
+  android:layout_height="100dip"
+  android:src="@drawable/pine_grosbeak"
+  />
+</FrameLayout>

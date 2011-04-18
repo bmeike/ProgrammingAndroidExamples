@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ch15_AccountSample</string>
+    <string name="baseurl">http://localhost:8080</string>
+    <string name="authlabel">Ch15_AuthSync</string>
+</resources>

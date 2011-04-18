@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/scan"
+          android:icon="@android:drawable/ic_menu_search"
+          android:title="@string/connect" />
+    <item android:id="@+id/discoverable"
+          android:icon="@android:drawable/ic_menu_mylocation"
+          android:title="@string/discoverable" />
+</menu>

@@ -7,7 +7,6 @@ files/directories do not find their way into source control:
    .classpath
    .project
    .setting
-   assets
    bin
    gen
 

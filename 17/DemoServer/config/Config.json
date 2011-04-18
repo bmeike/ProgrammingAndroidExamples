@@ -1,0 +1,12 @@
+{
+	"debug" : true,
+	"httpservletport" : 8080,
+	"httpservlets" : [
+		"com.oreilly.demo.pa.ch17.server.servlet.LoginServlet",
+		"com.oreilly.demo.pa.ch17.server.servlet.GetFriendsServlet",
+		"com.oreilly.demo.pa.ch17.server.servlet.AddFriendServlet",
+		"com.oreilly.demo.pa.ch17.server.servlet.DeleteFriendServlet",
+		"com.oreilly.demo.pa.ch17.server.servlet.AddUserServlet"
+	],
+	"userdata" : "config/UsersDB.json"
+}
