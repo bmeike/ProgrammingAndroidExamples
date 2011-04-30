@@ -185,6 +185,11 @@ public class NFC233 extends Activity {
 		}
 		
 		final Ndef ndefref = Ndef.get(mytag);
+
+		if(ndefref == null) {
+			Toast.makeText(this, "Tag is not Ndef: NULL", Toast.LENGTH_SHORT).show();
+			return;
+		}
 		
 		if(!ndefref.isWritable()) {
 			Toast.makeText(this, "The tag is not writable!", Toast.LENGTH_SHORT).show();
