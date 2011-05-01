@@ -8,7 +8,7 @@ import android.util.Log;
 import com.finchframework.finch.Finch;
 import com.finchframework.finch.rest.RESTfulContentProvider;
 import com.finchframework.finch.rest.ResponseHandler;
-import com.oreilly.demo.pa.finchvideo.Ch11;
+import com.oreilly.demo.pa.finchvideo.Ch12;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.xmlpull.v1.XmlPullParser;
@@ -306,10 +306,10 @@ public class YouTubeHandler implements ResponseHandler {
             // all entries have been inserted.
 
         } catch (XmlPullParserException e) {
-            Log.d(Ch11.LOG_TAG,
+            Log.d(Ch12.LOG_TAG,
                     "could not parse video feed", e);
         } catch (IOException e) {
-            Log.d(Ch11.LOG_TAG,
+            Log.d(Ch12.LOG_TAG,
                     "could not process video stream", e);
         }
 
