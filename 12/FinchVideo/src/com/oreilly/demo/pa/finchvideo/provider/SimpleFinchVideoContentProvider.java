@@ -52,7 +52,7 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
                 FinchVideo.Videos.DESCRIPTION);
     }
 
-    public static final String VIDEO_TABLE_NAME = "video";
+    public static final String VIDEO_TABLE_NAME = "videos";
 
     public static final String DATABASE_NAME = SIMPLE_VIDEO + ".db";
     private static int DATABASE_VERSION = 2;

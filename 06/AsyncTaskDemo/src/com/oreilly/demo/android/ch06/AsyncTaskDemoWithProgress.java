@@ -16,7 +16,6 @@ import com.oreilly.demo.android.ch06.game.Game;
 
 /** AsyncTaskDemo */
 public class AsyncTaskDemoWithProgress extends Activity {
-    /** mock service URL */
 
     private final class AsyncInit
         extends AsyncTask<String, Integer, String>
@@ -26,7 +25,6 @@ public class AsyncTaskDemoWithProgress extends Activity {
         private final Game game;
         private final TextView message;
         private final Drawable bg;
-
 
         public AsyncInit(
             View root,
