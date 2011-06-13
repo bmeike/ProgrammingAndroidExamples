@@ -27,44 +27,44 @@ public class AddJob extends Activity {
     MicroJobsDatabase db;
 
     private class Employer {
-    	public String employerName;
-    	public long id;
-    	Employer( long id, String employerName){
-    		this.id = id;
-    		this.employerName = employerName;
-    	}
-    	@Override
-    	public String toString() {
-    		return this.employerName;
-    	}
+        public String employerName;
+        public long id;
+        Employer( long id, String employerName){
+            this.id = id;
+            this.employerName = employerName;
+        }
+        @Override
+        public String toString() {
+            return this.employerName;
+        }
     }
 
     // Create a button click listener for the AddJob button.
     private final Button.OnClickListener btnAddJobOnClick = new Button.OnClickListener() {
         @Override
         public void onClick(View v) {
-        	Employer employer = (Employer)spnEmployer.getSelectedItem();
-//        	Toast.makeText(
-//    			AddJob.this,
-//    			String.format(
-//					"Employer: %s (%d)\nTitle: %s\nDesc: %s",
-//					employer.employerName,
-//					employer.id,
-//					txtTitle.getText(),
-//					txtDescription.getText()
-//				),
-//    			Toast.LENGTH_SHORT
-//			).show();
-        	if ((employer.id<0) || (txtTitle.getText().length()==0) || (txtDescription.getText().length()==0)){
-	        	Toast.makeText(AddJob.this, "Fill out the form completely first.", Toast.LENGTH_LONG).show();
-        	} else {
-	        	db.addJob(employer.id, txtTitle.getText().toString(), txtDescription.getText().toString());
-	        	Toast.makeText(AddJob.this, "Job added", Toast.LENGTH_SHORT).show();
-	        	//spnEmployer.setSelection(0); // select "choose an employer"
-	        	txtTitle.setText("");
-	        	txtDescription.setText("");
-        	}
-    	}
+            Employer employer = (Employer)spnEmployer.getSelectedItem();
+//            Toast.makeText(
+//                AddJob.this,
+//                String.format(
+//                    "Employer: %s (%d)\nTitle: %s\nDesc: %s",
+//                    employer.employerName,
+//                    employer.id,
+//                    txtTitle.getText(),
+//                    txtDescription.getText()
+//                ),
+//                Toast.LENGTH_SHORT
+//            ).show();
+            if ((employer.id<0) || (txtTitle.getText().length()==0) || (txtDescription.getText().length()==0)){
+                Toast.makeText(AddJob.this, "Fill out the form completely first.", Toast.LENGTH_LONG).show();
+            } else {
+                db.addJob(employer.id, txtTitle.getText().toString(), txtDescription.getText().toString());
+                Toast.makeText(AddJob.this, "Job added", Toast.LENGTH_SHORT).show();
+                //spnEmployer.setSelection(0); // select "choose an employer"
+                txtTitle.setText("");
+                txtDescription.setText("");
+            }
+        }
     };
 
 
@@ -91,12 +91,12 @@ public class AddJob extends Activity {
         startManagingCursor(c);
 
         for(int i=0; i<c.getCount(); i++){
-        	c.moveToPosition(i);
-        	employersList.add(new Employer(c.getColId(),c.getColEmployerName()));
+            c.moveToPosition(i);
+            employersList.add(new Employer(c.getColId(),c.getColEmployerName()));
         }
 
         ArrayAdapter<Employer> aspnEmployers = new ArrayAdapter<Employer>(
-        		this, android.R.layout.simple_spinner_item, employersList);
+                this, android.R.layout.simple_spinner_item, employersList);
         aspnEmployers.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnEmployer.setAdapter(aspnEmployers);
     }

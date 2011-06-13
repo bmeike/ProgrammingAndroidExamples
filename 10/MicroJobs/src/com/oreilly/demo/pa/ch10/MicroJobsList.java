@@ -165,10 +165,10 @@ public class MicroJobsList extends Activity {
                 fillData(JobsCursor.SortBy.employer_name);
                 return true;
             case 3:
-            	// Add a new job
+                // Add a new job
                 Intent i = new Intent(MicroJobsList.this, AddJob.class);
                 startActivity(i);
-                 	return true;
+                     return true;
         }
 
         return false;
@@ -188,7 +188,7 @@ public class MicroJobsList extends Activity {
         // Now load the lists with job title and employer name
         //for (Jobs row : rows) {
         for( int rowNum=0; rowNum<cursor.getCount(); rowNum++){
-        	cursor.moveToPosition(rowNum);
+            cursor.moveToPosition(rowNum);
             TableRow tr = new TableRow(this);
             tr.setLayoutParams(new LayoutParams(
                 android.view.ViewGroup.LayoutParams.FILL_PARENT,

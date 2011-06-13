@@ -29,16 +29,16 @@ public class EditJob extends ListActivity {
     MicroJobsDatabase db;
 
     private class Employer {
-    	public String employerName;
-    	public long id;
-    	Employer( long id, String employerName){
-    		this.id = id;
-    		this.employerName = employerName;
-    	}
-    	@Override
-    	public String toString() {
-    		return this.employerName;
-    	}
+        public String employerName;
+        public long id;
+        Employer( long id, String employerName){
+            this.id = id;
+            this.employerName = employerName;
+        }
+        @Override
+        public String toString() {
+            return this.employerName;
+        }
     }
 
 
@@ -46,26 +46,26 @@ public class EditJob extends ListActivity {
     private final Button.OnClickListener btnUpdateOnClick = new Button.OnClickListener() {
         @Override
         public void onClick(View v) {
-        	Employer employer = (Employer)spnEmployer.getSelectedItem();
-//        	Toast.makeText(
-//        			EditJob.this,
-//        			String.format(
-//        					"Job: %d\nEmployer: %s (%d)\nTitle: %s\nDesc: %s",
-//        					job_id,
-//        					employer.employerName,
-//        					employer.id,
-//        					txtTitle.getText(),
-//        					txtDescription.getText()
-//        			),
-//        			Toast.LENGTH_SHORT
-//        	).show();
-        	if ((txtTitle.getText().length()==0) || (txtDescription.getText().length()==0)){
-	        	Toast.makeText(EditJob.this, "Fill out the form completely first.", Toast.LENGTH_LONG).show();
-        	} else {
-	        	db.editJob(job_id.longValue(), employer.id, txtTitle.getText().toString(), txtDescription.getText().toString());
-	        	Toast.makeText(EditJob.this, "Job updated", Toast.LENGTH_SHORT).show();
-	        	finish();
-        	}
+            Employer employer = (Employer)spnEmployer.getSelectedItem();
+//            Toast.makeText(
+//                    EditJob.this,
+//                    String.format(
+//                            "Job: %d\nEmployer: %s (%d)\nTitle: %s\nDesc: %s",
+//                            job_id,
+//                            employer.employerName,
+//                            employer.id,
+//                            txtTitle.getText(),
+//                            txtDescription.getText()
+//                    ),
+//                    Toast.LENGTH_SHORT
+//            ).show();
+            if ((txtTitle.getText().length()==0) || (txtDescription.getText().length()==0)){
+                Toast.makeText(EditJob.this, "Fill out the form completely first.", Toast.LENGTH_LONG).show();
+            } else {
+                db.editJob(job_id.longValue(), employer.id, txtTitle.getText().toString(), txtDescription.getText().toString());
+                Toast.makeText(EditJob.this, "Job updated", Toast.LENGTH_SHORT).show();
+                finish();
+            }
         }
     };
 
@@ -73,8 +73,8 @@ public class EditJob extends ListActivity {
     private final Button.OnClickListener btnCancelOnClick = new Button.OnClickListener() {
         @Override
         public void onClick(View v) {
-        		finish();
-        	}
+                finish();
+            }
     };
 
     /** Called when the activity is first created. */
@@ -107,15 +107,15 @@ public class EditJob extends ListActivity {
         startManagingCursor(c);
         int position=0;
         for(int i=0; i<c.getCount(); i++){
-        	c.moveToPosition(i);
-        	employersList.add(new Employer(c.getColId(),c.getColEmployerName()));
-        	if (c.getColId()==job.getColEmployersId()) {
+            c.moveToPosition(i);
+            employersList.add(new Employer(c.getColId(),c.getColEmployerName()));
+            if (c.getColId()==job.getColEmployersId()) {
                 position=i;
             }
         }
 
         ArrayAdapter<Employer> aspnEmployers = new ArrayAdapter<Employer>(
-        		this, android.R.layout.simple_spinner_item, employersList);
+                this, android.R.layout.simple_spinner_item, employersList);
         aspnEmployers.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnEmployer.setAdapter(aspnEmployers);
         spnEmployer.setSelection(position);

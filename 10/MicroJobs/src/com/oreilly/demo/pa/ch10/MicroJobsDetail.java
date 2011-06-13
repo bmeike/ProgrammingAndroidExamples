@@ -118,10 +118,10 @@ public class MicroJobsDetail extends Activity {
                 startActivity(iEmp);
                 return true;
             case 2:
-            	// Delete this job
+                // Delete this job
                 // Setup Delete Alert Dialog
-            	final int DELETE_JOB = 0;
-            	final int CANCEL_DELETE = 1;
+                final int DELETE_JOB = 0;
+                final int CANCEL_DELETE = 1;
 
                 Handler mHandler = new Handler() {
                     @Override
@@ -151,31 +151,31 @@ public class MicroJobsDetail extends Activity {
                 new AlertDialog.Builder(this)
                   .setMessage("Are you sure you want to delete this job?")
                   .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                	  @Override
+                      @Override
                     public void onClick(DialogInterface dialog, int value) {
-                		  rejectMsg.sendToTarget();
-                	  }})
+                          rejectMsg.sendToTarget();
+                      }})
                   .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
-                	  @Override
+                      @Override
                     public void onClick(DialogInterface dialog, int value) {
-                    		  acceptMsg.sendToTarget();
-                	  }})
+                              acceptMsg.sendToTarget();
+                      }})
                   .setOnCancelListener(new DialogInterface.OnCancelListener() {
                         @Override
                         public void onCancel(DialogInterface dialog) {
                           rejectMsg.sendToTarget();
                       }})
                       .show();
-            	return true;
+                return true;
             case 3:
-            	// Edit this job
-            	// Start the Edit Job Activity, passing this job's id
+                // Edit this job
+                // Start the Edit Job Activity, passing this job's id
                 Intent iEdit = new Intent(MicroJobsDetail.this, EditJob.class);
                 Bundle bEdit = new Bundle();
                 bEdit.putInt("_id", job_id.intValue());
                 iEdit.putExtras(bEdit);
                 startActivity(iEdit);
-            	return true;
+                return true;
 
             default:
                 return false;
