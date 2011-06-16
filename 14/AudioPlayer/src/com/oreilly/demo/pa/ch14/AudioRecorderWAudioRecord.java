@@ -100,7 +100,7 @@ public class AudioRecorderWAudioRecord extends Activity implements Runnable {
 									for(int i=0;i<readBytes;i++) {
 										dos.writeShort(buffer[i]);  // write out to file
 									}
-								} catch (Throwable t) {
+								} catch (Exception t) {
 									recordablestate = false;
 									t.printStackTrace();
 								}
@@ -151,7 +151,7 @@ public class AudioRecorderWAudioRecord extends Activity implements Runnable {
 				Thread.sleep(1000); // per sec
 				timeupdater.sendEmptyMessage(0);
 			}
-		} catch (Throwable t) { }
+		} catch (Exception t) { }
 	}
 	
 	private void playAudio() {

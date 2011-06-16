@@ -119,7 +119,7 @@ public class VideoRecorder extends Activity implements Runnable, SurfaceHolder.C
 				Thread.sleep(1000); // per sec
 				timeupdater.sendEmptyMessage(0);
 			}
-		} catch (Throwable t) { }
+		} catch (Exception t) { }
 	}
 	
 	private void playVideo() {

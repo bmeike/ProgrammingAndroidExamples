@@ -121,7 +121,7 @@ public class AudioRecorder extends Activity implements Runnable {
 				Thread.sleep(1000); // per sec
 				timeupdater.sendEmptyMessage(0);
 			}
-		} catch (Throwable t) { }
+		} catch (Exception t) { }
 	}
 	
 	private void playAudio() {

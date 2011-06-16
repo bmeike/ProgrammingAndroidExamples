@@ -111,7 +111,7 @@ public final class NetworkUtil {
 					if(handler != null) {
 						Message.obtain(handler, OK, resp).sendToTarget();
 					} else System.out.println(resp.toString());
-				} catch (Throwable t) {
+				} catch (Exception t) {
 					if(handler != null) Message.obtain(handler, ERR, t).sendToTarget();
 					else t.printStackTrace();
 				}
@@ -147,7 +147,7 @@ public final class NetworkUtil {
 					if(handler != null) {
 						Message.obtain(handler, OK, resp).sendToTarget();
 					} else System.out.println(resp);
-				} catch (Throwable t) {
+				} catch (Exception t) {
 					if(handler != null) Message.obtain(handler, ERR, t).sendToTarget();
 					else t.printStackTrace();
 				}
