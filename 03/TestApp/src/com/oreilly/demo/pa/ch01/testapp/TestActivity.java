@@ -2,7 +2,7 @@ package com.oreilly.demo.pa.ch01.testapp;
 
 import android.app.Activity;
 import android.os.Bundle;
-import com.oreilly.demo.pa.ch01.R;
+import com.oreilly.demo.pa.ch01.testapp.R;
 
 public class TestActivity extends Activity {
     /** Called when the activity is first created. */
