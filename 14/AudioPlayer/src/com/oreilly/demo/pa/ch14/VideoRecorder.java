@@ -49,7 +49,8 @@ public class VideoRecorder extends Activity implements Runnable, SurfaceHolder.C
 		
 		findViewById(R.id.recordstop).setOnClickListener(new OnClickListener() {
 
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				recordOrStop(holder);
 			}
 			
@@ -57,7 +58,8 @@ public class VideoRecorder extends Activity implements Runnable, SurfaceHolder.C
 		
 		findViewById(R.id.play).setOnClickListener(new OnClickListener() {
 
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				playVideo();
 			}
 			
@@ -105,13 +107,15 @@ public class VideoRecorder extends Activity implements Runnable, SurfaceHolder.C
 	}
 	
 	private final Handler timeupdater = new Handler() {
-		public void handleMessage(Message msg) {
+		@Override
+        public void handleMessage(Message msg) {
 			time++;
 			((TextView) findViewById(R.id.time)).setText(""+time+" secs");
 		}
 	};
 	
-	public void run() {
+	@Override
+    public void run() {
 		try {
 			time = 0;
 			timeupdater.sendEmptyMessage(0);
@@ -130,15 +134,18 @@ public class VideoRecorder extends Activity implements Runnable, SurfaceHolder.C
 		startActivity(intent);
 	}
 
-	public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+	@Override
+    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
 		
 	}
 
-	public void surfaceCreated(SurfaceHolder holder) {
+	@Override
+    public void surfaceCreated(SurfaceHolder holder) {
 		findViewById(R.id.recordstop).setEnabled(true);
 	}
 
-	public void surfaceDestroyed(SurfaceHolder holder) {
+	@Override
+    public void surfaceDestroyed(SurfaceHolder holder) {
 		
 	}
 }

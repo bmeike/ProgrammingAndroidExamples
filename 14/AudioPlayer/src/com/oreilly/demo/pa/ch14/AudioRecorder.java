@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
+import android.provider.MediaStore.Audio.AudioColumns;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
@@ -44,7 +45,8 @@ public class AudioRecorder extends Activity implements Runnable {
 		
 		findViewById(R.id.recordstop).setOnClickListener(new OnClickListener() {
 
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				recordOrStop();
 			}
 			
@@ -52,7 +54,8 @@ public class AudioRecorder extends Activity implements Runnable {
 		
 		findViewById(R.id.play).setOnClickListener(new OnClickListener() {
 
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				playAudio();
 			}
 			
@@ -60,7 +63,8 @@ public class AudioRecorder extends Activity implements Runnable {
 		
 		findViewById(R.id.register).setOnClickListener(new OnClickListener() {
 
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				registerAudioFile();
 			}
 			
@@ -107,13 +111,15 @@ public class AudioRecorder extends Activity implements Runnable {
 	}
 	
 	private final Handler timeupdater = new Handler() {
-		public void handleMessage(Message msg) {
+		@Override
+        public void handleMessage(Message msg) {
 			time++;
 			((TextView) findViewById(R.id.time)).setText(""+time+" secs");
 		}
 	};
 	
-	public void run() {
+	@Override
+    public void run() {
 		try {
 			time = 0;
 			timeupdater.sendEmptyMessage(0);
@@ -137,8 +143,8 @@ public class AudioRecorder extends Activity implements Runnable {
 		content.put(MediaStore.MediaColumns.DATA, MEDIAFILE);
 		content.put(MediaStore.MediaColumns.TITLE, "AudioRecordExample");
 		content.put(MediaStore.MediaColumns.MIME_TYPE, "audio/amr");
-		content.put(MediaStore.Audio.Media.ARTIST, "Me");
-		content.put(MediaStore.Audio.Media.IS_MUSIC, true);
+		content.put(AudioColumns.ARTIST, "Me");
+		content.put(AudioColumns.IS_MUSIC, true);
 		ContentResolver resolve = getContentResolver();
 		Uri uri = resolve.insert(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, content);
 		sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, uri));

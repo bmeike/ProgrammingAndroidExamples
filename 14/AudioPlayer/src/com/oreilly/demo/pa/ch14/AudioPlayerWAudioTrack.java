@@ -61,7 +61,8 @@ public class AudioPlayerWAudioTrack extends Activity {
 		ImageButton playpauseButton = (ImageButton) findViewById(R.id.playpause);
 		playpauseButton.setOnClickListener(new OnClickListener() {
 
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				switch(state) {
 					case 1: setState(2); break;  // is playing, set to pause
 					case 0:						 // is stopped, set to play
@@ -75,7 +76,8 @@ public class AudioPlayerWAudioTrack extends Activity {
 		ImageButton stopButton = (ImageButton) findViewById(R.id.stop);
 		stopButton.setOnClickListener(new OnClickListener() {
 
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				setState(0);
 			}
 			
@@ -150,7 +152,8 @@ public class AudioPlayerWAudioTrack extends Activity {
 	
 	private void playPlayer(int previousState) {
 		(new Thread() {
-			public void run() {
+			@Override
+            public void run() {
 				audiotrack.play();
 				audiotrack.write(audio, 0, audio.length);
 			}

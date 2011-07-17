@@ -45,7 +45,8 @@ public class AudioRecorderWAudioRecord extends Activity implements Runnable {
 		
 		findViewById(R.id.recordstop).setOnClickListener(new OnClickListener() {
 
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				recordOrStop();
 			}
 			
@@ -53,7 +54,8 @@ public class AudioRecorderWAudioRecord extends Activity implements Runnable {
 		
 		findViewById(R.id.play).setOnClickListener(new OnClickListener() {
 
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				playAudio();
 			}
 			
@@ -91,7 +93,8 @@ public class AudioRecorderWAudioRecord extends Activity implements Runnable {
 				
 				// start recording in a separate thread
 				(new Thread() {
-					public void run() {
+					@Override
+                    public void run() {
 						if(recorder != null) {
 							recorder.startRecording();
 							while(recordablestate) {
@@ -137,13 +140,15 @@ public class AudioRecorderWAudioRecord extends Activity implements Runnable {
 	}
 	
 	private final Handler timeupdater = new Handler() {
-		public void handleMessage(Message msg) {
+		@Override
+        public void handleMessage(Message msg) {
 			time++;
 			((TextView) findViewById(R.id.time)).setText(""+time+" secs");
 		}
 	};
 	
-	public void run() {
+	@Override
+    public void run() {
 		try {
 			time = 0;
 			timeupdater.sendEmptyMessage(0);

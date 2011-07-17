@@ -57,7 +57,8 @@ public class AudioPlayer extends Activity implements OnSeekBarChangeListener, Ru
 		ImageButton playpauseButton = (ImageButton) findViewById(R.id.playpause);
 		playpauseButton.setOnClickListener(new OnClickListener() {
 
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				switch(state) {
 					case 1: setState(2); break;  // is playing, set to pause
 					case 0:						 // is stopped, set to play
@@ -71,7 +72,8 @@ public class AudioPlayer extends Activity implements OnSeekBarChangeListener, Ru
 		ImageButton stopButton = (ImageButton) findViewById(R.id.stop);
 		stopButton.setOnClickListener(new OnClickListener() {
 
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				setState(0);
 			}
 			
@@ -110,18 +112,21 @@ public class AudioPlayer extends Activity implements OnSeekBarChangeListener, Ru
 	//////////////////////////////
 	private int seekbarprogress = 0;
 	
-	public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+	@Override
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 		if(fromUser) {
 			seekbarprogress = progress;
 		}
 	}
 
-	public void onStartTrackingTouch(SeekBar seekBar) {
+	@Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
 		seekbarprogress = 0;
 		if(state == 1) pausePlayer();
 	}
 
-	public void onStopTrackingTouch(SeekBar seekBar) {
+	@Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
 		mediaplayer.seekTo(seekbarprogress * 100);
 		if(state == 1) playPlayer(2);
 		seekbarprogress = 0;
@@ -135,13 +140,15 @@ public class AudioPlayer extends Activity implements OnSeekBarChangeListener, Ru
 	}
 	
 	private final Handler seekbarHandler = new Handler() {
-		public void handleMessage(Message msg) {
+		@Override
+        public void handleMessage(Message msg) {
 			SeekBar seek = (SeekBar) findViewById(R.id.seek);
 			seek.setProgress(msg.what);
 		}
 	};
 	
-	public void run() {
+	@Override
+    public void run() {
 		try {
 			while(state > 0) {
 				Thread.sleep(100);  // 10th of a second 
@@ -175,7 +182,8 @@ public class AudioPlayer extends Activity implements OnSeekBarChangeListener, Ru
 		}
 	}
 	
-	public void onCompletion(MediaPlayer mp) {
+	@Override
+    public void onCompletion(MediaPlayer mp) {
 		setState(0);
 	}
 	

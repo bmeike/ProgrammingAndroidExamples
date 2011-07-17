@@ -87,43 +87,53 @@ public class AudioPlayerWMediaController extends Activity {
 			media = md;
 		}
 		
-		public boolean canPause() {
+		@Override
+        public boolean canPause() {
 			return true;
 		}
 
-		public boolean canSeekBackward() {
+		@Override
+        public boolean canSeekBackward() {
 			return true;
 		}
 
-		public boolean canSeekForward() {
+		@Override
+        public boolean canSeekForward() {
 			return true;
 		}
 
-		public int getBufferPercentage() {
+		@Override
+        public int getBufferPercentage() {
 			return 0;
 		}
 
-		public int getCurrentPosition() {
+		@Override
+        public int getCurrentPosition() {
 			return media.getCurrentPosition();
 		}
 
-		public int getDuration() {
+		@Override
+        public int getDuration() {
 			return media.getDuration();
 		}
 
-		public boolean isPlaying() {
+		@Override
+        public boolean isPlaying() {
 			return media.isPlaying();
 		}
 
-		public void pause() {
+		@Override
+        public void pause() {
 			media.pause();
 		}
 
-		public void seekTo(int pos) {
+		@Override
+        public void seekTo(int pos) {
 			media.seekTo(pos);
 		}
 
-		public void start() {
+		@Override
+        public void start() {
 			media.start();
 		}
 		

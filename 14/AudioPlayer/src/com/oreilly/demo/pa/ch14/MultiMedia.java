@@ -14,7 +14,8 @@ public class MultiMedia extends Activity {
 		
 		findViewById(R.id.audioplayer).setOnClickListener(new View.OnClickListener() {
 			
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				startActivity(new Intent(getBaseContext(), AudioPlayer.class));  // Launch the AudioPlayer Example
 			}
 			
@@ -22,7 +23,8 @@ public class MultiMedia extends Activity {
 
 		findViewById(R.id.audioplayerwmediacontroller).setOnClickListener(new View.OnClickListener() {
 			
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				startActivity(new Intent(getBaseContext(), AudioPlayerWMediaController.class));  // Launch the AudioPlayer W Media ControllerExample
 			}
 			
@@ -30,7 +32,8 @@ public class MultiMedia extends Activity {
 		
 		findViewById(R.id.audioplayerwaudiotrack).setOnClickListener(new View.OnClickListener() {
 			
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				startActivity(new Intent(getBaseContext(), AudioPlayerWAudioTrack.class));  // Launch the AudioPlayer W AudioTrack Example
 			}
 			
@@ -38,7 +41,8 @@ public class MultiMedia extends Activity {
 		
 		findViewById(R.id.audiorecorder).setOnClickListener(new View.OnClickListener() {
 			
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				startActivity(new Intent(getBaseContext(), AudioRecorder.class));  // Launch the AudioRecorder Example
 			}
 			
@@ -46,7 +50,8 @@ public class MultiMedia extends Activity {
 		
 		findViewById(R.id.audiorecorderwaudiorecord).setOnClickListener(new View.OnClickListener() {
 			
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				startActivity(new Intent(getBaseContext(), AudioRecorderWAudioRecord.class));  // Launch the AudioRecorder W AudioRecord Example
 			}
 			
@@ -54,7 +59,8 @@ public class MultiMedia extends Activity {
 		
 		findViewById(R.id.audiorecorderintent).setOnClickListener(new View.OnClickListener() {
 			
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				startActivity(new Intent(getBaseContext(), AudioRecorderViaIntent.class));  // Launch the AudioRecorder By Intent Example
 			}
 			
@@ -62,7 +68,8 @@ public class MultiMedia extends Activity {
 		
 		findViewById(R.id.videoplayer).setOnClickListener(new View.OnClickListener() {
 			
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				startActivity(new Intent(getBaseContext(), VideoPlayer.class));  // Launch the VideoPlayer Example
 			}
 			
@@ -70,7 +77,8 @@ public class MultiMedia extends Activity {
 		
 		findViewById(R.id.videorecorder).setOnClickListener(new View.OnClickListener() {
 			
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				startActivity(new Intent(getBaseContext(), VideoRecorder.class));  // Launch the VideoRecorder Example
 			}
 			
@@ -78,7 +86,8 @@ public class MultiMedia extends Activity {
 		
 		findViewById(R.id.videorecorderintent).setOnClickListener(new View.OnClickListener() {
 			
-			public void onClick(View v) {
+			@Override
+            public void onClick(View v) {
 				startActivity(new Intent(getBaseContext(), VideoRecorderViaIntent.class));  // Launch the VideoRecorder By Intent Example
 			}
 			
