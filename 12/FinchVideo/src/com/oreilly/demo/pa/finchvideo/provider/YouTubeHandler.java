@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.provider.BaseColumns;
 import android.util.Log;
 import com.finchframework.finch.Finch;
 import com.finchframework.finch.rest.RESTfulContentProvider;
@@ -64,9 +65,8 @@ public class YouTubeHandler implements ResponseHandler {
      * Handles the response from the YouTube gdata server, which is in the form
      * of an RSS feed containing references to YouTube videos.
      */
-    public void handleResponse(HttpResponse response, Uri uri)
-            throws IOException
-    {
+    @Override
+    public void handleResponse(HttpResponse response, Uri uri) {
         try {
             int newCount = parseYoutubeEntity(response.getEntity());
 
@@ -103,7 +103,7 @@ public class YouTubeHandler implements ResponseHandler {
                 if (old.moveToNext()) {
                     do {
                         String ID = old.getString(FinchVideo.ID_COLUMN);
-                        sb.append(FinchVideo.Videos._ID);
+                        sb.append(BaseColumns._ID);
                         sb.append(" = ");
                         sb.append(ID);
 

@@ -443,8 +443,9 @@ public class MicroJobsDatabase extends SQLiteOpenHelper {
 
         Cursor c = null;
         try {
-            c = getReadableDatabase().rawQuery("SELECT count(*) FROM jobs",
-                    null);
+            c = getReadableDatabase().rawQuery(
+                "SELECT count(*) FROM jobs",
+                null);
             if (0 >= c.getCount()) { return 0; }
             c.moveToFirst();
             return c.getInt(0);

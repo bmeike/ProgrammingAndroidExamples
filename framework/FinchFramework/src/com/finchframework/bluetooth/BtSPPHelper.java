@@ -27,12 +27,12 @@ public class BtSPPHelper {
     // Debugging
     private final String TAG = getClass().getSimpleName();
     private static final boolean D = true;
-    
+
     public enum State {
-    	NONE,
-    	LISTEN,
-    	CONNECTING,
-    	CONNECTED;
+        NONE,
+        LISTEN,
+        CONNECTING,
+        CONNECTED;
     }
 
     // Name for the SDP record when creating server socket
@@ -48,7 +48,7 @@ public class BtSPPHelper {
     private ConnectThread mConnectThread;
     private ConnectedThread mConnectedThread;
     private State mState;
-	private Context mContext;
+    private Context mContext;
 
     /**
      * Constructor. Prepares a new Bluetooth SPP session.
@@ -56,7 +56,7 @@ public class BtSPPHelper {
      * @param handler  A Handler to send messages back to the UI Activity
      */
     public BtSPPHelper(Context context, BtHelperHandler handler) {
-    	mContext = context;
+        mContext = context;
         mAdapter = BluetoothAdapter.getDefaultAdapter();
         mState = State.NONE;
         mHandler = handler;
@@ -125,47 +125,47 @@ public class BtSPPHelper {
         setState(State.CONNECTING);
     }
 
-	/**
-	 * Start the ConnectedThread to begin managing a Bluetooth connection
-	 * 
-	 * @param socket
-	 *            The BluetoothSocket on which the connection was made
-	 * @param device
-	 *            The BluetoothDevice that has been connected
-	 */
-	private synchronized void connected(BluetoothSocket socket,
-			BluetoothDevice device) {
-		if (D)
-			Log.d(TAG, "connected");
+    /**
+     * Start the ConnectedThread to begin managing a Bluetooth connection
+     * 
+     * @param socket
+     *            The BluetoothSocket on which the connection was made
+     * @param device
+     *            The BluetoothDevice that has been connected
+     */
+    private synchronized void connected(BluetoothSocket socket,
+        BluetoothDevice device) {
+        if (D)
+            Log.d(TAG, "connected");
 
-		// Cancel the thread that completed the connection
-		if (mConnectThread != null) {
-			mConnectThread.cancel();
-			mConnectThread = null;
-		}
+        // Cancel the thread that completed the connection
+        if (mConnectThread != null) {
+            mConnectThread.cancel();
+            mConnectThread = null;
+        }
 
-		// Cancel any thread currently running a connection
-		if (mConnectedThread != null) {
-			mConnectedThread.cancel();
-			mConnectedThread = null;
-		}
+        // Cancel any thread currently running a connection
+        if (mConnectedThread != null) {
+            mConnectedThread.cancel();
+            mConnectedThread = null;
+        }
 
-		// Cancel the accept thread because we only want to connect to one
-		// device
-		if (mAcceptThread != null) {
-			mAcceptThread.cancel();
-			mAcceptThread = null;
-		}
+        // Cancel the accept thread because we only want to connect to one
+        // device
+        if (mAcceptThread != null) {
+            mAcceptThread.cancel();
+            mAcceptThread = null;
+        }
 
-		// Start the thread to manage the connection and perform transmissions
-		mConnectedThread = new ConnectedThread(socket);
-		mConnectedThread.start();
+        // Start the thread to manage the connection and perform transmissions
+        mConnectedThread = new ConnectedThread(socket);
+        mConnectedThread.start();
 
-		// Send the name of the connected device back to the UI Activity
-		mHandler.obtainMessage(BtHelperHandler.MessageType.DEVICE, -1,
-				device.getName()).sendToTarget();
-		setState(State.CONNECTED);
-	}
+        // Send the name of the connected device back to the UI Activity
+        mHandler.obtainMessage(BtHelperHandler.MessageType.DEVICE, -1,
+            device.getName()).sendToTarget();
+        setState(State.CONNECTED);
+    }
 
     /**
      * Stop all threads
@@ -185,7 +185,7 @@ public class BtSPPHelper {
      */
     public void write(byte[] out) {
         ConnectedThread r;
-        
+
         // Synchronize a copy of the ConnectedThread
         synchronized (this) {
             if (mState != State.CONNECTED) return;
@@ -196,9 +196,9 @@ public class BtSPPHelper {
     }
 
     private void sendErrorMessage(int messageId) {
-    	setState(State.LISTEN);
+        setState(State.LISTEN);
         mHandler.obtainMessage(BtHelperHandler.MessageType.NOTIFY, -1,
-    	mContext.getResources().getString(messageId)).sendToTarget();
+            mContext.getResources().getString(messageId)).sendToTarget();
     }
 
     /**
@@ -242,20 +242,20 @@ public class BtSPPHelper {
                 if (socket != null) {
                     synchronized (BtSPPHelper.this) {
                         switch (mState) {
-                        case LISTEN:
-                        case CONNECTING:
-                            // Situation normal. Start the connected thread.
-                            connected(socket, socket.getRemoteDevice());
-                            break;
-                        case NONE:
-                        case CONNECTED:
-                            // Either not ready or already connected. Terminate new socket.
-                            try {
-                                socket.close();
-                            } catch (IOException e) {
-                                Log.e(TAG, "Could not close unwanted socket", e);
-                            }
-                            break;
+                            case LISTEN:
+                            case CONNECTING:
+                                // Situation normal. Start the connected thread.
+                                connected(socket, socket.getRemoteDevice());
+                                break;
+                            case NONE:
+                            case CONNECTED:
+                                // Either not ready or already connected. Terminate new socket.
+                                try {
+                                    socket.close();
+                                } catch (IOException e) {
+                                    Log.e(TAG, "Could not close unwanted socket", e);
+                                }
+                                break;
                         }
                     }
                 }
@@ -379,7 +379,7 @@ public class BtSPPHelper {
 
                     // Send the obtained bytes to the UI Activity
                     mHandler.obtainMessage(BtHelperHandler.MessageType.READ, bytes, buffer)
-                            .sendToTarget();
+                    .sendToTarget();
                 } catch (IOException e) {
                     Log.e(TAG, "disconnected", e);
                     sendErrorMessage(R.string.bt_connection_lost);
@@ -398,7 +398,7 @@ public class BtSPPHelper {
 
                 // Share the sent message back to the UI Activity
                 mHandler.obtainMessage(BtHelperHandler.MessageType.WRITE, -1, buffer)
-                        .sendToTarget();
+                .sendToTarget();
             } catch (IOException e) {
                 Log.e(TAG, "Exception during write", e);
             }

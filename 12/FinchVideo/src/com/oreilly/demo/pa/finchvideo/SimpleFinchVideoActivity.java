@@ -43,32 +43,33 @@ public class SimpleFinchVideoActivity extends Activity {
 
         // Maps video entries from the database to views
         mAdapter = new SimpleCursorAdapter(this,
-                R.layout.simple_video_list_item,
-                videoCursor,
-                new String[] {
-                        FinchVideo.SimpleVideos.TITLE_NAME,
-                        FinchVideo.SimpleVideos.DESCRIPTION_NAME
-                },
-                new int[] { R.id.simple_video_title_text });
+            R.layout.simple_video_list_item,
+            videoCursor,
+            new String[] {
+            FinchVideo.SimpleVideos.TITLE_NAME,
+            FinchVideo.SimpleVideos.DESCRIPTION_NAME
+        },
+        new int[] { R.id.simple_video_title_text });
 
         SimpleCursorAdapter.ViewBinder savb =
-                new SimpleCursorAdapter.ViewBinder() {
-                    public boolean setViewValue(View view,
-                                                Cursor cursor, int i)
-                    {
-                        switch (i) {
-                            case FinchVideo.TITLE_COLUMN:
-                                TextView tv = (TextView)
-                                        view.findViewById(
-                                                R.id.simple_video_title_text);
-                                String videoText = cursor.getString(i);
-                                tv.setText(videoText);
-                                break;
-                        }
+            new SimpleCursorAdapter.ViewBinder() {
+            @Override public boolean setViewValue(
+                View view,
+                Cursor cursor, int i)
+            {
+                switch (i) {
+                    case FinchVideo.TITLE_COLUMN:
+                        TextView tv = (TextView)
+                        view.findViewById(
+                            R.id.simple_video_title_text);
+                        String videoText = cursor.getString(i);
+                        tv.setText(videoText);
+                        break;
+                }
 
-                        return true;
-                    }
-                };
+                return true;
+            }
+        };
 
         mAdapter.setViewBinder(savb);
 
@@ -84,13 +85,11 @@ public class SimpleFinchVideoActivity extends Activity {
         mInsertButton = (Button)
                 findViewById(R.id.simple_video_insert_button);
         mInsertButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                insert();
-            }
+            @Override public void onClick(View view) { insert(); }
         });
     }
 
-    private void insert() {
+    void insert() {
         ContentValues values = new ContentValues();
         String title = mTitleEditText.getText().toString();
         values.put(FinchVideo.SimpleVideos.TITLE_NAME, title);

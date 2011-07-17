@@ -43,28 +43,29 @@ public class FinchVideoActivity extends Activity {
 
         final ListView searchList = (ListView) findViewById(R.id.video_list);
         Cursor videoCursor =
-                managedQuery(FinchVideo.Videos.CONTENT_URI, null,
-                        null, null, null);
+            managedQuery(FinchVideo.Videos.CONTENT_URI, null,
+                null, null, null);
 
         // have to reset this on a new search
 
         // Maps video entries from the database to views
         mAdapter = new SimpleCursorAdapter(this,
-                R.layout.video_list_item,
-                videoCursor,
-                new String[] {
-                        FinchVideo.Videos.TITLE,
-                        FinchVideo.Videos.THUMB_URI_NAME
-                },
-                new int[] { R.id.video_text, R.id.video_thumb_icon });
+            R.layout.video_list_item,
+            videoCursor,
+            new String[] {
+            FinchVideo.Videos.TITLE,
+            FinchVideo.Videos.THUMB_URI_NAME
+        },
+        new int[] { R.id.video_text, R.id.video_thumb_icon });
 
         SimpleCursorAdapter.ViewBinder savb =
-                new SimpleCursorAdapter.ViewBinder() {
+            new SimpleCursorAdapter.ViewBinder() {
+            @Override
             public boolean setViewValue(View view, Cursor cursor, int i) {
                 switch (i) {
                     case FinchVideo.TITLE_COLUMN:
                         TextView tv = (TextView)
-                                view.findViewById(R.id.video_text);
+                        view.findViewById(R.id.video_text);
                         String videoText = cursor.getString(i);
                         tv.setText(videoText);
 
@@ -86,6 +87,7 @@ public class FinchVideoActivity extends Activity {
         mSearchText.setMesgText(r.getString(R.string.finch_video_search));
         mSearchText.setOnEditorActionListener(
                 new EditText.OnEditorActionListener() {
+                    @Override
                     public boolean onEditorAction(TextView textView,
                                                   int actionId,
                                                   KeyEvent keyEvent)
@@ -111,14 +113,12 @@ public class FinchVideoActivity extends Activity {
         final ImageButton refreshButton = (ImageButton)
                 findViewById(R.id.video_update_button);
         refreshButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                query();
-            }
+            @Override public void onClick(View view) { query(); }
         });
         refreshButton.setFocusable(true);
     }
 
-    private void setThumbResource(View view, Cursor cursor) {
+    void setThumbResource(View view, Cursor cursor) {
         Uri thumbUri = ContentUris.
                 withAppendedId(FinchVideo.Videos.THUMB_URI,
                         cursor.getLong(FinchVideo.ID_COLUMN));
@@ -136,7 +136,7 @@ public class FinchVideoActivity extends Activity {
     }
 
     // sends the query to the finch video content provider
-    private void query() {
+    void query() {
         if (!mSearchText.searchEmpty()) {
             String queryString =
                     FinchVideo.Videos.QUERY_PARAM_NAME + "=" +

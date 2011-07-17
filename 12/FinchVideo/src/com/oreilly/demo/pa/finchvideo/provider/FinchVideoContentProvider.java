@@ -10,6 +10,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
+import android.provider.BaseColumns;
 import android.text.TextUtils;
 import com.finchframework.finch.rest.FileHandlerFactory;
 import com.finchframework.finch.rest.RESTfulContentProvider;
@@ -26,7 +27,7 @@ import java.io.FileNotFoundException;
 public class FinchVideoContentProvider extends RESTfulContentProvider {
     public static final String VIDEO = "video";
     public static final String DATABASE_NAME = VIDEO + ".db";
-    private static int DATABASE_VERSION = 2;
+    static int DATABASE_VERSION = 2;
 
     public static final String VIDEOS_TABLE_NAME = "video";
 
@@ -81,7 +82,7 @@ public class FinchVideoContentProvider extends RESTfulContentProvider {
         private void createTable(SQLiteDatabase sqLiteDatabase) {
             String createvideoTable =
                     "CREATE TABLE " + VIDEOS_TABLE_NAME + " (" +
-                    FinchVideo.Videos._ID +
+                    BaseColumns._ID +
                             " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     FinchVideo.Videos.TITLE + " TEXT, " +
                     FinchVideo.Videos.DESCRIPTION + " TEXT, " +
@@ -129,6 +130,7 @@ public class FinchVideoContentProvider extends RESTfulContentProvider {
         mFileHandlerFactory = new FileHandlerFactory(FILE_CACHE_DIR);
     }
 
+    @Override
     public SQLiteDatabase getDatabase() {
         return mDb;
     }
@@ -212,7 +214,7 @@ public Cursor query(Uri uri, String[] projection, String where,
             long videoID = ContentUris.parseId(uri);
             queryCursor =
                     mDb.query(VIDEOS_TABLE_NAME, projection,
-                            FinchVideo.Videos._ID + " = " + videoID,
+                            BaseColumns._ID + " = " + videoID,
                             whereArgs, null, null, null);
             queryCursor.setNotificationUri(
                     getContext().getContentResolver(), uri);
@@ -353,6 +355,7 @@ public Cursor query(Uri uri, String[] projection, String where,
      * The delegate insert method, which also takes a database parameter. Note
      * that this method is a direct implementation of a content provider method.
      */
+    @Override
     public Uri insert(Uri uri, ContentValues values, SQLiteDatabase db) {
         verifyValues(values);
 
@@ -377,10 +380,10 @@ public Cursor query(Uri uri, String[] projection, String where,
                                 FinchVideo.Videos.CONTENT_URI, rowId);
                 getContext().getContentResolver().notifyChange(insertUri, null);
                 return insertUri;
-            } else {
-                throw new IllegalStateException("could not insert " +
-                        "content values: " + values);
             }
+
+            throw new IllegalStateException("could not insert " +
+                "content values: " + values);
         }
 
         return ContentUris.withAppendedId(FinchVideo.Videos.CONTENT_URI, rowID);
@@ -420,7 +423,7 @@ public Cursor query(Uri uri, String[] projection, String where,
             case VIDEO_ID:
                 long videoId = ContentUris.parseId(uri);
                 affected = db.delete(VIDEOS_TABLE_NAME,
-                        FinchVideo.Videos._ID + "=" + videoId
+                        BaseColumns._ID + "=" + videoId
                                 + (!TextUtils.isEmpty(where) ?
                                 " AND (" + where + ')' : ""),
                         whereArgs);
@@ -451,7 +454,7 @@ public Cursor query(Uri uri, String[] projection, String where,
             case VIDEO_ID:
                 String videoId = uri.getPathSegments().get(1);
                 count = db.update(VIDEOS_TABLE_NAME, values,
-                        FinchVideo.Videos._ID + "=" + videoId
+                        BaseColumns._ID + "=" + videoId
                                 + (!TextUtils.isEmpty(where) ?
                                 " AND (" + where + ')' : ""),
                         whereArgs);

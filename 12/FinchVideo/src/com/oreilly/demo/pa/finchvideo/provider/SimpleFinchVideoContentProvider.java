@@ -11,6 +11,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
+import android.provider.BaseColumns;
 import android.text.TextUtils;
 
 import java.util.HashMap;
@@ -42,8 +43,8 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
 
         // example projection map, not actually used in this application
         sVideosProjectionMap = new HashMap<String, String>();
-        sVideosProjectionMap.put(FinchVideo.Videos._ID,
-                FinchVideo.Videos._ID);
+        sVideosProjectionMap.put(BaseColumns._ID,
+                BaseColumns._ID);
         sVideosProjectionMap.put(FinchVideo.Videos.TITLE,
                 FinchVideo.Videos.TITLE);
         sVideosProjectionMap.put(FinchVideo.Videos.VIDEO,
@@ -55,7 +56,7 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
     public static final String VIDEO_TABLE_NAME = "videos";
 
     public static final String DATABASE_NAME = SIMPLE_VIDEO + ".db";
-    private static int DATABASE_VERSION = 2;
+    static int DATABASE_VERSION = 2;
 
     private static class SimpleVideoDbHelper extends SQLiteOpenHelper {
         private SimpleVideoDbHelper(Context context, String name,
@@ -71,7 +72,7 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
 
         private void createTable(SQLiteDatabase sqLiteDatabase) {
             String qs = "CREATE TABLE " + VIDEO_TABLE_NAME + " (" +
-                    FinchVideo.SimpleVideos._ID +
+                    BaseColumns._ID +
                     " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     FinchVideo.SimpleVideos.TITLE_NAME + " TEXT, " +
                     FinchVideo.SimpleVideos.DESCRIPTION_NAME + " TEXT, " +
@@ -145,7 +146,7 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
                 // query the database for a specific video
                 long videoID = ContentUris.parseId(uri);
                 c = mDb.query(VIDEO_TABLE_NAME, projection,
-                        FinchVideo.Videos._ID + " = " + videoID +
+                        BaseColumns._ID + " = " + videoID +
                                 (!TextUtils.isEmpty(where) ?
                                         " AND (" + where + ')' : ""),
                         whereArgs, null, null, sortOrder);
@@ -237,7 +238,7 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
             case VIDEO_ID:
                 long videoId = ContentUris.parseId(uri);
                 affected = mDb.delete(VIDEO_TABLE_NAME,
-                        FinchVideo.SimpleVideos._ID + "=" + videoId
+                        BaseColumns._ID + "=" + videoId
                                 + (!TextUtils.isEmpty(where) ?
                                 " AND (" + where + ')' : ""),
                         whereArgs);
@@ -269,7 +270,7 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
             case VIDEO_ID:
                 String videoId = uri.getPathSegments().get(1);
                 affected = db.update(VIDEO_TABLE_NAME, values,
-                        FinchVideo.SimpleVideos._ID + "=" + videoId
+                        BaseColumns._ID + "=" + videoId
                                 + (!TextUtils.isEmpty(where) ?
                                 " AND (" + where + ')' : ""),
                         whereArgs);
