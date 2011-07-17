@@ -20,18 +20,18 @@ public class AsyncTaskDemo extends Activity {
     private final class AsyncInitGame
         extends AsyncTask<String, Void, String>
     {
-        private final View root;
+        private final View dots;
         private final Game game;
         private final TextView message;
         private final Drawable bg;
 
         public AsyncInitGame(
-            View root,
+            View dots,
             Drawable bg,
             Game game,
             TextView msg)
         {
-            this.root = root;
+            this.dots = dots;
             this.bg = bg;
             this.game = game;
             this.message = msg;
@@ -40,16 +40,16 @@ public class AsyncTaskDemo extends Activity {
         // runs on the UI thread
         @Override protected void onPreExecute() {
             if (0 >= mInFlight++) {
-                root.setBackgroundResource(R.anim.dots);
-                ((AnimationDrawable) root.getBackground()).start();
+                dots.setBackgroundResource(R.anim.dots);
+                ((AnimationDrawable) dots.getBackground()).start();
             }
         }
 
         // runs on the UI thread
         @Override protected void onPostExecute(String msg) {
             if (0 >= --mInFlight) {
-                ((AnimationDrawable) root.getBackground()).stop();
-                root.setBackgroundDrawable(bg);
+                ((AnimationDrawable) dots.getBackground()).stop();
+                dots.setBackgroundDrawable(bg);
             }
 
             message.setText(msg);
@@ -71,9 +71,9 @@ public class AsyncTaskDemo extends Activity {
         super.onCreate(state);
 
         setContentView(R.layout.asyncdemo);
-
-        final View root = findViewById(R.id.root);
-        final Drawable bg = root.getBackground();
+        
+        final View dots = findViewById(R.id.dots);
+        final Drawable bg = dots.getBackground();
 
         final TextView msg = ((TextView) findViewById(R.id.msg));
 
@@ -84,7 +84,7 @@ public class AsyncTaskDemo extends Activity {
                 @Override public void onClick(View v) {
                     //initGame(
                     new AsyncInitGame(
-                        root,
+                        dots,
                         bg,
                         game,
                         //msg,
