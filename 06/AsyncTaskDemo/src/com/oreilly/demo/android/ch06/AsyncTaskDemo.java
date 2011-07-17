@@ -57,7 +57,6 @@ public class AsyncTaskDemo extends Activity {
 
         // runs on its own thread
         @Override protected String doInBackground(String... args) {
-            root.setBackgroundColor(Color.CYAN);
             return ((1 != args.length) || (null == args[0]))
                 ? null
                 : game.initialize(args[0]);

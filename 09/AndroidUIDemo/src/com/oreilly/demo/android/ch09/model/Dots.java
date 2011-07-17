@@ -1,4 +1,4 @@
-package com.oreilly.demo.android.ch08.model;
+package com.oreilly.demo.android.ch09.model;
 
 import java.util.Collections;
 import java.util.LinkedList;

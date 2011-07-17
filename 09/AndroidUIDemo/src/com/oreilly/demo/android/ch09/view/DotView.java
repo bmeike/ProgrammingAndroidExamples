@@ -1,4 +1,4 @@
-package com.oreilly.demo.android.ch08.view;
+package com.oreilly.demo.android.ch09.view;
 
 import android.content.Context;
 
@@ -9,8 +9,8 @@ import android.graphics.Paint.Style;
 
 import android.view.View;
 
-import com.oreilly.demo.android.ch08.model.Dot;
-import com.oreilly.demo.android.ch08.model.Dots;
+import com.oreilly.demo.android.ch09.model.Dot;
+import com.oreilly.demo.android.ch09.model.Dots;
 
 
 /**

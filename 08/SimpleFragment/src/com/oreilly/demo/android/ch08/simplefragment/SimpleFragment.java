@@ -1,6 +1,6 @@
 /* $Id: $
  */
-package com.oreilly.demo.android.ch085.simplefragment;
+package com.oreilly.demo.android.ch08.simplefragment;
 
 import java.util.Date;
 
@@ -10,6 +10,8 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.oreilly.demo.android.ch08.simplefragment.R;
 
 
 /**

@@ -1,6 +1,6 @@
 /* $Id: $
  */
-package com.oreilly.demo.android.ch085.simplefragment;
+package com.oreilly.demo.android.ch08.simplefragment;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.oreilly.demo.android.ch08.simplefragment.R;
 
 
 /**

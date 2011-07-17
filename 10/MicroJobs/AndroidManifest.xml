@@ -6,16 +6,17 @@
 	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"></uses-permission>
 	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-sdk android:targetSdkVersion="9"></uses-sdk>
 
     <application android:icon="@drawable/icon2" android:debuggable="true">
 		<uses-library android:name="com.google.android.maps" />
-        <activity android:name="com.oreilly.demo.pa.microJobs.MicroJobs" android:label="@string/app_name">
+        <activity android:name="com.oreilly.demo.pa.ch10.MicroJobs" android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.oreilly.demo.pa.microJobs.MicroJobsList" android:label="@string/list_name">
+        <activity android:name="com.oreilly.demo.pa.ch10.MicroJobsList" android:label="@string/list_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.EDIT" />
@@ -30,7 +31,7 @@
                 <data android:name="vnd.android.cursor.item/vnd.microjobs.jobs" />
             </intent-filter>
         </activity>
-        <activity android:name="com.oreilly.demo.pa.microJobs.MicroJobsDetail" android:label="@string/jobs_detail_name">
+        <activity android:name="com.oreilly.demo.pa.ch10.MicroJobsDetail" android:label="@string/jobs_detail_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.EDIT" />
@@ -44,7 +45,7 @@
                 <data android:name="vnd.android.cursor.item/vnd.microjobs.jobs" />
             </intent-filter>
         </activity>
-        <activity android:name="com.oreilly.demo.pa.microJobs.MicroJobsEmpDetail" android:label="@string/emp_detail_name">
+        <activity android:name="com.oreilly.demo.pa.ch10.MicroJobsEmpDetail" android:label="@string/emp_detail_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.EDIT" />
@@ -58,7 +59,7 @@
                 <data android:name="vnd.android.cursor.item/vnd.microjobs.jobs" />
             </intent-filter>
         </activity>
-        <activity android:name="com.oreilly.demo.pa.microJobs.AddJob" android:label="@string/add_job_name">
+        <activity android:name="com.oreilly.demo.pa.ch10.AddJob" android:label="@string/add_job_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.EDIT" />
@@ -72,7 +73,7 @@
                 <data android:name="vnd.android.cursor.item/vnd.microjobs.jobs" />
             </intent-filter>
         </activity>
-        <activity android:name="com.oreilly.demo.pa.microJobs.EditJob" android:label="@string/edit_job_name">
+        <activity android:name="com.oreilly.demo.pa.ch10.EditJob" android:label="@string/edit_job_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.EDIT" />

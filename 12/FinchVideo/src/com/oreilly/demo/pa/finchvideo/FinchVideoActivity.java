@@ -86,32 +86,32 @@ public class FinchVideoActivity extends Activity {
         mSearchText = (MesgEditText) findViewById(R.id.video_search_box);
         mSearchText.setMesgText(r.getString(R.string.finch_video_search));
         mSearchText.setOnEditorActionListener(
-                new EditText.OnEditorActionListener() {
-                    @Override
-                    public boolean onEditorAction(TextView textView,
-                                                  int actionId,
-                                                  KeyEvent keyEvent)
-                    {
-                        // a null key event observed on some devices
-                        if (null != keyEvent) {
-                            int keyCode = keyEvent.getKeyCode();
-                            if ((keyCode == KeyEvent.KEYCODE_ENTER) &&
-                                    (keyEvent.getAction() ==
-                                            KeyEvent.ACTION_DOWN))
-                            {
-                                // action only causes the provider to ensure
-                                // the presence of some search results.
-                                query();
+            new EditText.OnEditorActionListener() {
+                @Override
+                public boolean onEditorAction(TextView textView,
+                    int actionId,
+                    KeyEvent keyEvent)
+                {
+                    // a null key event observed on some devices
+                    if (null != keyEvent) {
+                        int keyCode = keyEvent.getKeyCode();
+                        if ((keyCode == KeyEvent.KEYCODE_ENTER) &&
+                            (keyEvent.getAction() ==
+                                KeyEvent.ACTION_DOWN))
+                        {
+                            // action only causes the provider to ensure
+                            // the presence of some search results.
+                            query();
 
-                                return true;
-                            }
+                            return true;
                         }
-                        return false;
                     }
-                });
+                    return false;
+                }
+            });
 
         final ImageButton refreshButton = (ImageButton)
-                findViewById(R.id.video_update_button);
+        findViewById(R.id.video_update_button);
         refreshButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) { query(); }
         });
@@ -120,13 +120,13 @@ public class FinchVideoActivity extends Activity {
 
     void setThumbResource(View view, Cursor cursor) {
         Uri thumbUri = ContentUris.
-                withAppendedId(FinchVideo.Videos.THUMB_URI,
-                        cursor.getLong(FinchVideo.ID_COLUMN));
+        withAppendedId(FinchVideo.Videos.THUMB_URI,
+            cursor.getLong(FinchVideo.ID_COLUMN));
         try {
             InputStream thumbStream =
-                    getContentResolver().openInputStream(thumbUri);
+                getContentResolver().openInputStream(thumbUri);
             ImageView iv = (ImageView)
-                    view.findViewById(R.id.video_thumb_icon);
+            view.findViewById(R.id.video_thumb_icon);
             Bitmap bm = BitmapFactory.decodeStream(thumbStream);
             iv.setImageBitmap(bm);
 
@@ -139,11 +139,11 @@ public class FinchVideoActivity extends Activity {
     void query() {
         if (!mSearchText.searchEmpty()) {
             String queryString =
-                    FinchVideo.Videos.QUERY_PARAM_NAME + "=" +
-                            Uri.encode(mSearchText.getText().toString());
+                FinchVideo.Videos.QUERY_PARAM_NAME + "=" +
+                Uri.encode(mSearchText.getText().toString());
             Uri queryUri =
-                    Uri.parse(FinchVideo.Videos.CONTENT_URI + "?" +
-                            queryString);
+                Uri.parse(FinchVideo.Videos.CONTENT_URI + "?" +
+                    queryString);
             Cursor c = managedQuery(queryUri, null, null, null, null);
             mAdapter.changeCursor(c);
         }

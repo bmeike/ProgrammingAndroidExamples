@@ -11,16 +11,15 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Parcel;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.oreilly.demo.android.ch06.aidl.R;
-import com.oreilly.demo.android.ch06.aidl.service.PathService;
 import com.oreilly.demo.android.ch06.aidl.parcelables.ParcelableList;
-import com.oreilly.demo.android.ch06.aidl.parcelables.SimpleParcelable;
+import com.oreilly.demo.android.ch06.aidl.service.PathService;
+
 
 /**
  * AIDLDemo
@@ -89,7 +88,7 @@ public class AIDLDemo extends Activity {
         list.add(l);
         ParcelableList orig = new ParcelableList(list);
 
-        try {   
+        try {
             p1.writeParcelable(orig, 0);
             byte[] bytes = p1.marshall();
 

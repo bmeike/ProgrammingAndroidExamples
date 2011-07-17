@@ -1,8 +1,9 @@
-package com.oreilly.demo.pa.ch01.testapp;
+package com.oreilly.demo.pa.ch03.testapp;
 
 import android.app.Activity;
 import android.os.Bundle;
-import com.oreilly.demo.pa.ch01.testapp.R;
+
+import com.oreilly.demo.pa.ch03.testapp.R;
 
 public class TestActivity extends Activity {
     /** Called when the activity is first created. */

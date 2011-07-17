@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.os.Parcel;
 
 import com.oreilly.android.demo.R;
-import com.oreilly.android.demo.R.layout;
 
 
 /**
@@ -42,7 +41,7 @@ public class JSerialize extends Activity {
 
       Bundle bundle = new Bundle();
       bundle.putFloat(APP_STATE, 3.14159F);
-      
+
       Parcel p = Parcel.obtain();
       p.writeBundle(bundle);
 

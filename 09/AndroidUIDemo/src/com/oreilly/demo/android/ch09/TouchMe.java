@@ -1,4 +1,4 @@
-package com.oreilly.demo.android.ch08;
+package com.oreilly.demo.android.ch09;
 
 import java.util.Random;
 
@@ -19,10 +19,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
-import com.oreilly.demo.android.ch08.R;
-import com.oreilly.demo.android.ch08.model.Dot;
-import com.oreilly.demo.android.ch08.model.Dots;
-import com.oreilly.demo.android.ch08.view.DotView;
+import com.oreilly.demo.android.ch09.R;
+import com.oreilly.demo.android.ch09.model.Dot;
+import com.oreilly.demo.android.ch09.model.Dots;
+import com.oreilly.demo.android.ch09.view.DotView;
 
 
 /**

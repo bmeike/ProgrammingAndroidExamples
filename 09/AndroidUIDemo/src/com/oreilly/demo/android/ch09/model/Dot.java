@@ -1,4 +1,4 @@
-package com.oreilly.demo.android.ch08.model;
+package com.oreilly.demo.android.ch09.model;
 
 
 /** A dot: the coordinates, color and size. */

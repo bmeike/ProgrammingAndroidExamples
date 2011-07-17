@@ -65,7 +65,7 @@ public class SimplePathService extends Service {
 
     String getPoint(String name) {
         Log.d("PathService", "getPoint(): " + name);
-        return "Blake";
+        return "Service says: 'Hi!'"; // verify connectivity
     }
 
     void setPoint(String name, String path) {

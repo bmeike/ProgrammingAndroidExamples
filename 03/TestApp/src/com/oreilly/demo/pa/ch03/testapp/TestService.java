@@ -1,4 +1,4 @@
-package com.oreilly.demo.pa.ch01.testapp;
+package com.oreilly.demo.pa.ch03.testapp;
 
 import android.app.Service;
 import android.content.Intent;
