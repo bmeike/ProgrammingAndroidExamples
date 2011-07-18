@@ -3,17 +3,9 @@
           package="com.finchframework.finch"
           android:versionCode="1"
           android:versionName="1.0">
-    <application android:icon="@drawable/icon" android:label="@string/app_name"
-                 android:name="FinchApplication" android:debuggable="true">
-        <provider android:name=".video.FinchVideoContentProvider"
-                  android:authorities=
-                          "com.finchframework.finch.video.FinchVideo"
-                />
-        <activity
-                android:name=".CheckBoxExample"
-                android:label="@string/checkbox_app_name"
-                >
-        </activity>
+    <application android:icon="@drawable/icon"
+                 android:label="@string/app_name"
+                 android:debuggable="true">
         <activity android:name=".FinchWelcome"
                   android:label="@string/app_name">
             <intent-filter>
@@ -21,16 +13,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    <activity android:name="com.finchframework.bluetooth.BtConsoleActivity">
-    </activity>
-<activity android:name="com.finchframework.bluetooth.DeviceListActivity"
+        <activity android:name="com.finchframework.bluetooth.BtConsoleActivity" />
+        <activity android:name="com.finchframework.bluetooth.DeviceListActivity"
                   android:label="@string/select_device"
                   android:configChanges="orientation|keyboardHidden"/>
-<activity android:name="animate.AnimateActivity"></activity>
-</application>
+        <activity android:name="animate.AnimateActivity"></activity>
+    </application>
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
 	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-	
+
     <uses-sdk android:minSdkVersion="7" />
 </manifest>
