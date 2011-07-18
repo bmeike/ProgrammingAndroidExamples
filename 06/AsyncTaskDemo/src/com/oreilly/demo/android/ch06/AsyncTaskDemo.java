@@ -99,7 +99,7 @@ public class AsyncTaskDemo extends Activity {
      * DO NOT USE!!
      */
     void initGame(
-        View root,
+        View dots,
         Drawable bg,
         Game game,
         TextView resp,
@@ -108,8 +108,8 @@ public class AsyncTaskDemo extends Activity {
         // if the animation hasn't been started,
         // initialize and start it
         if (0 >= mInFlight++ ) {
-            root.setBackgroundResource(R.anim.dots);
-            ((AnimationDrawable) root.getBackground()).start();
+            dots.setBackgroundResource(R.anim.dots);
+            ((AnimationDrawable) dots.getBackground()).start();
         }
 
         // get the response from the remote service
@@ -118,8 +118,8 @@ public class AsyncTaskDemo extends Activity {
         // if this is the last running initialization
         // remove and clean up the animation
         if (0 >= --mInFlight) {
-            ((AnimationDrawable) root.getBackground()).stop();
-            root.setBackgroundDrawable(bg);
+            ((AnimationDrawable) dots.getBackground()).stop();
+            dots.setBackgroundDrawable(bg);
         }
 
         resp.setText(msg);

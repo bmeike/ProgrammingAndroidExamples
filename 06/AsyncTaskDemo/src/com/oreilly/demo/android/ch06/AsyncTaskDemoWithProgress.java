@@ -21,18 +21,18 @@ public class AsyncTaskDemoWithProgress extends Activity {
         extends AsyncTask<String, Integer, String>
         implements Game.InitProgressListener
     {
-        private final View root;
+        private final View dots;
         private final Game game;
         private final TextView message;
         private final Drawable bg;
 
         public AsyncInit(
-            View root,
+            View dots,
             Drawable bg,
             Game game,
             TextView msg)
         {
-            this.root = root;
+            this.dots = dots;
             this.bg = bg;
             this.game = game;
             this.message = msg;
@@ -41,16 +41,16 @@ public class AsyncTaskDemoWithProgress extends Activity {
         // runs on the UI thread
         @Override protected void onPreExecute() {
             if (0 >= mInFlight++) {
-                root.setBackgroundResource(R.anim.dots);
-                ((AnimationDrawable) root.getBackground()).start();
+                dots.setBackgroundResource(R.anim.dots);
+                ((AnimationDrawable) dots.getBackground()).start();
             }
         }
 
         // runs on the UI thread
         @Override protected void onPostExecute(String msg) {
             if (0 >= --mInFlight) {
-                ((AnimationDrawable) root.getBackground()).stop();
-                root.setBackgroundDrawable(bg);
+                ((AnimationDrawable) dots.getBackground()).stop();
+                dots.setBackgroundDrawable(bg);
             }
 
             message.setText(msg);
@@ -82,8 +82,8 @@ public class AsyncTaskDemoWithProgress extends Activity {
 
         setContentView(R.layout.asyncdemoprogress);
 
-        final View root = findViewById(R.id.root);
-        final Drawable bg = root.getBackground();
+        final View dots = findViewById(R.id.dots);
+        final Drawable bg = dots.getBackground();
 
         final TextView msg = ((TextView) findViewById(R.id.msg));
 
@@ -94,7 +94,7 @@ public class AsyncTaskDemoWithProgress extends Activity {
                 @Override public void onClick(View v) {
                     mComplete = 0;
                     new AsyncInit(
-                        root,
+                        dots,
                         bg,
                         game,
                         msg)
