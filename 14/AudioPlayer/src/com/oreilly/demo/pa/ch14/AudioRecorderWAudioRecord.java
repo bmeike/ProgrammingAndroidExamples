@@ -87,7 +87,7 @@ public class AudioRecorderWAudioRecord extends Activity implements Runnable {
 				
 				recorder = new AudioRecord(MediaRecorder.AudioSource.MIC, // source to record from
 											44100,// frequency
-											AudioFormat.CHANNEL_IN_MONO,// channel config.. mono, stereo, etc
+											AudioFormat.CHANNEL_CONFIGURATION_MONO,// channel config.. mono, stereo, etc
 											AudioFormat.ENCODING_PCM_16BIT,// audio encoding
 											buffer.length// buffer size
 											);
