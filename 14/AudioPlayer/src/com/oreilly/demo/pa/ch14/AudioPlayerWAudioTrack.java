@@ -134,7 +134,7 @@ public class AudioPlayerWAudioTrack extends Activity {
             audiotrack = new AudioTrack(
                                 AudioManager.STREAM_MUSIC,                    // stream type
                                 44100,                                        // frequency
-                                AudioFormat.CHANNEL_IN_MONO,       // channel config.. mono, stereo, etc
+                                AudioFormat.CHANNEL_CONFIGURATION_MONO,       // channel config.. mono, stereo, etc
                                 AudioFormat.ENCODING_PCM_16BIT,               // audio encoding
                                 audio.length,                                 // length
                                 AudioTrack.MODE_STREAM                        // mode
