@@ -9,6 +9,10 @@ The projects are organized by the primary chapter in which the examples appears.
 
 The projects have all been tested in eclipse, using the emulator (with the exception of a couple that are hardware dependent; those projects have notes to that effect in their README files)
 
+If you have a question, you might check the FAQ:
+
+https://github.com/bmeike/ProgrammingAndroidExamples/wiki/FAQ
+
 To set up a project, check it out and then:
 cd $PROJ
 cp tools/ide/eclipse/project .project
