@@ -16,7 +16,7 @@ https://github.com/bmeike/ProgrammingAndroidExamples/wiki/FAQ
 To set up a project, check it out and then:
 cd $PROJ
 cp tools/ide/eclipse/project .project
-cp tools/ide/eclipse/classpath .classpaht
+cp tools/ide/eclipse/classpath .classpath
 
 Start eclipse and use File > Import > "Existing project into workspace"
 
