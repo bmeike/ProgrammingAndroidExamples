@@ -21,18 +21,18 @@ public class AsyncTaskDemoWithProgress extends Activity {
         extends AsyncTask<String, Integer, String>
         implements Game.InitProgressListener
     {
-        private final View dots;
+        private final View root;
         private final Game game;
         private final TextView message;
         private final Drawable bg;
 
         public AsyncInit(
-            View dots,
+            View root,
             Drawable bg,
             Game game,
             TextView msg)
         {
-            this.dots = dots;
+            this.root = root;
             this.bg = bg;
             this.game = game;
             this.message = msg;
@@ -41,16 +41,16 @@ public class AsyncTaskDemoWithProgress extends Activity {
         // runs on the UI thread
         @Override protected void onPreExecute() {
             if (0 >= mInFlight++) {
-                dots.setBackgroundResource(R.anim.dots);
-                ((AnimationDrawable) dots.getBackground()).start();
+                root.setBackgroundResource(R.anim.dots);
+                ((AnimationDrawable) root.getBackground()).start();
             }
         }
 
         // runs on the UI thread
         @Override protected void onPostExecute(String msg) {
             if (0 >= --mInFlight) {
-                ((AnimationDrawable) dots.getBackground()).stop();
-                dots.setBackgroundDrawable(bg);
+                ((AnimationDrawable) root.getBackground()).stop();
+                root.setBackgroundDrawable(bg);
             }
 
             message.setText(msg);
@@ -63,10 +63,12 @@ public class AsyncTaskDemoWithProgress extends Activity {
                 : game.initialize(args[0], this);
         }
 
+        // runs on the UI thread
         @Override protected void onProgressUpdate(Integer... vals) {
             updateProgressBar(vals[0].intValue());
         }
 
+        // runs on its own thread
         @Override public void onInitProgress(int pctComplete) {
             publishProgress(Integer.valueOf(pctComplete));
         }

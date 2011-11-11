@@ -3,7 +3,7 @@ Welcome to the ProgrammingAndroidExamples wiki!
 This repo contains working code for the example in O'Reilly's
 
 _Programming Android_;  Mednieks, Dornin, Meike, Nakamura
-http://www.amazon.com/Programming-Android-Zigurd-Mednieks/dp/1449389694/ref=sr_1_1?ie=UTF8&qid=1311005055&sr=8-1
+http://shop.oreilly.com/product/0636920010364.do
 
 The projects are organized by the primary chapter in which the examples appears.
 
