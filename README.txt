@@ -21,7 +21,3 @@ cp tools/ide/eclipse/classpath .classpath
 Start eclipse and use File > Import > "Existing project into workspace"
 
 Comments are welcome! Send problems and comments to programmingandroidexamples at callmeike dot net.
-
-OpenMobile (http://openmobileww.com/) is hiring!
-
-
