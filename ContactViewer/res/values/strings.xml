@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ContactViewer</string>
+    <string name="empty">......</string>
+    <string name="detail_label">Contact:</string>
+    <string name="phone_label">Phone:</string>
+    <string name="email_label">Email:</string>
+</resources>
