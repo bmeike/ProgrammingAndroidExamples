@@ -7,7 +7,7 @@
 #define  LOGINFO(x...)  __android_log_print(ANDROID_LOG_INFO,"SampleJNI",x)
 
 
-jdouble Java_com_oreilly_demo_pa_ch18_SampleActivityWithNativeMethods_calculatePower( JNIEnv* env, jobject thisobject, jdouble x, jdouble y) {
+jdouble Java_com_oreilly_demo_android_pa_ndkdemo_SampleActivityWithNativeMethods_calculatePower( JNIEnv* env, jobject thisobject, jdouble x, jdouble y) {
 
     LOGINFO("Sample Debug Log Output");
 
@@ -15,7 +15,7 @@ jdouble Java_com_oreilly_demo_pa_ch18_SampleActivityWithNativeMethods_calculateP
     return calculatePower(x, y);
 }
 
-jstring Java_com_oreilly_demo_pa_ch18_SampleActivityWithNativeMethods_whatAmI(JNIEnv* env, jobject thisobject) {
+jstring Java_com_oreilly_demo_android_pa_ndkdemo_SampleActivityWithNativeMethods_whatAmI(JNIEnv* env, jobject thisobject) {
 	__android_log_print(ANDROID_LOG_WARN,"SampleJNI","Sample Warning Log Output");
 
 	uint64_t cpu_features;

@@ -7,7 +7,7 @@
     >
 
     <fragment
-        class="com.oreilly.demo.android.contactviewer.ContactsFragment"
+        class="com.oreilly.demo.android.pa.contactviewer.ContactsFragment"
         android:id="@+id/contacts"
         android:layout_width="fill_parent"
         android:layout_height="0dp" 

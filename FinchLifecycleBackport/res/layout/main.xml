@@ -9,7 +9,7 @@
 	    android:layout_height="wrap_content" 
 	    android:text="@string/hello"
 	    />
-	<fragment class="com.oreilly.demo.pa.ch10.finchlifecyclebackport.TestFragment"
+	<fragment class="com.oreilly.demo.android.pa.finchlifecyclebackport.TestFragment"
 	    android:id="@+id/the_frag"
 	    android:layout_weight="1"
 	    android:layout_width="fill_parent"

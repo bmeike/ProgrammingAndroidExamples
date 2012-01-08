@@ -6,7 +6,7 @@
 -->
 
 <account-authenticator xmlns:android="http://schemas.android.com/apk/res/android"
-    android:accountType="com.oreilly.demo.pa.ch17.sync"
+    android:accountType="com.oreilly.demo.android.pa.clientserver.sync"
     android:icon="@drawable/icon"
     android:smallIcon="@drawable/icon"
     android:label="@string/authlabel" 

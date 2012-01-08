@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.oreilly.demo.pa.ch18"
+      package="com.oreilly.demo.android.pa.ndkdemo"
       android:versionCode="1"
       android:versionName="1.0">
 

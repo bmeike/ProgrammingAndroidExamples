@@ -8,7 +8,7 @@
         
 <!-- Layout fragment
     <fragment
-        class="com.oreilly.demo.android.ch085.simplefragment.DateTime"
+        class="com.oreilly.demo.android.pa.simplefragment.DateTime"
         android:id="@+id/date_time"
         android:layout_width="fill_parent" 
         android:layout_height="fill_parent"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.oreilly.demo.android.contactviewer"
+      package="com.oreilly.demo.android.pa.contactviewer"
       android:versionCode="1"
       android:versionName="1.0">
     <uses-sdk android:minSdkVersion="6"/>
@@ -15,7 +15,6 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name="com.oreilly.demo.android.contactviewer.ContactDetailActivity" />
+        <activity android:name=".ContactDetailActivity" />
     </application>
 </manifest>
