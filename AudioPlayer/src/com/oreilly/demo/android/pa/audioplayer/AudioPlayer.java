@@ -203,8 +203,8 @@ public class AudioPlayer extends Activity implements OnSeekBarChangeListener, Ru
 	}
 
 	private void stopPlayer() {
-		mediaplayer.stop();
-		mediaplayer.reset();
+		try { mediaplayer.stop(); } catch (Throwable t) {}
+		try { mediaplayer.reset(); } catch (Throwable t) {}
 		initializeMediaPlayer();
 	}
 
