@@ -18,7 +18,10 @@ import com.oreilly.demo.android.pa.viewdemo.R;
 public class EffectsWidget extends View {
 
     /** The effect to apply to the drawing */
-    public interface PaintEffect { void setEffect(Paint paint); }
+    public interface PaintEffect {
+        /** @param paint the paint effect */
+        void setEffect(Paint paint);
+    }
 
     private final PaintEffect effect;
     private final int id;

@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.oreilly.demo.android.pa.asynctask.R;
 import com.oreilly.demo.android.pa.asynctask.game.Game;
 
 
@@ -96,6 +95,12 @@ public class AsyncTaskDemo extends Activity {
     /**
      * Synchronous request to remote service
      * DO NOT USE!!
+
+     * @param dots
+     * @param bg
+     * @param game
+     * @param resp
+     * @param level
      */
     void initGame(
         View dots,
