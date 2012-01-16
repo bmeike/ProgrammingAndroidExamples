@@ -1,4 +1,4 @@
-package com.oreilly.demo.android.pa.testapp;
+package com.oreilly.demo.android.pa.lifecycle;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;

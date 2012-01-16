@@ -26,8 +26,8 @@ public class PersistentModel implements Runnable {
         Looper.loop();
     }
 
-    public Handler getHandler() {
-        // TODO Auto-generated method stub
-        return null;
-    }
+    /**
+     * @return the handler
+     */
+    public Handler getHandler() { return null; }
 }

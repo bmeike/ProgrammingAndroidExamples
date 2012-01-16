@@ -17,10 +17,11 @@ import com.oreilly.android.demo.pa.serialize.R;
  * @author <a href="mailto:bmeike@callmeike.net">Blake Meike</a>
  */
 public class JSerialize extends Activity {
+    /** Bundle tag for app state */
     public static final String APP_STATE
         = "com.oreilly.android.app.state";
 
-    private static class AppState implements Serializable {
+    static class AppState implements Serializable {
         // definitions, getters and setters
         // for application state parameters here.
         // ...

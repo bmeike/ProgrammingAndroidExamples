@@ -21,24 +21,39 @@ import org.apache.http.HttpResponse;
  */
 public class AsyncTaskSample {
 
+    /**
+     * AsyncDBReq
+     */
     public class AsyncDBReq
         extends AsyncTask<PreparedStatement, Void, ResultSet>
     {
+        /**
+         * @see android.os.AsyncTask#doInBackground(PreparedStatement[])
+         */
         @Override
         protected ResultSet doInBackground(PreparedStatement... q) {
             // implementation...
             return null;
         }
 
+        /**
+         * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
+         */
         @Override
         protected void onPostExecute(ResultSet result) {
             // implementation...
         }
      }
 
+    /**
+     * AsyncContentReq
+     */
     public class AsyncContentReq
         extends AsyncTask<URI, Void, HttpResponse>
     {
+        /**
+         * @see android.os.AsyncTask#doInBackground(PreparedStatement[])
+         */
         @Override
         protected HttpResponse doInBackground(URI... req) {
             // implementation...
@@ -46,6 +61,9 @@ public class AsyncTaskSample {
         }
 
 
+        /**
+         * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
+         */
         @Override
         protected void onPostExecute(HttpResponse result) {
             // implementation...
@@ -54,9 +72,12 @@ public class AsyncTaskSample {
 
     int mCount;
 
+    /**
+     * @param button
+     */
     public void initButton1( Button button) {
         mCount = 0;
-        button.setOnClickListener(            
+        button.setOnClickListener(
             new View.OnClickListener() {
                 @Override public void onClick(View v) {
                     new AsyncTask<Void, Void, Void>() {
@@ -69,11 +90,15 @@ public class AsyncTaskSample {
                 } });
     }
 
+    /**
+     * @param button
+     * @param vals
+     */
     public void initButton2(
         Button button,
         final Map<String, String> vals)
     {
-        button.setOnClickListener(            
+        button.setOnClickListener(
             new View.OnClickListener() {
                 @SuppressWarnings("unchecked")
                 @Override public void onClick(View v) {

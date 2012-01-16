@@ -2,5 +2,5 @@
 <resources>
     <string name="app_name">Simple Fragment</string>
     <string name="time_label">The Time:</string>
-    <string name="doit">Do It!</string>
+    <string name="doit">Update</string>
 </resources>

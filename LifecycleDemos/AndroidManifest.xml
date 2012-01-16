@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.oreilly.demo.android.pa.testapp"
+          package="com.oreilly.demo.android.pa.lifecycle"
           android:versionCode="1"
           android:versionName="1.0">
 
@@ -14,7 +14,7 @@
     <application android:icon="@drawable/icon" android:label="@string/app_name"
                  android:debuggable="true">
 
-        <activity android:name="com.oreilly.demo.android.pa.testapp.TestActivity"
+        <activity android:name=".TestActivity"
                   android:label="Test Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -22,15 +22,15 @@
             </intent-filter>
         </activity>
 
-        <provider android:name="com.oreilly.demo.android.pa.testapp.TestProvider"
-                  android:authorities= "com.oreilly.demo.pa.ch03.TestProvider"
+        <provider android:name=".TestProvider"
+                  android:authorities= "com.oreilly.demo.android.pa.lifecycle.TestProvider"
                 />
 
-        <service android:name="com.oreilly.demo.android.pa.testapp.TestService"
+        <service android:name=".TestService"
                  android:label="Test Service"/>
 
         <receiver
-                android:name="com.oreilly.demo.android.pa.testapp.TestBroadcastReceiver"
+                android:name=".TestBroadcastReceiver"
                 android:label="Test Broadcast Receiver"/>
     </application>
 </manifest>
