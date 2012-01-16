@@ -3,6 +3,14 @@
       package="com.oreilly.demo.android.pa.audioplayer"
       android:versionCode="1"
       android:versionName="1.0">
+      
+	<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+	<uses-permission android:name="android.permission.RECORD_VIDEO"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.CAMERA"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-sdk android:targetSdkVersion="14"></uses-sdk>
+	
     <application android:icon="@drawable/icon" android:label="@string/app_name">
         <activity android:name=".MultiMedia"
                   android:label="@string/app_name">
@@ -19,14 +27,7 @@
         <activity android:name=".AudioRecorderViaIntent" android:label="Audio Recorder By Intent"/>
         <activity android:name=".VideoRecorder" android:label="Video Recorder"/>
         <activity android:name=".AudioRecorder" android:label="Audio Recorder"/>
-        <activity android:name="com.oreilly.demo.android.pa.audioplayer.AudioRecorderWAudioRecord" android:label="Audio Recorder W AudioRecord"/>
+        <activity android:name=".AudioRecorderWAudioRecord" android:label="Audio Recorder W AudioRecord"/>
     </application>
-        
-	<uses-permission android:name="android.permission.RECORD_AUDIO"/>
-	<uses-permission android:name="android.permission.RECORD_VIDEO"/>
-	<uses-permission android:name="android.permission.INTERNET"/>
-	<uses-permission android:name="android.permission.CAMERA"/>
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<uses-sdk android:targetSdkVersion="14"></uses-sdk>
     
 </manifest> 
