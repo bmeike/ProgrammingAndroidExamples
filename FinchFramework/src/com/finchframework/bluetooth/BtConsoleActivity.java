@@ -2,8 +2,6 @@ package com.finchframework.bluetooth;
 
 import java.io.UnsupportedEncodingException;
 
-import com.finchframework.finch.R;
-
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -16,8 +14,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -25,6 +23,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.finchframework.finch.R;
 
 /**
  * This is the main Activity that displays the current chat session.
@@ -181,7 +181,7 @@ public class BtConsoleActivity extends Activity {
 
 	/**
 	 * Sends a message on a Bluetooth connection
-	 * 
+	 *
 	 * @param message
 	 *            A string of text to send.
 	 */
@@ -202,7 +202,7 @@ public class BtConsoleActivity extends Activity {
 	}
 
     // The action listener for the EditText widget, to listen for the return key
-    private TextView.OnEditorActionListener mWriteListener =
+    private final TextView.OnEditorActionListener mWriteListener =
         new TextView.OnEditorActionListener() {
         public boolean onEditorAction(TextView view, int actionId, KeyEvent event) {
             // If the action is a key-up event on the return key, send the message
@@ -219,7 +219,7 @@ public class BtConsoleActivity extends Activity {
 	private final BtHelperHandler mHandler = new BtHelperHandler() {
 		@Override
 		public void handleMessage(Message msg) {
-			BtHelperHandler.MessageType messageType = 
+			BtHelperHandler.MessageType messageType =
 				BtHelperHandler.MessageType.values()[msg.what];
 			switch (messageType) {
 			case STATE:
@@ -281,6 +281,7 @@ public class BtConsoleActivity extends Activity {
 		}
 	};
 
+    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(D) Log.d(TAG, "onActivityResult " + resultCode);
         switch (requestCode) {
@@ -318,13 +319,13 @@ public class BtConsoleActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-        case R.id.scan:
+        if (item.getItemId() == R.id.scan) {
             // Launch the DeviceListActivity to see devices and do scan
             Intent serverIntent = new Intent(this, DeviceListActivity.class);
             startActivityForResult(serverIntent, REQUEST_CONNECT_DEVICE);
             return true;
-        case R.id.discoverable:
+        }
+        else if (item.getItemId() == R.id.discoverable) {
             // Ensure this device is discoverable by others
             ensureDiscoverable();
             return true;

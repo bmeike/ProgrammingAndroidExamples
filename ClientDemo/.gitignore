@@ -1,5 +1,10 @@
-/gen
-/assets
+.DS_*
 /.project
+/.checkstyle
 /.classpath
+/.settings
+/assets
 /bin
+/gen
+/lint.xml
+
