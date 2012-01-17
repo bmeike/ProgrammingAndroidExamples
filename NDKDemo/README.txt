@@ -1,5 +1,6 @@
-This example must be run on actual hardware (not an emulator)
-as this contains hardware specific code.
 
+This example must be run on actual device (not an emulator)
+becaue it contains hardware specific code.  
 
-(This was tested on a Nexus One, Nexus S, Galaxy Nexus phones)
+It has been tested on a Nexus One, Nexus S, Galaxy Nexus phones
+

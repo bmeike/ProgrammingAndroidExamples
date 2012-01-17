@@ -2,20 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:id="@+id/controllayout"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentTop="true"
     >
 <ImageButton
 	android:id="@+id/recordstop"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:src="@drawable/record"
     />
 <ImageButton
 	android:id="@+id/play"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:src="@drawable/play"
@@ -23,7 +23,7 @@
     />
 <TextView
 	android:id="@+id/time"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:layout_marginBottom="20dp"

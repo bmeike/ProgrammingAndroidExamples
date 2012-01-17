@@ -2,19 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:id="@+id/mainlayout"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     >
 <ImageButton
 	android:id="@+id/recordstop"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:src="@drawable/record"
     />
 <ImageButton
 	android:id="@+id/play"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:src="@drawable/play"
@@ -22,7 +22,7 @@
     />
 <TextView
 	android:id="@+id/time"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:background="#fff"
@@ -33,7 +33,7 @@
     />
 <Button
 	android:id="@+id/register"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:text="Register With System"

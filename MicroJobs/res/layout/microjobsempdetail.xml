@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-android:layout_width="fill_parent"
-android:layout_height="fill_parent"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
 xmlns:android="http://schemas.android.com/apk/res/android"
 android:orientation="vertical"
 >
@@ -49,12 +49,12 @@ android:layout_below="@+id/txtContact"
 >
 </TextView>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/tblWeb" 
-    android:layout_width="fill_parent" 
+    android:layout_width="match_parent" 
     android:layout_height="wrap_content" 
     android:layout_below="@+id/lblWebsite"
     >
      <TableRow 
-          android:layout_width="fill_parent" 
+          android:layout_width="match_parent" 
           android:layout_height="wrap_content"> 
           	<ImageButton android:text="Dial" android:id="@+id/btnBrowser"/>
 			<TextView
@@ -67,12 +67,12 @@ android:layout_below="@+id/txtContact"
      </TableRow> 
 </TableLayout>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/tblRating" 
-    android:layout_width="fill_parent" 
+    android:layout_width="match_parent" 
     android:layout_height="wrap_content" 
     android:layout_below="@+id/tblWeb"
     >
      <TableRow 
-          android:layout_width="fill_parent" 
+          android:layout_width="match_parent" 
           android:layout_height="wrap_content"> 
 			<TextView
 			android:id="@+id/lblRating"
@@ -150,12 +150,12 @@ android:layout_below="@+id/txtZIP"
 >
 </TextView>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/tblPhone" 
-    android:layout_width="fill_parent" 
+    android:layout_width="match_parent" 
     android:layout_height="wrap_content" 
     android:layout_below="@+id/lblPhone"
     >
      <TableRow 
-          android:layout_width="fill_parent" 
+          android:layout_width="match_parent" 
           android:layout_height="wrap_content"> 
           	<ImageButton android:text="Dial" android:id="@+id/btnPhone"/>
 			<TextView

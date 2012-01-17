@@ -2,19 +2,19 @@
 
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:id="@+id/video_layout"
         android:orientation="vertical"
         >
     <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@color/medium_gray"
             >
         <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@color/medium_gray"
@@ -29,14 +29,14 @@
                     android:id="@+id/simple_video_title_edit"
                     android:height="@dimen/text_edit_height"
                     android:layout_weight="1"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:lines="1"
                     android:singleLine="true"
                     />
         </LinearLayout>
         <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@color/medium_gray"
@@ -51,14 +51,14 @@
                     android:id="@+id/simple_video_description_edit"
                     android:height="@dimen/text_edit_height"
                     android:layout_weight="1"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:lines="1"
                     android:singleLine="true"
                     />
         </LinearLayout>
        <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@color/medium_gray"
@@ -73,7 +73,7 @@
                     android:id="@+id/simple_video_media_id_edit"
                     android:height="@dimen/text_edit_height"
                     android:layout_weight="1"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:lines="1"
                     android:singleLine="true"
@@ -90,7 +90,7 @@
     <!--The list of video data. -->
     <ListView
             android:id="@+id/simple_video_list"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             />
 </LinearLayout>

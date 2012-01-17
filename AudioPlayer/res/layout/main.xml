@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     >
 <Button
 	android:id="@+id/audioplayer"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -14,7 +14,7 @@
     />
 <Button
 	android:id="@+id/audioplayerwmediacontroller"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -22,7 +22,7 @@
     />
 <Button
 	android:id="@+id/audioplayerwaudiotrack"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -30,7 +30,7 @@
     />
 <Button
 	android:id="@+id/videoplayer"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -38,7 +38,7 @@
     />
 <Button
 	android:id="@+id/audiorecorder"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -46,7 +46,7 @@
     />
 <Button
 	android:id="@+id/audiorecorderwaudiorecord"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -54,7 +54,7 @@
     />
 <Button
 	android:id="@+id/audiorecorderintent"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -62,7 +62,7 @@
     />
 <Button
 	android:id="@+id/videorecorder"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -70,7 +70,7 @@
     />
 <Button
 	android:id="@+id/videorecorderintent"
-	android:layout_width="fill_parent"
+	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
