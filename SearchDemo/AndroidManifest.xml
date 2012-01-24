@@ -16,14 +16,13 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            
         	<meta-data android:name="android.app.default_searchable" android:value=".searchdemo.SearchActivity" />
-        </activity>
-        
-         <activity android:name=".searchdemo.SearchActivity" >
-            <intent-filter >
-                <action android:name="android.intent.action.SEARCH" />
-            </intent-filter>
-        	<meta-data android:name="android.app.searchable" android:resource="@xml/searchxml"/>
+        	
+<!--    			Comment out the above meta-data that refers to .searchdemo.SearchActivity and uncomment the one  -->
+<!--    			below to use the Search based on the local database -->
+
+<!--         	<meta-data android:name="android.app.default_searchable" android:value=".searchdemo.SearchDBActivity" /> -->
         </activity>
         
        	<provider android:name=".searchdemo.CustomSearchSuggestionProvider"
@@ -32,6 +31,28 @@
 		          android:writePermission="com.oreilly.demo.android.pa.searchdemo.CustomSearchSuggestionProvider.WRITE_MY_DATA">
   		  				<path-permission android:pathPrefix="/search_suggest_query" android:readPermission="android.permission.GLOBAL_SEARCH" />
 		</provider>
+		
+<!--        	Comment out the above provider that uses .searchdemo.CustomSearchSuggestionProvider and uncomment the -->
+<!--        	one below that uses .searchdemo.SearchDBProvider to enable usage of the Search based on the local database -->
+		
+<!--         <provider android:name=".searchdemo.SearchDBProvider" -->
+<!-- 		          android:authorities="com.oreilly.demo.android.pa.searchdemo.SearchDBProvider"> -->
+<!--   		  				<path-permission android:pathPrefix="/search_suggest_query" android:readPermission="android.permission.GLOBAL_SEARCH" /> -->
+<!-- 		</provider> -->
+
+		<activity android:name=".searchdemo.SearchActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        	<meta-data android:name="android.app.searchable" android:resource="@xml/searchxml"/>
+        </activity>
+        
+         <activity android:name=".searchdemo.SearchDBActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        	<meta-data android:name="android.app.searchable" android:resource="@xml/searchdbxml"/>
+        </activity>
     </application>
 
 </manifest>

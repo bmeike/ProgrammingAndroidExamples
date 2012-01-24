@@ -28,16 +28,7 @@ public class MainActivity extends Activity {
 	 }
 	 
 	 @Override
-	 public boolean onCreateOptionsMenu(Menu menu) {	
-		 MenuItem search = menu.add(Menu.NONE, Menu.NONE, 0, R.string.search);
-		 search.setIcon(android.R.drawable.ic_search_category_default);
-		 search.setOnMenuItemClickListener(new OnMenuItemClickListener() {
-			public boolean onMenuItemClick(MenuItem _menuItem) {
-				onSearchRequested();
-				return true;
-			}
-		 });
-    	
+	 public boolean onCreateOptionsMenu(Menu menu) {	    	
 		 MenuItem clearhistory = menu.add(Menu.NONE,Menu.NONE,1, R.string.menu_clearhistory);
 		 clearhistory.setIcon(android.R.drawable.ic_delete);
 		 clearhistory.setOnMenuItemClickListener(new OnMenuItemClickListener() {
