@@ -38,7 +38,7 @@ public class SearchDBProvider extends ContentProvider {
 	@Override
 	public boolean onCreate() {
 		try {
-			SearchDBActivity.initializeSearchLogic(getContext());
+			SearchActivity.initializeSearchLogic(getContext());
 		} catch (Exception e) {
 			e.printStackTrace();
 			return false;
@@ -101,21 +101,21 @@ public class SearchDBProvider extends ContentProvider {
 		query = query.toLowerCase();
 		String[] columns = new String[] {
 											BaseColumns._ID,
-											SearchDB.SONNETNUM,
-											SearchDB.LINETXT,
+											SearchDBLogic.SONNETNUM,
+											SearchDBLogic.LINETXT,
 											SearchManager.SUGGEST_COLUMN_INTENT_DATA_ID
 										};
 
-		return SearchDBActivity.SEARCHDB.searchDB(query, columns);
+		return ((SearchDBLogic) SearchActivity.SEARCHLOGIC).searchDB(query, columns);
     }
 
     private Cursor search(String query) {
-    	return SearchDBActivity.SEARCHDB.searchDB(query);
+    	return ((SearchDBLogic) SearchActivity.SEARCHLOGIC).searchDB(query);
     }
 
     private Cursor getSonnet(Uri uri) {
     	String rowId = uri.getLastPathSegment();
-    	return SearchDBActivity.SEARCHDB.getSonnetCursor(Integer.parseInt(rowId));
+    	return ((SearchDBLogic) SearchActivity.SEARCHLOGIC).getSonnetCursor(Integer.parseInt(rowId));
     }
 
 }

@@ -23,7 +23,7 @@ import android.widget.TextView;
 public class SearchActivity extends ListActivity {
 	public final static String CONTENT = "content://";
 	
-	public static SearchLogic SEARCHLOGIC;
+	public static SearchLogicInterface SEARCHLOGIC;
 	
 	public static void initializeSearchLogic(Context context) throws Exception {
 		initializeSearchLogic(context, R.raw.sonnets);
@@ -31,7 +31,11 @@ public class SearchActivity extends ListActivity {
 	
 	public static void initializeSearchLogic(Context context, int resourceId) throws Exception {
 		if(SEARCHLOGIC == null) {
-			SEARCHLOGIC = new SearchLogic(context, resourceId);
+			// if UseDBSearchLogic (in res/values/bool.xml) is true then use the SearchDBLogic else use SearchLogic
+			
+			SEARCHLOGIC = context.getResources().getBoolean(R.bool.UseDBSearchLogic) ? 
+								new SearchDBLogic(context, resourceId) : 
+								new SearchLogic(context, resourceId);
 		}
 	}
 	

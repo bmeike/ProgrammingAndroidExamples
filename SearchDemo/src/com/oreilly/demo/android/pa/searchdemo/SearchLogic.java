@@ -10,7 +10,7 @@ import java.util.Iterator;
 
 import android.content.Context;
 
-public class SearchLogic {
+public class SearchLogic implements SearchLogicInterface {
 	private Sonnet[] sonnets;
 	private HashMap<String, HashSet<SonnetRef>> termindex;
 	

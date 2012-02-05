@@ -4,7 +4,9 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="14" />
+    <!--  this is primarily built for android 2.3+, we include the target for 3.0+ so we can use the searchwidget-->
+    
+    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="11" />  
 
     <application
         android:icon="@drawable/icon"
@@ -18,11 +20,6 @@
             </intent-filter>
             
         	<meta-data android:name="android.app.default_searchable" android:value=".searchdemo.SearchActivity" />
-        	
-<!--    			Comment out the above meta-data that refers to .searchdemo.SearchActivity and uncomment the one  -->
-<!--    			below to use the Search based on the local database -->
-
-<!--         	<meta-data android:name="android.app.default_searchable" android:value=".searchdemo.SearchDBActivity" /> -->
         </activity>
         
        	<provider android:name=".searchdemo.CustomSearchSuggestionProvider"
@@ -34,6 +31,7 @@
 		
 <!--        	Comment out the above provider that uses .searchdemo.CustomSearchSuggestionProvider and uncomment the -->
 <!--        	one below that uses .searchdemo.SearchDBProvider to enable usage of the Search based on the local database -->
+<!-- 			ALSO: change res/values/bool.xml UseDBSearchLogic to true -->
 		
 <!--         <provider android:name=".searchdemo.SearchDBProvider" -->
 <!-- 		          android:authorities="com.oreilly.demo.android.pa.searchdemo.SearchDBProvider"> -->
