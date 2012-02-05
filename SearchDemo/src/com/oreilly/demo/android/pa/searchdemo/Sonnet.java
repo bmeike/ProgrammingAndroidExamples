@@ -2,13 +2,13 @@ package com.oreilly.demo.android.pa.searchdemo;
 
 public class Sonnet {
 	public int num;
-	public String number;
+	public String title;
 	public String[] lines;
 	
 	public Sonnet(String n, String[] lins) {
-		number = n;
+		title = n;
 		lines = lins;
-		num = RomanNum.convert(number);
+		num = RomanNum.convert(title);
 	}
 	
 	private static class RomanNum {

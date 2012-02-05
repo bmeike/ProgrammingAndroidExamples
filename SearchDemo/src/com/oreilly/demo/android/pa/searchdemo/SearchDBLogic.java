@@ -113,7 +113,7 @@ public class SearchDBLogic implements SearchLogicInterface {
 						Sonnet sonnet = new Sonnet(num, ls.toArray(new String[size]));
 						if(sql != null) {
 							for(int i=0;i<size;i++) {
-								sql.addSonnet(id++, sonnet.num, sonnet.number, i, sonnet.lines[i]);
+								sql.addSonnet(id++, sonnet.num, sonnet.title, i, sonnet.lines[i]);
 							}
 						}
 					} 

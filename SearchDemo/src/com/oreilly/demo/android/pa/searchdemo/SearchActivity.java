@@ -62,7 +62,7 @@ public class SearchActivity extends ListActivity {
          	txt.setVisibility(View.VISIBLE);
         } else if(son != null){
         	TextView txt = (TextView) findViewById(R.id.title);
-         	txt.setText("Sonnet ".intern() + son.number);
+         	txt.setText("Sonnet ".intern() + son.title);
          	txt.setVisibility(View.VISIBLE);
         	for(int i=0;i<son.lines.length;i++) {
         		TextView tline = (TextView) findViewById(getResources().getIdentifier(("line".intern()) + (i+1), "id".intern(), getPackageName()));
