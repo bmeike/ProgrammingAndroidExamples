@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="match_parent"
-    android:layout_height="match_parent"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
 	>
 <ScrollView
-	android:layout_width="match_parent"
-    android:layout_height="match_parent"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     >
 <LinearLayout 
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     >
   <Button
 	android:id="@+id/sensorsaccel"
-	android:layout_width="match_parent"
+	android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -22,7 +22,7 @@
     />  
   <Button
 	android:id="@+id/sensorgyroscope"
-	android:layout_width="match_parent"
+	android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -30,7 +30,7 @@
     />
    <Button
 	android:id="@+id/sensorrotate"
-	android:layout_width="match_parent"
+	android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -38,7 +38,7 @@
     />
      <Button
 	android:id="@+id/sensorlinear"
-	android:layout_width="match_parent"
+	android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -46,7 +46,7 @@
     />
      <Button
 	android:id="@+id/sensorgravity"
-	android:layout_width="match_parent"
+	android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -54,7 +54,7 @@
     />
   <Button
 	android:id="@+id/sensorlight"
-	android:layout_width="match_parent"
+	android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -62,7 +62,7 @@
     />
   <Button
 	android:id="@+id/sensormagnetic"
-	android:layout_width="match_parent"
+	android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -70,7 +70,7 @@
     />
   <Button
 	android:id="@+id/sensorpressure"
-	android:layout_width="match_parent"
+	android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -78,7 +78,7 @@
     />
   <Button
 	android:id="@+id/sensorproximity"
-	android:layout_width="match_parent"
+	android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -86,7 +86,7 @@
     />
    <Button
 	android:id="@+id/sensortemp"
-	android:layout_width="match_parent"
+	android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -94,7 +94,7 @@
     />
       <Button
 	android:id="@+id/gesture"
-	android:layout_width="match_parent"
+	android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
@@ -102,11 +102,19 @@
     />
       <Button
 	android:id="@+id/nfc233"
-	android:layout_width="match_parent"
+	android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
     android:text="NFC - 2.3.3"
+    />  
+    <Button
+	android:id="@+id/nfc40"
+	android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:text="NFC - 4.0 (Beam Example)"
     />  
 </LinearLayout>
 </ScrollView>

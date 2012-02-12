@@ -106,5 +106,13 @@ public class MainActivity extends Activity {
 			}
 
 		});
+		
+		findViewById(R.id.nfc40).setOnClickListener(new View.OnClickListener() {
+
+			public void onClick(View v) {
+				startActivity(new Intent(getBaseContext(), NFC40.class));  // Launch the NFC 4.0 (SDK 14) Example
+			}
+
+		});
     }
 }
