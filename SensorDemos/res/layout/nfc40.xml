@@ -37,22 +37,6 @@
     	android:textColor="#000"
     	android:text="Beam Now"
     	/>
-    <TextView 
-    	android:id="@+id/tagid"
-    	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-    	android:padding="10dp"
-    	android:textColor="#000"
-    	android:text="TagID: UNKNOWN"
-    	/>
-   	 <TextView 
-    	android:id="@+id/tagtype"
-    	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-    	android:padding="10dp"
-    	android:textColor="#000"
-    	android:text="TagType: UNKNOWN"
-    	/>
       <TextView 
     	android:id="@+id/tagdata"
     	android:layout_width="fill_parent"
