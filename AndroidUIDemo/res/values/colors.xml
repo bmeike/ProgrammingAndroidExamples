@@ -6,4 +6,5 @@
     <drawable name="lt_grey">#dddddd</drawable>
     <drawable name="grey">#999999</drawable>
     <drawable name="dk_grey">#666666</drawable>
+    <drawable name="white">#ffffffff</drawable>
 </resources>

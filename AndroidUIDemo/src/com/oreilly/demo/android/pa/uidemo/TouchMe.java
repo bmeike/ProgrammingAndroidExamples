@@ -1,5 +1,7 @@
 package com.oreilly.demo.android.pa.uidemo;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import android.app.Activity;
@@ -17,8 +19,6 @@ import android.view.View.OnFocusChangeListener;
 import android.view.View.OnKeyListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-
 import com.oreilly.demo.android.pa.uidemo.model.Dot;
 import com.oreilly.demo.android.pa.uidemo.model.Dots;
 import com.oreilly.demo.android.pa.uidemo.view.DotView;
@@ -36,35 +36,57 @@ public class TouchMe extends Activity {
         implements View.OnTouchListener
     {
         private final Dots mDots;
+        private List<Integer> tracks = new ArrayList<Integer>();
 
         TrackingTouchListener(Dots dots) { mDots = dots; }
 
         @Override public boolean onTouch(View v, MotionEvent evt) {
-            switch (evt.getAction()) {
+            int n;
+            int idx;
+            int action = evt.getAction();
+            switch (action & MotionEvent.ACTION_MASK) {
                 case MotionEvent.ACTION_DOWN:
+                case MotionEvent.ACTION_POINTER_DOWN:
+                    idx = (action & MotionEvent.ACTION_POINTER_INDEX_MASK)
+                        >> MotionEvent.ACTION_POINTER_INDEX_SHIFT;
+                    tracks.add(Integer.valueOf(evt.getPointerId(idx)));
+                    break;
+
+                case MotionEvent.ACTION_POINTER_UP:
+                    idx = (action & MotionEvent.ACTION_POINTER_INDEX_MASK)
+                        >> MotionEvent.ACTION_POINTER_INDEX_SHIFT;
+                    tracks.remove(Integer.valueOf(evt.getPointerId(idx)));
                     break;
 
                 case MotionEvent.ACTION_MOVE:
-                    for (int i = 0, n = evt.getHistorySize(); i < n; i++) {
-                        addDot(
-                            mDots,
-                            evt.getHistoricalX(i),
-                            evt.getHistoricalY(i),
-                            evt.getHistoricalPressure(i),
-                            evt.getHistoricalSize(i));
+                    n = evt.getHistorySize();
+                    for (Integer i: tracks) {
+                        idx = evt.findPointerIndex(i.intValue());
+                        for (int j = 0; j < n; j++) {
+                            addDot(
+                                mDots,
+                                evt.getHistoricalX(idx, j),
+                                evt.getHistoricalY(idx, j),
+                                evt.getHistoricalPressure(idx, j),
+                                evt.getHistoricalSize(idx, j));
+                        }
                     }
                     break;
+
 
                 default:
                     return false;
             }
 
-            addDot(
-                mDots,
-                evt.getX(),
-                evt.getY(),
-                evt.getPressure(),
-                evt.getSize());
+            for (Integer i: tracks) {
+                idx = evt.findPointerIndex(i.intValue());
+                addDot(
+                    mDots,
+                    evt.getX(idx),
+                    evt.getY(idx),
+                    evt.getPressure(idx),
+                    evt.getSize(idx));
+            }
 
             return true;
         }
@@ -124,35 +146,38 @@ public class TouchMe extends Activity {
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
 
-        dotView = new DotView(this, dotModel);
-        dotView.setOnCreateContextMenuListener(this);
-
         // install the view
         setContentView(R.layout.main);
-        ((LinearLayout) findViewById(R.id.root)).addView(dotView, 0);
 
+        // find the dots view
+        dotView = (DotView) findViewById(R.id.dots);
+        dotView.setDots(dotModel);
+
+        dotView.setOnCreateContextMenuListener(this);
         dotView.setOnTouchListener(new TrackingTouchListener(dotModel));
 
         dotView.setOnKeyListener(new OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (KeyEvent.ACTION_UP != event.getAction()) {
-                    int color = Color.BLUE;
-                    switch (keyCode) {
-                        case KeyEvent.KEYCODE_SPACE:
-                            color = Color.MAGENTA;
-                            break;
-                        case KeyEvent.KEYCODE_ENTER:
-                            color = Color.YELLOW;
-                            break;
-                        default: ;
-                    }
-
-                    makeDot(dotModel, dotView, color);
+                if (KeyEvent.ACTION_DOWN != event.getAction()) {
+                    return false;
                 }
 
-                return (keyCode < KeyEvent.KEYCODE_0)
-                    ||(keyCode > KeyEvent.KEYCODE_9);
+                int color;
+                switch (keyCode) {
+                    case KeyEvent.KEYCODE_SPACE:
+                        color = Color.MAGENTA;
+                        break;
+                    case KeyEvent.KEYCODE_ENTER:
+                        color = Color.BLUE;
+                        break;
+                    default:
+                        return false;
+                }
+
+                makeDot(dotModel, dotView, color);
+                return true;
+
             } });
 
 
@@ -194,22 +219,20 @@ public class TouchMe extends Activity {
 
     /** Install an options menu. */
     @Override public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        menu.add(Menu.NONE, 1, Menu.NONE, "Clear")
-            .setAlphabeticShortcut('x');
+        getMenuInflater().inflate(R.menu.simple_menu, menu);
         return true;
     }
 
     /** Respond to an options menu selection. */
     @Override public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case 1:
+            case R.id.menu_clear:
                 dotModel.clearDots();
                 return true;
-            default: ;
-        }
 
-        return false;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     /** Install a context menu. */
