@@ -30,16 +30,4 @@
 		<nature>com.android.ide.eclipse.adt.AndroidNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>FinchWelcome_lib-src</name>
-			<type>2</type>
-			<locationURI>_android_FinchWelcome_5a987fb2/lib-src</locationURI>
-		</link>
-		<link>
-			<name>FinchWelcome_src</name>
-			<type>2</type>
-			<locationURI>_android_FinchWelcome_5a987fb2/src</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>
