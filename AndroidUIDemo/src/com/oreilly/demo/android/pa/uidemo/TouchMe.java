@@ -176,8 +176,8 @@ public class TouchMe extends Activity {
                 }
 
                 makeDot(dotModel, dotView, color);
-                return true;
 
+                return true;
             } });
 
 
