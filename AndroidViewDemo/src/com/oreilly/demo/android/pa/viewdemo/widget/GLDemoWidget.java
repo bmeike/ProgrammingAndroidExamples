@@ -17,6 +17,7 @@ import android.graphics.BitmapFactory;
 import android.opengl.GLU;
 import android.opengl.GLUtils;
 import android.os.SystemClock;
+import android.util.AttributeSet;
 
 import com.example.android.apis.graphics.GLSurfaceView;
 import com.oreilly.demo.android.pa.viewdemo.R;
@@ -37,13 +38,11 @@ public class GLDemoWidget extends GLSurfaceView
 
     /**
      * @param context the app context
+     * @param attrs the view attributes
      */
-    public GLDemoWidget(Context context) {
-        super(context);
+    public GLDemoWidget(Context context, AttributeSet attrs) {
+        super(context, attrs);
         this.context = context;
-
-        setMinimumWidth(160);
-        setMinimumHeight(80);
 
         setRenderer(this);
 
@@ -86,14 +85,6 @@ public class GLDemoWidget extends GLSurfaceView
         indexBuf.position(0);
      }
 
-    /** @see android.view.View#onMeasure(int, int) */
-    @Override
-    protected void onMeasure(int widthSpec, int heightSpec) {
-        setMeasuredDimension(
-            getSuggestedMinimumWidth(),
-            getSuggestedMinimumHeight());
-    }
-
     /**
      * We don't need a depth buffer and don't care about our color depth.
      */
@@ -131,7 +122,7 @@ public class GLDemoWidget extends GLSurfaceView
             GL10.GL_PERSPECTIVE_CORRECTION_HINT,
             GL10.GL_FASTEST);
 
-        gl.glClearColor(0.4f, 0.2f, 0.2f, 0.5f);
+        gl.glClearColor(0.2f, 0.1f, 0.8f, 0.1f);
         gl.glShadeModel(GL10.GL_SMOOTH);
         gl.glEnable(GL10.GL_DEPTH_TEST);
 

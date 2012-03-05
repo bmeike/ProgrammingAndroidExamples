@@ -153,11 +153,11 @@ public class TransformIt extends Activity {
                         new LinearGradient(
                             0.0F,
                             0.0F,
-                            160.0F,
-                            80.0F,
+                            100.0F,
+                            10.0F,
                             new int[] {
                                 Color.BLACK, Color.RED, Color.YELLOW },
-                            new float[] { 0.2F, 0.3F, 0.2F },
+                            new float[] { 0.0F, 0.5F, 0.95F },
                             Shader.TileMode.REPEAT));
                 } }));
         lv.addView(new EffectsWidget(
@@ -168,10 +168,6 @@ public class TransformIt extends Activity {
                     paint.setMaskFilter(
                         new BlurMaskFilter(2, BlurMaskFilter.Blur.NORMAL));
                 } }));
-
-        // the OpenGL widget
-        glWidget = new GLDemoWidget(this);
-        lv.addView(glWidget);
 
         rv.addView(new EffectsWidget(
             this,
@@ -204,7 +200,6 @@ public class TransformIt extends Activity {
         rv.addView(w);
         w.setBackgroundResource(R.drawable.throbber);
 
-        //!!! Hack; should be fixed in Cupcake
         w.setOnClickListener(new OnClickListener() {
             @Override public void onClick(View v) {
                 AnimationDrawable animation

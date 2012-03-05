@@ -8,6 +8,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.oreilly.demo.android.pa.viewdemo.R;
 
@@ -39,7 +40,7 @@ public class EffectsWidget extends View {
         effect = pe;
 
         setMinimumWidth(160);
-        setMinimumHeight(80);
+        setMinimumHeight(135);
 
         setBackgroundResource(R.drawable.bg0);
     }
@@ -48,7 +49,7 @@ public class EffectsWidget extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         setMeasuredDimension(
-            getSuggestedMinimumWidth(),
+            ViewGroup.LayoutParams.MATCH_PARENT,
             getSuggestedMinimumHeight());
     }
 
