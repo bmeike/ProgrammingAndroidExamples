@@ -28,9 +28,10 @@ public class RotationTransitionAnimation
     /** the transition target */
     final View nextView;
 
+    final float xCenter;
+    final float yCenter;
+
     private final int dir;
-    private final float xCenter;
-    private final float yCenter;
     private final Camera camera = new Camera();
 
     /**
@@ -55,8 +56,22 @@ public class RotationTransitionAnimation
         curView = cur;
         nextView = nxt;
 
-        xCenter = root.getWidth() / 2.0f;
-        yCenter = root.getHeight() / 2.0f;
+        xCenter = cur.getWidth() / 2.0f;
+        yCenter = cur.getHeight() / 2.0f;
+    }
+
+    RotationTransitionAnimation(
+        View r,
+        View cur,
+        float xc,
+        float yc)
+    {
+        dir = -1;
+        root = r;
+        curView = cur;
+        nextView = null;
+        xCenter = xc;
+        yCenter = yc;
     }
 
     /**
@@ -98,8 +113,8 @@ public class RotationTransitionAnimation
                 curView.setVisibility(View.GONE);
                 nextView.setVisibility(View.VISIBLE);
                 nextView.requestFocus();
-                new RotationTransitionAnimation(-1, root, nextView, null)
-                .   animateOnce(new DecelerateInterpolator(), null);
+                new RotationTransitionAnimation(root, nextView, xCenter, yCenter)
+                   .animateOnce(new DecelerateInterpolator(), null);
             } });
     }
 

@@ -36,7 +36,9 @@ public class TransformIt extends Activity {
     /** the view up next */
     View next;
 
+    private AnimationDrawable throbber;
     private GLDemoWidget glWidget;
+    private View efxView;
 
 
     /** @see android.app.Activity#onCreate(android.os.Bundle) */
@@ -55,9 +57,12 @@ public class TransformIt extends Activity {
         // and the next one
         next = findViewById(R.id.efx_v);
         next.setVisibility(View.GONE);
-        buildEfxView(
+        throbber = buildEfxView(
             (LinearLayout) findViewById(R.id.efx_v_left),
             (LinearLayout) findViewById(R.id.efx_v_right));
+
+        glWidget = (GLDemoWidget) findViewById(R.id.efx_gl);
+        efxView = next;
 
         // install the animation click listener
         final View root = findViewById(R.id.main);
@@ -70,6 +75,7 @@ public class TransformIt extends Activity {
                     View t = cur;
                     cur = next;
                     next = t;
+                    toggleThrobber();
             } });
     }
 
@@ -136,7 +142,7 @@ public class TransformIt extends Activity {
                 } }));
     }
 
-    private void buildEfxView(LinearLayout lv, LinearLayout rv) {
+    private AnimationDrawable buildEfxView(LinearLayout lv, LinearLayout rv) {
         lv.addView(new EffectsWidget(
             this,
             1,
@@ -200,13 +206,10 @@ public class TransformIt extends Activity {
         rv.addView(w);
         w.setBackgroundResource(R.drawable.throbber);
 
-        w.setOnClickListener(new OnClickListener() {
-            @Override public void onClick(View v) {
-                AnimationDrawable animation
-                    = (AnimationDrawable) v.getBackground();
-                if (animation.isRunning()) { animation.stop(); }
-                else { animation.start(); }
-            } });
+        lv.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+        rv.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+
+        return (AnimationDrawable) w.getBackground();
     }
 
     /**
@@ -215,6 +218,7 @@ public class TransformIt extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
+        if (null != throbber) { throbber.stop(); }
         if (null != glWidget) { glWidget.onPause(); }
     }
 
@@ -224,6 +228,14 @@ public class TransformIt extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+        toggleThrobber();
         if (null != glWidget) { glWidget.onResume(); }
+    }
+
+    void toggleThrobber() {
+        if (null != throbber) {
+            if (efxView.equals(cur)) { throbber.start(); }
+            else { throbber.stop(); }
+        }
     }
 }
