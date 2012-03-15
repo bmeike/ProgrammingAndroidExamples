@@ -1,23 +1,11 @@
-Welcome to the ProgrammingAndroidExamples wiki!
+This repo contains working code for the example in O'Reilly's Programming Android; Mednieks, Dornin, Meike, Nakamura
 
-This repo contains working code for the example in O'Reilly's
+The code for the 2nd Edition of Programming Android is now available here:
 
-_Programming Android_;  Mednieks, Dornin, Meike, Nakamura
-http://shop.oreilly.com/product/0636920010364.do
+https://github.com/bmeike/ProgrammingAndroid2Examples
 
-The projects are organized by the primary chapter in which the examples appears.
+(git://github.com/bmeike/ProgrammingAndroid2Examples.git)
 
-The projects have all been tested in eclipse, using the emulator (with the exception of a couple that are hardware dependent; those projects have notes to that effect in their README files)
+The new repo has been re-organized and all the code has been updated to run under ICS
 
-If you have a question, you might check the FAQ:
-
-https://github.com/bmeike/ProgrammingAndroidExamples/wiki/FAQ
-
-To set up a project, check it out and then:
-cd $PROJ
-cp tools/ide/eclipse/project .project
-cp tools/ide/eclipse/classpath .classpath
-
-Start eclipse and use File > Import > "Existing project into workspace"
-
-Comments are welcome! Send problems and comments to programmingandroidexamples at callmeike dot net.
+This repo has been deprecated and will be removed soon
