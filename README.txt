@@ -1,7 +1,4 @@
-This repo contains working code for the example in O'Reilly's
-
-_Programming Android, 2nd Edition_;  Mednieks, Dornin, Meike, Nakamura
-http://www.amazon.com/Programming-Android-Zigurd-Mednieks/dp/1449389694/ref=sr_1_1?ie=UTF8&qid=1311005055&sr=8-1
+This repo contains working code for the example in O'Reilly's _Programming Android, 2nd Edition_;  Mednieks, Dornin, Meike, Nakamura (http://shop.oreilly.com/product/0636920023005.do)
 
 The projects have all been tested in eclipse, using the emulator (with the exception of a couple that are hardware dependent; those projects have notes to that effect in their README files)
 
