@@ -11,7 +11,7 @@
     <string name="map_menu_zoom_out">Zoom out</string> 
     <string name="map_menu_show_list">List jobs</string> 
     <string name="map_menu_set_satellite">Toggle Satellite</string>
-    <string name="map_menu_set_map">Toggle Street View</string>
+    <string name="map_menu_streetview">Launch Street View</string>
     <string name="map_menu_set_traffic">Toggle Traffic View</string>
     <string name="list_menu_back_to_map">Back to Map</string>
     <string name="list_menu_sort_by_title">Sort by Job Title</string>

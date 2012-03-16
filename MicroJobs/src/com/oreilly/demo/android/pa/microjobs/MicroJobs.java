@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -121,6 +122,7 @@ public class MicroJobs extends MapActivity {
     MicroJobsDatabase db;
     MyLocationOverlay mMyLocationOverlay;
     int latitude, longitude;
+    double[] curlocation = new double[2];
 
     /**
      * Called when the activity is first created.
@@ -151,6 +153,7 @@ public class MicroJobs extends MapActivity {
                 public void run() {
                     mc.animateTo(mMyLocationOverlay.getMyLocation());
                     mc.setZoom(16);
+                    updateCurLocation(mMyLocationOverlay.getMyLocation());
                 }
             });
 
@@ -162,7 +165,6 @@ public class MicroJobs extends MapActivity {
         mvMap.setEnabled(true);
         mvMap.setSatellite(false);
         mvMap.setTraffic(false);
-        mvMap.setStreetView(false);
 
         // start out with a general zoom
         mc.setZoom(16);
@@ -214,6 +216,7 @@ public class MicroJobs extends MapActivity {
                                 mMyLocationOverlay.getMyLocation();
                             if (myLocation != null) {
                                 mc.animateTo(myLocation);
+                                updateCurLocation(myLocation);
                             }
                         }
                         catch (Exception e) {
@@ -223,6 +226,7 @@ public class MicroJobs extends MapActivity {
                     } else {
                         mMyLocationOverlay.disableMyLocation();
                         mc.animateTo(hmLocations.get(vt.getText()));
+                        updateCurLocation(hmLocations.get(vt.getText()));
                     }
                     mvMap.invalidate();
                 }
@@ -268,7 +272,7 @@ public class MicroJobs extends MapActivity {
         menu.add(Menu.NONE, 0, Menu.NONE, getString(R.string.map_menu_zoom_in));
         menu.add(Menu.NONE, 1, Menu.NONE, getString(R.string.map_menu_zoom_out));
         menu.add(Menu.NONE, 2, Menu.NONE, getString(R.string.map_menu_set_satellite));
-        menu.add(Menu.NONE, 3, Menu.NONE, getString(R.string.map_menu_set_map));
+        menu.add(Menu.NONE, 3, Menu.NONE, getString(R.string.map_menu_streetview));
         menu.add(Menu.NONE, 4, Menu.NONE, getString(R.string.map_menu_set_traffic));
         menu.add(Menu.NONE, 5, Menu.NONE, getString(R.string.map_menu_show_list));
         return supRetVal;
@@ -293,8 +297,10 @@ public class MicroJobs extends MapActivity {
                 mvMap.setSatellite(!mvMap.isSatellite());
                 return true;
             case 3:
-                // Toggle street views
-                mvMap.setStreetView(!mvMap.isStreetView());
+                // Launch StreetView with lat/lon of center of current map
+            	String uri = "google.streetview:cbll="+curlocation[0]+","+curlocation[1]+"&cbp=1,0,,0,1.0&mz="+mvMap.getZoomLevel();
+            	Intent streetView = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri));
+            	startActivity(streetView);
                 return true;
             case 4:
                 // Toggle traffic views
@@ -355,14 +361,31 @@ public class MicroJobs extends MapActivity {
      */
     private Location getCurrentLocation(LocationManager lm) {
         Location l = lm.getLastKnownLocation("gps");
-        if (null != l) { return l; }
+        if (null != l) { updateCurLocation(l); return l; }
 
         // getLastKnownLocation returns null if loc provider is not enabled
         l = new Location("gps");
         l.setLatitude(42.352299);
         l.setLatitude(-71.063979);
-
+        
+        updateCurLocation(l);
         return l;
+    }
+    
+    /**
+     * updates curlocation for streetview use
+     */
+    private void updateCurLocation(GeoPoint point) {
+    	curlocation[0] = ((double) point.getLatitudeE6()) / ((double) 1E6);
+    	curlocation[1] = ((double) point.getLongitudeE6()) / ((double) 1E6);
+    }
+    
+    /**
+     * updates curlocation for streetview use
+     */
+    private void updateCurLocation(Location loc) {
+    	curlocation[0] = loc.getLatitude();
+    	curlocation[1] = loc.getLongitude();
     }
 
 }
