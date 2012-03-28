@@ -246,12 +246,6 @@ public class MicroJobs extends MapActivity {
         mMyLocationOverlay.disableMyLocation();
     }
 
-    // stop tracing when application ends
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-    }
-
     /**
      * @see com.google.android.maps.MapActivity#onResume()
      */
