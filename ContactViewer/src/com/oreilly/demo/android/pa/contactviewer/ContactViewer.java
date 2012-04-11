@@ -8,7 +8,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 
 
 /**
@@ -41,7 +40,6 @@ public class ContactViewer extends FragmentActivity {
         Intent intent,
         int requestCode)
     {
-        Log.d("####", "Fragment started activity: " + useFrag);
         if (!useFrag) { startActivity(intent); }
         else if (fragment instanceof ContactsFragment) {
             launchDetailFragment(intent.getExtras());
