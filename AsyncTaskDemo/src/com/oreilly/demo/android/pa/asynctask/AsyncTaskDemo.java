@@ -80,13 +80,13 @@ public class AsyncTaskDemo extends Activity {
         ((Button) findViewById(R.id.start)).setOnClickListener(
             new View.OnClickListener() {
                 @Override public void onClick(View v) {
-                    //initGame(
+//                    initGame(
                     new AsyncInitGame(
                         dots,
                         bg,
                         game,
-                        //msg,
-                        //"basic");
+//                        msg,
+//                        "basic");
                         msg)
                     .execute("basic");
                 } });
