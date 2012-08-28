@@ -20,7 +20,11 @@ public class SearchDB {
 	public static final String SONNETSTR			= "SONNETSTR";
 	public static final String LINENUM				= "LINENUM";
 	public static final String LINETXT				= SearchManager.SUGGEST_COLUMN_TEXT_2;
-	private static final String[] COLS 				= {BaseColumns._ID, SONNETNUM, SONNETSTR, LINENUM, LINETXT};
+	private static final String[] COLS 				= {BaseColumns._ID, 
+														SONNETNUM, 
+														SONNETSTR, 
+														LINENUM, 
+														LINETXT};
 	
 	private SonnetsSQLOpenHelper sql;
 	
@@ -36,7 +40,9 @@ public class SearchDB {
 		if(cur != null) {
 			ArrayList<SonnetFragment> arr = new ArrayList<SonnetFragment>();
 			while(cur.moveToNext()) {
-				arr.add(new SonnetFragment(cur.getInt(cur.getColumnIndex(SONNETNUM)), cur.getString(cur.getColumnIndex(LINETXT))));
+				arr.add(
+						new SonnetFragment(cur.getInt(cur.getColumnIndex(SONNETNUM)), 
+					    cur.getString(cur.getColumnIndex(LINETXT))));
 			}
 			if(!arr.isEmpty()) {
 				frags = arr.toArray(new SonnetFragment[arr.size()]);
@@ -52,7 +58,8 @@ public class SearchDB {
 			String num = null;
 			ArrayList<String> arr = new ArrayList<String>();
 			while(cur.moveToNext()) {
-				if(num == null) num = cur.getString(cur.getColumnIndex(SONNETSTR));
+				if(num == null) 
+					num = cur.getString(cur.getColumnIndex(SONNETSTR));
 				arr.add(cur.getString(cur.getColumnIndex(LINETXT)));
 			}
 			if(!arr.isEmpty()) {
@@ -85,7 +92,13 @@ public class SearchDB {
         SQLiteQueryBuilder builder = new SQLiteQueryBuilder();
         builder.setTables(SONNETTABLE);
 
-        Cursor cursor = builder.query(sql.getReadableDatabase(), columns, selection, selectionArgs, null, null, sort);
+        Cursor cursor = 
+        	builder.query(sql.getReadableDatabase(), 
+        					columns, selection, 
+        					selectionArgs, 
+        					null, 
+        					null, 
+        					sort);
 
         if (cursor == null) {
             return null;
@@ -99,7 +112,8 @@ public class SearchDB {
 	private void readInSonnets(Context context, int resourceId) throws Exception {
 		BufferedReader br = null;
 		try {
-			br = new BufferedReader(new InputStreamReader(context.getResources().openRawResource(resourceId)));
+			br = new BufferedReader(
+					new InputStreamReader(context.getResources().openRawResource(resourceId)));
 			String line = null;
 			String num = null;
 			ArrayList<String> ls = new ArrayList<String>();
@@ -113,7 +127,11 @@ public class SearchDB {
 						Sonnet sonnet = new Sonnet(num, ls.toArray(new String[size]));
 						if(sql != null) {
 							for(int i=0;i<size;i++) {
-								sql.addSonnet(id++, sonnet.num, sonnet.number, i, sonnet.lines[i]);
+								sql.addSonnet(	id++, 
+												sonnet.num, 
+												sonnet.title, 
+												i, 
+												sonnet.lines[i]);
 							}
 						}
 					} 
@@ -144,7 +162,13 @@ public class SearchDB {
 		@Override
 		public void onCreate(SQLiteDatabase db) {
 			sonnetdb = db;
-			sonnetdb.execSQL("CREATE TABLE "+SONNETTABLE+" ("+BaseColumns._ID +" INTEGER, "+SONNETNUM+" INTEGER, "+SearchManager.SUGGEST_COLUMN_INTENT_DATA_ID+" TEXT, "+SONNETSTR+" TEXT, "+LINENUM+" INTEGER, "+LINETXT+" TEXT);");
+			sonnetdb.execSQL("CREATE TABLE "+SONNETTABLE+
+								" ("+BaseColumns._ID +" INTEGER, "+
+								SONNETNUM+" INTEGER, "+
+								SearchManager.SUGGEST_COLUMN_INTENT_DATA_ID+
+								" TEXT, "+SONNETSTR+" TEXT, "+
+								LINENUM+" INTEGER, "+LINETXT+
+								" TEXT);");
 		}
 
 		@Override

@@ -31,9 +31,11 @@ public class MainActivity extends Activity {
 	     });
 	     
 	     if(getResources().getBoolean(R.bool.UseDBSearchLogic)) {
-	    	 ((android.widget.TextView) findViewById(R.id.searchlogictext)).setText("Using SearchDBLogic (DB Based Search)");
+	    	 ((android.widget.TextView) findViewById(R.id.searchlogictext)).
+	    	 			setText("Using SearchDBLogic (DB Based Search)");
 	     } else {
-	    	 ((android.widget.TextView) findViewById(R.id.searchlogictext)).setText("Using SearchLogic (Basic Index System)");
+	    	 ((android.widget.TextView) findViewById(R.id.searchlogictext)).
+	    	 			setText("Using SearchLogic (Basic Index System)");
 	     }
 	 }
 	 
@@ -41,23 +43,30 @@ public class MainActivity extends Activity {
 	 public boolean onCreateOptionsMenu(Menu menu) {
 		
 		 // check to see if we are using Android 3.0+
-		 if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
+		 if(android.os.Build.VERSION.SDK_INT >= 
+			 						android.os.Build.VERSION_CODES.HONEYCOMB) {
 			 // Inflate the options menu from XML
 		     MenuInflater inflater = getMenuInflater();
 		     inflater.inflate(R.menu.search_menu, menu);
 	
 		     // Get the SearchView and set the searchable configuration
-		     SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-		     SearchView searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
+		     SearchManager searchManager = 
+		    	 		(SearchManager) getSystemService(Context.SEARCH_SERVICE);
+		     SearchView searchView = 
+		    	 	(SearchView) menu.findItem(R.id.menu_search).getActionView();
 		     searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-		     searchView.setIconifiedByDefault(false); // Do not iconify the widget; expand it by default
+		     // Do not iconify the widget; expand it by default
+		     searchView.setIconifiedByDefault(false); 
 		 }
 		 
 		 MenuItem clearhistory = menu.add(Menu.NONE,Menu.NONE,1, R.string.menu_clearhistory);
 		 clearhistory.setIcon(android.R.drawable.ic_delete);
 		 clearhistory.setOnMenuItemClickListener(new OnMenuItemClickListener() {
     		public boolean onMenuItemClick(MenuItem _menuItem) {
-    			SearchRecentSuggestions suggestions = new SearchRecentSuggestions(getBaseContext(), CustomSearchSuggestionProvider.AUTHORITY, CustomSearchSuggestionProvider.MODE);
+    			SearchRecentSuggestions suggestions = 
+    				new SearchRecentSuggestions(getBaseContext(), 
+    											CustomSearchSuggestionProvider.AUTHORITY, 
+    											CustomSearchSuggestionProvider.MODE);
     			suggestions.clearHistory();
     			return true;
     		}

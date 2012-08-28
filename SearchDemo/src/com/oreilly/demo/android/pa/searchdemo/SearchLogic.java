@@ -57,14 +57,17 @@ public class SearchLogic implements SearchLogicInterface {
 			}
 		}
 		
-		return frags.isEmpty() ? new SonnetFragment[0] : frags.toArray(new SonnetFragment[frags.size()]);
+		return frags.isEmpty() ? 
+				new SonnetFragment[0] : 
+				frags.toArray(new SonnetFragment[frags.size()]);
 	}
 	
 	private static Sonnet[] readInSonnets(Context context, int resourceId, HashMap<String, HashSet<SonnetRef>> index) throws Exception {
 		ArrayList<Sonnet> sons = new ArrayList<Sonnet>();
 		BufferedReader br = null;
 		try {
-			br = new BufferedReader(new InputStreamReader(context.getResources().openRawResource(resourceId)));
+			br = new BufferedReader(
+					new InputStreamReader(context.getResources().openRawResource(resourceId)));
 			String line = null;
 			
 			String num = null;
@@ -82,7 +85,9 @@ public class SearchLogic implements SearchLogicInterface {
 								String[] words = sonnet.lines[i].split(" ".intern());
 								if(words != null) {
 									for(String word: words) {
-										while(word.endsWith(",".intern()) || word.endsWith(".".intern()) || word.endsWith("?".intern())) {
+										while(word.endsWith(",".intern()) || 
+												word.endsWith(".".intern()) || 
+												word.endsWith("?".intern())) {
 											word = word.substring(0, word.length() - 1);
 										}
 										word = word.trim().toLowerCase();

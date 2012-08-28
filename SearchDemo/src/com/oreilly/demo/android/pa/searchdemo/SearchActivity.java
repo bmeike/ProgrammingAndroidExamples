@@ -31,7 +31,8 @@ public class SearchActivity extends ListActivity {
 	
 	public static void initializeSearchLogic(Context context, int resourceId) throws Exception {
 		if(SEARCHLOGIC == null) {
-			// if UseDBSearchLogic (in res/values/bool.xml) is true then use the SearchDBLogic else use SearchLogic
+			// if UseDBSearchLogic (in res/values/bool.xml) 
+			// is true then use the SearchDBLogic else use SearchLogic
 			
 			SEARCHLOGIC = context.getResources().getBoolean(R.bool.UseDBSearchLogic) ? 
 								new SearchDBLogic(context, resourceId) : 
@@ -65,7 +66,10 @@ public class SearchActivity extends ListActivity {
          	txt.setText("Sonnet ".intern() + son.title);
          	txt.setVisibility(View.VISIBLE);
         	for(int i=0;i<son.lines.length;i++) {
-        		TextView tline = (TextView) findViewById(getResources().getIdentifier(("line".intern()) + (i+1), "id".intern(), getPackageName()));
+        		TextView tline = (TextView) 
+        							findViewById(getResources().getIdentifier(("line".intern()) +
+        									(i+1), 
+        						"id".intern(), getPackageName()));
         		if(tline != null) {
 	        		tline.setText(son.lines[i]);
 	        		tline.setVisibility(View.VISIBLE);
@@ -111,16 +115,21 @@ public class SearchActivity extends ListActivity {
     
     private void search(String query) {
     	if(query != null) {
-			SearchRecentSuggestions suggestions = new SearchRecentSuggestions(this, CustomSearchSuggestionProvider.AUTHORITY, CustomSearchSuggestionProvider.MODE);
+			SearchRecentSuggestions suggestions = 
+					new SearchRecentSuggestions(this, 
+												CustomSearchSuggestionProvider.AUTHORITY, 
+												CustomSearchSuggestionProvider.MODE);
 	        suggestions.saveRecentQuery(query, null);
 	        
 	        final SonnetFragment[] sfrags = SEARCHLOGIC.search(query);
 	        
 	        if(sfrags != null && sfrags.length > 0) {
 	        	getListView().setVisibility(View.VISIBLE);
-	        	getListView().addHeaderView(View.inflate(this, R.layout.searchheader, null), null, false);
+	        	getListView().addHeaderView(View.inflate(this, R.layout.searchheader, null), 
+	        									null, false);
 	        	
-	        	ArrayAdapter<SonnetFragment> arr = new ArrayAdapter<SonnetFragment>(this, R.layout.searchrow, sfrags);
+	        	ArrayAdapter<SonnetFragment> arr = 
+	        				new ArrayAdapter<SonnetFragment>(this, R.layout.searchrow, sfrags);
 	        	setListAdapter(arr);
 	    		getListView().setOnItemClickListener(new OnItemClickListener() {
 	    			public void onItemClick(AdapterView<?> adpt, View view, int pos, long id) {
@@ -166,7 +175,10 @@ public class SearchActivity extends ListActivity {
 		clearhistory.setIcon(android.R.drawable.ic_delete);
 		clearhistory.setOnMenuItemClickListener(new OnMenuItemClickListener() {
     		public boolean onMenuItemClick(MenuItem _menuItem) {
-    			SearchRecentSuggestions suggestions = new SearchRecentSuggestions(getBaseContext(), CustomSearchSuggestionProvider.AUTHORITY, CustomSearchSuggestionProvider.MODE);
+    			SearchRecentSuggestions suggestions = 
+    					new SearchRecentSuggestions(getBaseContext(), 
+    												CustomSearchSuggestionProvider.AUTHORITY, 
+    												CustomSearchSuggestionProvider.MODE);
     			suggestions.clearHistory();
     			return true;
     		}

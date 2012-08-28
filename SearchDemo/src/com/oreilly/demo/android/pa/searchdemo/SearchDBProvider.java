@@ -10,12 +10,18 @@ import android.net.Uri;
 import android.provider.BaseColumns;
 
 public class SearchDBProvider extends ContentProvider {
-	public final static String AUTHORITY = "com.oreilly.demo.android.pa.searchdemo.SearchDBProvider";
-	public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/sonnets");
+	public final static String AUTHORITY = 
+					"com.oreilly.demo.android.pa.searchdemo.SearchDBProvider";
+	public static final Uri CONTENT_URI = 
+					Uri.parse("content://" + AUTHORITY + "/sonnets");
 	public final static int MODE = 1;
 	
-	public static final String MIME_TYPE = ContentResolver.CURSOR_DIR_BASE_TYPE + "/vnd.oreilly.demo.android.pa.searchdemo";
-	public static final String SONNET_MIME_TYPE = ContentResolver.CURSOR_ITEM_BASE_TYPE + "/vnd.oreilly.demo.android.pa.searchdemo";
+	public static final String MIME_TYPE = 
+					ContentResolver.CURSOR_DIR_BASE_TYPE + 
+						"/vnd.oreilly.demo.android.pa.searchdemo";
+	public static final String SONNET_MIME_TYPE = 
+					ContentResolver.CURSOR_ITEM_BASE_TYPE + 
+						"/vnd.oreilly.demo.android.pa.searchdemo";
 	
 	private static final int SEARCH = 0;
 	private static final int GET_SONNET = 1;
@@ -29,8 +35,12 @@ public class SearchDBProvider extends ContentProvider {
         umatcher.addURI(AUTHORITY, "sonnets", SEARCH);
         umatcher.addURI(AUTHORITY, "sonnets/#", GET_SONNET);
         
-        umatcher.addURI(AUTHORITY, SearchManager.SUGGEST_URI_PATH_QUERY, SEARCH_SUGGEST);
-        umatcher.addURI(AUTHORITY, SearchManager.SUGGEST_URI_PATH_QUERY + "/*", SEARCH_SUGGEST);
+        umatcher.addURI(AUTHORITY, 
+        				SearchManager.SUGGEST_URI_PATH_QUERY, 
+        				SEARCH_SUGGEST);
+        umatcher.addURI(AUTHORITY, 
+        				SearchManager.SUGGEST_URI_PATH_QUERY + "/*", 
+        				SEARCH_SUGGEST);
         
         return umatcher;
     }
