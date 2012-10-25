@@ -140,7 +140,7 @@ public class RotationTransitionAnimation
         Interpolator interpolator,
         Animation.AnimationListener listener)
     {
-        setDuration(700);
+        setDuration(2000);
         setInterpolator(interpolator);
         setAnimationListener(listener);
         root.startAnimation(this);
