@@ -12,12 +12,12 @@ public class Dots {
         /** @param dots the dots that changed. */
         void onDotsChange(Dots dots);
     }
-    
+
     private final LinkedList<Dot> dots = new LinkedList<Dot>();
     private final List<Dot> safeDots = Collections.unmodifiableList(dots);
-    
+
     private DotsChangeListener dotsChangeListener;
-    
+
     /** @param l set the change listener. */
     public void setDotsChangeListener(DotsChangeListener l) {
         dotsChangeListener = l;
@@ -27,7 +27,7 @@ public class Dots {
     public Dot getLastDot() {
         return (dots.size() <= 0) ? null : dots.getLast();
     }
-    
+
     /** @return immutable list of dots. */
     public List<Dot> getDots() { return safeDots; }
 
@@ -50,7 +50,7 @@ public class Dots {
 
     private void notifyListener() {
         if (null != dotsChangeListener) {
-            dotsChangeListener.onDotsChange(this); 
+            dotsChangeListener.onDotsChange(this);
         }
     }
 }

@@ -19,6 +19,7 @@ import android.view.View.OnFocusChangeListener;
 import android.view.View.OnKeyListener;
 import android.widget.Button;
 import android.widget.EditText;
+
 import com.oreilly.demo.android.pa.uidemo.model.Dot;
 import com.oreilly.demo.android.pa.uidemo.model.Dots;
 import com.oreilly.demo.android.pa.uidemo.view.DotView;
@@ -96,7 +97,7 @@ public class TouchMe extends Activity {
                 x,
                 y,
                 Color.CYAN,
-                (int) ((p * s * DOT_DIAMETER) + 1));
+                (int) ((p + 0.5) * (s + 0.5) * DOT_DIAMETER));
         }
     }
 
@@ -211,8 +212,10 @@ public class TouchMe extends Activity {
         dotModel.setDotsChangeListener(new Dots.DotsChangeListener() {
             @Override public void onDotsChange(Dots dots) {
                 Dot d = dots.getLastDot();
-                tb1.setText((null == d) ? "" : String.valueOf(d.getX()));
-                tb2.setText((null == d) ? "" : String.valueOf(d.getY()));
+                // This code makes the UI unacceptably unresponsive.
+                // ... investigating
+                //tb1.setText((null == d) ? "" : String.valueOf(d.getX()));
+                //tb2.setText((null == d) ? "" : String.valueOf(d.getY()));
                 dotView.invalidate();
             } });
     }
