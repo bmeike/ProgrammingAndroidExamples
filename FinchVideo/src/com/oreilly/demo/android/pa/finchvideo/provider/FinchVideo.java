@@ -23,10 +23,10 @@ public class FinchVideo {
     public static final int MEDIA_ID_COLUMN = 8;
 
     public static final String AUTHORITY =
-            "com.oreilly.demo.pa.finchvideo.FinchVideo";
+            "com.oreilly.demo.android.pa.finchvideo.FinchVideo";
 
     public static final String SIMPLE_AUTHORITY =
-            "com.oreilly.demo.pa.finchvideo.SimpleFinchVideo";
+            "com.oreilly.demo.android.pa.finchvideo.SimpleFinchVideo";
     /**
      * Simple Videos columns
      */

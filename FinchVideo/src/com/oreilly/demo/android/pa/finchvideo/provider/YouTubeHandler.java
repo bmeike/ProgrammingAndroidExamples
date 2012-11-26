@@ -22,7 +22,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * Parses YouTube Entity data and and inserts it into the finch video content
+ * Parses YouTube entity data and and inserts it into the finch video content
  * provider.
  */
 public class YouTubeHandler implements ResponseHandler {
@@ -99,7 +99,7 @@ public class YouTubeHandler implements ResponseHandler {
                     null, null, null, null);
             int c = old.getCount();
             if (old.getCount() > 0) {
-                StringBuffer sb = new StringBuffer();
+                StringBuilder sb = new StringBuilder();
                 boolean next;
                 if (old.moveToNext()) {
                     do {

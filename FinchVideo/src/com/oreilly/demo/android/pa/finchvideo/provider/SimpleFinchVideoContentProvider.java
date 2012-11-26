@@ -21,9 +21,6 @@ import java.util.HashMap;
  * provider that stores basic video meta-data.
  */
 public class SimpleFinchVideoContentProvider extends ContentProvider {
-    public static final String AUTHORITY =
-            "com.oreilly.demo.pa.finchvideo.SimpleFinchVideo";
-
     public static final String SIMPLE_VIDEO = "simple_video";
 
     private static final int VIDEOS = 1;
@@ -35,10 +32,10 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
 
     static {
         sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
-        sUriMatcher.addURI(AUTHORITY, FinchVideo.SimpleVideos.VIDEO_NAME,
+        sUriMatcher.addURI(FinchVideo.SIMPLE_AUTHORITY, FinchVideo.SimpleVideos.VIDEO_NAME,
                 VIDEOS);
         // use of the hash character indicates matching of an id
-        sUriMatcher.addURI(AUTHORITY,
+        sUriMatcher.addURI(FinchVideo.SIMPLE_AUTHORITY,
                 FinchVideo.SimpleVideos.VIDEO_NAME + "/#", VIDEO_ID);
 
         // example projection map, not actually used in this application
@@ -196,9 +193,8 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
         long rowId = db.insert(VIDEO_TABLE_NAME,
                 FinchVideo.SimpleVideos.VIDEO_NAME, values);
         if (rowId > 0) {
-            Uri videoURi =
-                    ContentUris.withAppendedId(
-                            FinchVideo.SimpleVideos.CONTENT_URI, rowId);
+            Uri videoURi = ContentUris.withAppendedId(
+                    FinchVideo.SimpleVideos.CONTENT_URI, rowId);
             getContext().getContentResolver().notifyChange(videoURi, null);
             return videoURi;
         }

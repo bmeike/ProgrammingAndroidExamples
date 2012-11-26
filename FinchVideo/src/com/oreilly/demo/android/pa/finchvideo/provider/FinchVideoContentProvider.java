@@ -32,7 +32,7 @@ public class FinchVideoContentProvider extends RESTfulContentProvider {
     public static final String VIDEOS_TABLE_NAME = "video";
 
     private static final String FILE_CACHE_DIR =
-            "/data/data/com.oreilly.demo.pa.finchvideo/file_cache";
+            "/data/data/com.oreilly.demo.android.pa.finchvideo/file_cache";
 
     private static final int VIDEOS = 1;
     private static final int VIDEO_ID = 2;
