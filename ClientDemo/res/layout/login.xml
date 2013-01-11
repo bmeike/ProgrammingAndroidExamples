@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="5dip"
+            android:paddingBottom="13dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip">
+            <EditText
+                android:id="@+id/username"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="250dip"
+                android:scrollHorizontally="true"
+                android:capitalize="none"
+                android:hint="Username"
+                android:autoText="false" />
+            <EditText
+                android:id="@+id/password"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="250dip"
+                android:scrollHorizontally="true"
+                android:capitalize="none"
+                android:autoText="false"
+                android:password="true"
+                android:hint="Password"
+                android:inputType="textPassword" />
+        </LinearLayout>
+    </ScrollView>
+    <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:minWidth="100dip"
+            android:text="Login" />
+	<Button
+            android:id="@+id/settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:minWidth="100dip"
+            android:text="Server Settings (to change server uri)" />
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/video_layout"
+        android:orientation="vertical"
+        >
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/medium_gray"
+            >
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/medium_gray"
+                >
+            <com.finchframework.finch.MesgEditText
+                    android:id="@+id/video_search_box"
+                    android:width="0px"
+                    android:height="40px"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/finch_video_search"
+                    android:lines="1"
+                    android:singleLine="true"
+                    />
+            <ImageButton
+                    android:id="@+id/video_update_button"
+                    android:background="@color/blue"
+                    android:layout_width="@dimen/reload_size"
+                    android:layout_height="@dimen/reload_size"
+                    />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--The list of videos-->
+    <ListView
+            android:id="@+id/video_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+    </ListView>
+</LinearLayout>

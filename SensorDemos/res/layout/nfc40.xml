@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    >
+    <TextView 
+    	android:id="@+id/headermsg"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="10dp"
+    	android:textColor="#000"
+    	android:text="Example of Android NFC Beam (Andorid 4.0+)"
+    	/>
+    <Button 
+    	android:id="@+id/close"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="5dp"
+    	android:textColor="#000"
+    	android:text="Close"
+    	/>
+    <Button
+    	android:id="@+id/beamon"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="10dp"
+    	android:textColor="#000"
+    	android:text="Beam On"
+    	/>
+    <Button
+    	android:id="@+id/beamnow"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="10dp"
+    	android:textColor="#000"
+    	android:text="Beam Now"
+    	/>
+      <TextView 
+    	android:id="@+id/tagdata"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="10dp"
+    	android:textColor="#000"
+    	android:text="TagData: NONE"
+    	/>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.oreilly.demo.android.pa.audioplayer"
+      android:versionCode="1"
+      android:versionName="1.0">
+      
+	<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+	<uses-permission android:name="android.permission.RECORD_VIDEO"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.CAMERA"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-sdk android:targetSdkVersion="14"></uses-sdk>
+	
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".MultiMedia"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AudioPlayer" android:label="Audio Player"/>
+        <activity android:name=".AudioPlayerWAudioTrack" android:label="Audio Player W AudioTrack"/>
+        <activity android:name=".AudioPlayerWMediaController" android:label="Audio Player W MediaController"/>
+        <activity android:name=".VideoPlayer" android:label="Video Player"/>
+        <activity android:name=".VideoRecorderViaIntent" android:label="Video Recorder By Intent"/>
+        <activity android:name=".AudioRecorderViaIntent" android:label="Audio Recorder By Intent"/>
+        <activity android:name=".VideoRecorder" android:label="Video Recorder"/>
+        <activity android:name=".AudioRecorder" android:label="Audio Recorder"/>
+        <activity android:name=".AudioRecorderWAudioRecord" android:label="Audio Recorder W AudioRecord"/>
+    </application>
+    
+</manifest> 

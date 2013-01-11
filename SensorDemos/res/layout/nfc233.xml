@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+    <Button 
+        android:id="@+id/close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="#000"
+        android:text="Close"
+        />
+    <Button
+        android:id="@+id/enablefdispatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:text="Enable Foreground Dispatch"
+        />
+    <Button
+        android:id="@+id/enablefpush"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:text="Enable Foreground Push"
+        />
+    <TextView 
+        android:id="@+id/tagid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:text="TagID: UNKNOWN"
+        />
+        <TextView 
+        android:id="@+id/tagtype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:text="TagType: UNKNOWN"
+        />
+      <TextView 
+        android:id="@+id/tagdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:text="TagData: NONE"
+        />
+       <EditText
+           android:id="@+id/what"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="#000"
+        android:hint="Text to write to tag"
+        android:visibility="gone"
+       />
+       <Button
+        android:id="@+id/tagwrite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:text="Enable Foreground Push"
+        android:visibility="gone"
+        />
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+                android:layout_width="match_parent" 
+                android:layout_height="match_parent" 
+                android:padding="10px"> 
+<ScrollView android:layout_width="match_parent" android:layout_height="wrap_content"> 
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/tblJobs" 
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content" >
+     <TableRow 
+          android:layout_width="match_parent" 
+          android:layout_height="wrap_content"> 
+          <Button android:text="Title" android:id="@+id/btnTitle"/> 
+          <Button android:text="Employer" android:id="@+id/btnEmployer"/> 
+     </TableRow> 
+</TableLayout>
+</ScrollView>
+</LinearLayout>

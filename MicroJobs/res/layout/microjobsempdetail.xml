@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+>
+<!-- android:background="#4000ffff" -->
+<TextView
+android:id="@+id/lblEmployer"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Employer"
+android:textStyle="bold"
+>
+</TextView>
+<TextView
+android:id="@+id/txtEmployer"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:layout_below="@+id/lblEmployer" 
+android:paddingLeft="10px"
+>
+<!-- android:background="#ffffffff" --></TextView>
+<TextView
+android:id="@+id/lblContact"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:text="Contact"
+android:textStyle="bold"
+android:layout_below="@+id/txtEmployer" 
+>
+</TextView>
+<TextView
+android:id="@+id/txtContact"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:layout_below="@+id/lblContact" 
+android:paddingLeft="10px"
+>
+</TextView>
+<TextView
+android:id="@+id/lblWebsite"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:text="Website"
+android:textStyle="bold"
+android:layout_below="@+id/txtContact" 
+>
+</TextView>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/tblWeb" 
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content" 
+    android:layout_below="@+id/lblWebsite"
+    >
+     <TableRow 
+          android:layout_width="match_parent" 
+          android:layout_height="wrap_content"> 
+          	<ImageButton android:text="Dial" android:id="@+id/btnBrowser"/>
+			<TextView
+			android:id="@+id/txtWebsite"
+			android:layout_width="300px"
+			android:layout_height="wrap_content"
+			android:paddingLeft="10px"
+			>
+			</TextView>
+     </TableRow> 
+</TableLayout>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/tblRating" 
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content" 
+    android:layout_below="@+id/tblWeb"
+    >
+     <TableRow 
+          android:layout_width="match_parent" 
+          android:layout_height="wrap_content"> 
+			<TextView
+			android:id="@+id/lblRating"
+			android:layout_width="300px"
+			android:layout_height="wrap_content"
+			android:text="Rating"
+			android:textStyle="bold"
+			>
+			</TextView>
+			<TextView
+			android:id="@+id/txtRating"
+			android:layout_width="300px"
+			android:layout_height="wrap_content"
+			android:paddingLeft="10px"
+			>
+			<!-- android:background="#ffffffff" -->
+			</TextView>
+     </TableRow> 
+</TableLayout>
+<TextView
+android:id="@+id/lblAddress"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:text="Address"
+android:textStyle="bold"
+android:layout_below="@+id/tblRating" 
+>
+</TextView>
+<TextView
+android:id="@+id/txtAddress"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:layout_below="@+id/lblAddress"
+android:paddingLeft="10px"
+>
+<!-- android:background="#ffffffff" -->
+</TextView>
+
+<TextView
+android:id="@+id/txtCity"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:layout_below="@+id/txtAddress"
+android:paddingLeft="10px"
+>
+<!-- android:background="#ffffffff" -->
+</TextView>
+
+<TextView
+android:id="@+id/txtState"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:layout_below="@+id/txtCity"
+android:paddingLeft="10px"
+>
+<!-- android:background="#ffffffff" -->
+</TextView>
+
+<TextView
+android:id="@+id/txtZIP"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:layout_below="@+id/txtState"
+android:paddingLeft="10px"
+>
+<!-- android:background="#ffffffff" -->
+</TextView>
+<TextView
+android:id="@+id/lblPhone"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:text="Phone"
+android:textStyle="bold"
+android:layout_below="@+id/txtZIP"
+>
+</TextView>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/tblPhone" 
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content" 
+    android:layout_below="@+id/lblPhone"
+    >
+     <TableRow 
+          android:layout_width="match_parent" 
+          android:layout_height="wrap_content"> 
+          	<ImageButton android:text="Dial" android:id="@+id/btnPhone"/>
+			<TextView
+			android:id="@+id/txtPhone"
+			android:layout_width="300px"
+			android:layout_height="wrap_content"
+			android:paddingLeft="10px"
+			>
+			</TextView>
+     </TableRow> 
+</TableLayout>
+<TextView
+android:id="@+id/lblEmail"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:text="Email"
+android:textStyle="bold"
+android:layout_below="@+id/tblPhone"
+>
+</TextView>
+<TextView
+android:id="@+id/txtEmail"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:layout_below="@+id/lblEmail"
+android:paddingLeft="10px"
+>
+<!-- android:background="#ffffffff" -->
+</TextView>
+</RelativeLayout>

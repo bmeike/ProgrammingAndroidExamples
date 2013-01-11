@@ -1,0 +1,12 @@
+
+<animation-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+  <item android:drawable="@drawable/throbber_f0" android:duration="160" />
+  <item android:drawable="@drawable/throbber_f1" android:duration="140" />
+  <item android:drawable="@drawable/throbber_f2" android:duration="120" />
+  <item android:drawable="@drawable/throbber_f3" android:duration="100" />
+  <item android:drawable="@drawable/throbber_f4" android:duration="120" />
+  <item android:drawable="@drawable/throbber_f5" android:duration="140" />
+  <item android:drawable="@drawable/throbber_f6" android:duration="160" />
+</animation-list>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+        <fragment
+            android:id="@+id/list_frag"
+            android:name="com.finchframework.uiframework.QueryResultsListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.finchframework.uiframework.QueryResultsListFragment" />
+        
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <fragment
+                android:id="@+id/content_frag"
+                android:name="com.finchframework.uiframework.ContentFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                class="com.finchframework.uiframework.ContentFragment" />
+
+            <fragment
+                android:id="@+id/detail_frag"
+                android:name="com.finchframework.uiframework.DetailFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                class="com.finchframework.uiframework.DetailFragment" />
+        </LinearLayout>
+
+</LinearLayout>

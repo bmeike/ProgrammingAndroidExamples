@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/widget28"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+>
+<TextView 
+android:id="@+id/lblEmployer"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:text="Employer"
+android:textStyle="bold">
+</TextView>
+
+<Spinner 
+android:id="@+id/spnEmployer" 
+android:layout_below="@id/lblEmployer" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content">
+</Spinner>
+
+<!-- JL: I can't figure out how to get rid of this.  Currently it's not used,
+but if I get rid of it, the form won't come up & I get an error instead.  At
+least it's invisible. -->
+<ListView
+android:id="@android:id/list"
+android:layout_below="@id/spnEmployer"
+android:layout_width="300px" 
+android:layout_height="wrap_content" >
+</ListView>
+
+<TextView
+android:id="@+id/lblTitle"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Title"
+android:textStyle="bold"
+android:layout_below="@id/spnEmployer" >
+</TextView>
+
+<EditText
+android:id="@+id/txtTitle"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:layout_below="@+id/lblTitle" 
+android:paddingLeft="10px"
+>
+</EditText>
+
+<TextView
+android:id="@+id/lblDescription"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:text="Description"
+android:textStyle="bold"
+android:layout_below="@+id/txtTitle" 
+>
+</TextView>
+
+<EditText
+android:id="@+id/txtDescription"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:layout_below="@+id/lblDescription" 
+android:paddingLeft="10px"
+>
+</EditText>
+
+<Button android:id="@+id/btnUpdate" 
+android:layout_below="@id/txtDescription" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" 
+android:text="Update">
+</Button>
+
+<Button android:id="@+id/btnCancel" 
+android:layout_toRightOf="@id/btnUpdate" 
+android:layout_alignTop="@id/btnUpdate" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" 
+android:text="Cancel">
+</Button>
+
+</RelativeLayout>

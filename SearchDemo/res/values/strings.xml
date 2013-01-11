@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SearchDemo</string>
+    <string name="search">Search</string>
+	<string name="search_hint">Shakespeare Sonnet Word Search</string>
+	<string name="search_description">Search Shakespeare Sonnets</string>
+	<string name="search_header">Search Results</string>
+	<string name="nosonnetsloaded">No Sonnets Loaded</string>
+	<string name="menu_clearhistory">Clear History</string>
+	<string name="maintext">Shakespeare Sonnet Word Search</string>
+</resources>

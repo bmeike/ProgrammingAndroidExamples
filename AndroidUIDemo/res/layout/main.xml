@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/lt_grey"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+
+  <com.oreilly.demo.android.pa.uidemo.view.DotView
+        android:id="@+id/dots"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        />
+    
+  <LinearLayout
+      android:orientation="horizontal"
+      android:background="@color/grey"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/text1"
+        android:text="@string/defaultText"
+        android:focusable="false"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"/>
+
+    <EditText
+        android:id="@+id/text2"
+        android:text="@string/defaultText"
+        android:focusable="false"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"/>
+  </LinearLayout>
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:background="@color/dk_grey"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/button1"
+        android:text="@string/labelRed"
+        android:textColor="@color/red"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:text="@string/labelGreen"
+        android:textColor="@color/green"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"/>
+  </LinearLayout>
+</LinearLayout>

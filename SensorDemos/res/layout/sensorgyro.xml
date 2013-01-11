@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+    <TextView 
+        android:id="@+id/gyroxtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:text="No Gyroscopic Sensor"
+        />
+    <TextView 
+        android:id="@+id/gyroytext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:text="No Gyroscopic Sensor"
+        />
+    <TextView 
+        android:id="@+id/gyroztext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:text="No Gyroscopic Sensor"
+        />
+    <TextView 
+        android:id="@+id/gyrodxtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:text="No Gyroscopic Sensor"
+        />
+    <TextView 
+        android:id="@+id/gyrodytext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:text="No Gyroscopic Sensor"
+        />
+    <TextView 
+        android:id="@+id/gyrodztext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:text="No Gyroscopic Sensor"
+        />
+</LinearLayout>

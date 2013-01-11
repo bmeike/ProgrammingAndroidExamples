@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">FinchFramework</string>
+    
+    <string name="connect">Connect a device</string>
+    <string name="discoverable">Make discoverable</string>
+
+    <!-- Options Menu -->
+    <string name="lifecycle_explorer">Lifecycle explorer</string>
+    <string name="bluetooth_tools">Bluetooth tools</string>
+    <string name="animation_example">Animation</string>
+
+</resources>

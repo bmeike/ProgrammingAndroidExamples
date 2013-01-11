@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.gesture.GestureOverlayView
+	  	xmlns:android="http://schemas.android.com/apk/res/android"
+	   android:id="@+id/gestures"
+	   android:layout_width="match_parent"
+	   android:layout_height="match_parent"
+	   android:gestureStrokeType="multiple"
+	   android:eventsInterceptionEnabled="true">
+  <LinearLayout 
+	  android:layout_width="match_parent"
+	  android:layout_height="match_parent"
+	  android:orientation="vertical">
+	<Button
+		android:id="@+id/add"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="10dp"
+		android:textColor="#000"
+		android:text="Add Gesture"
+	/>
+</LinearLayout>
+</android.gesture.GestureOverlayView>
+
+

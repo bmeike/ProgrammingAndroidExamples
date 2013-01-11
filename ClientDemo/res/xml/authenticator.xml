@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+  Be very careful here.  doing anything different than what is here will cause unexpected crashes 
+  For example, the android:label - do NOT directly put in a string, use the @string methods
+-->
+
+<account-authenticator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accountType="com.oreilly.demo.android.pa.clientserver.sync"
+    android:icon="@drawable/icon"
+    android:smallIcon="@drawable/icon"
+    android:label="@string/authlabel" 
+/>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_lifecycle"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/lifecycle_explorer"/>
+    <item
+        android:id="@+id/menu_bluetooth"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/bluetooth_tools"/>
+    <item
+        android:id="@+id/menu_animation"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/animation_example"/>
+
+</menu>

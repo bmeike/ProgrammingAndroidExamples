@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/commons-codec-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-continuation-7.0.2.v20100331.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-http-7.0.2.v20100331.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-io-7.0.2.v20100331.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-security-7.0.2.v20100331.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-server-7.0.2.v20100331.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-servlet-7.0.2.v20100331.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-util-7.0.2.v20100331.jar"/>
+	<classpathentry kind="lib" path="lib/json-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/servlet-api-2.5.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

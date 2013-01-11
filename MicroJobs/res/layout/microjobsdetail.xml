@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/widget28"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+>
+<!-- android:background="#4000ffff" -->
+<TextView
+android:id="@+id/lblTitle"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Title"
+android:textStyle="bold"
+>
+<!-- android:textColor="#FF000000" -->
+</TextView>
+<TextView
+android:id="@+id/txtTitle"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:layout_below="@+id/lblTitle" 
+android:paddingLeft="10px"
+>
+<!-- android:background="#ffffffff" -->
+<!-- android:textColor="#FF000000" -->
+</TextView>
+<TextView
+android:id="@+id/lblEmployer"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:text="Employer"
+android:textStyle="bold"
+android:layout_below="@+id/txtTitle" 
+>
+<!-- android:textColor="#FF000000" -->
+</TextView>
+<TextView
+android:id="@+id/txtEmployer"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:layout_below="@+id/lblEmployer" 
+android:paddingLeft="10px"
+>
+<!-- android:background="#ffffffff" -->
+<!-- android:textColor="#FF000000" -->
+</TextView>
+<TextView
+android:id="@+id/lblDescription"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:text="Description"
+android:textStyle="bold"
+android:layout_below="@+id/txtEmployer" 
+>
+<!-- android:textColor="#FF000000" -->
+</TextView>
+<TextView
+android:id="@+id/txtDescription"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:layout_below="@+id/lblDescription" 
+android:paddingLeft="10px"
+>
+<!-- android:background="#ffffffff" -->
+<!-- android:textColor="#FF000000" -->
+</TextView>
+<TextView
+android:id="@+id/lblContact"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:text="Contact"
+android:textStyle="bold"
+android:layout_below="@+id/txtDescription" 
+>
+<!-- android:textColor="#FF000000" -->
+</TextView>
+<TextView
+android:id="@+id/txtContact"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:layout_below="@+id/lblContact"
+android:paddingLeft="10px"
+>
+<!-- android:textColor="#FF000000" -->
+<!-- android:background="#ffffffff" -->
+</TextView>
+
+<TextView
+android:id="@+id/lblPhone"
+android:layout_width="300px"
+android:layout_height="wrap_content"
+android:text="Phone:"
+android:textStyle="bold"
+android:layout_below="@+id/txtContact"
+>
+</TextView>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/tblJobs" 
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content" 
+    android:layout_below="@+id/lblPhone"
+    >
+     <TableRow 
+          android:layout_width="match_parent" 
+          android:layout_height="wrap_content"> 
+          	<ImageButton android:text="Dial" android:id="@+id/btnPhone"/>
+			<TextView
+			android:id="@+id/txtPhone"
+			android:layout_width="300px"
+			android:layout_height="wrap_content"
+			android:paddingLeft="10px"
+			>
+			</TextView>
+     </TableRow> 
+</TableLayout>
+</RelativeLayout>

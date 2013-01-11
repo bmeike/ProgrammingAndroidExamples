@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, ListAndContentActivity!</string>
+    <string name="app_name">UIFramework</string>
+    <string name="empty_content">An empty content fragment</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="detail">Details</string>
+    <string name="content">Content</string>
+    <string name="empty_detail">An empty detail fragment</string>
+    <string name="data">Data</string>
+</resources>

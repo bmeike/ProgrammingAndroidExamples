@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.oreilly.demo.android.pa.lifecycle"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-sdk android:targetSdkVersion="14"/>
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name"
+                 android:debuggable="true">
+
+        <activity android:name=".TestActivity"
+                  android:label="Test Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <provider android:name=".TestProvider"
+                  android:authorities= "com.oreilly.demo.android.pa.lifecycle.TestProvider"
+                />
+
+        <service android:name=".TestService"
+                 android:label="Test Service"/>
+
+        <receiver
+                android:name=".TestBroadcastReceiver"
+                android:label="Test Broadcast Receiver"/>
+    </application>
+</manifest>

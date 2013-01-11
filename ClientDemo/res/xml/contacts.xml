@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContactsSource xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ContactsDataKind android:mimeType="vnd.android.cursor.item/vnd.com.oreilly.demo.android.pa.clientserver.sync.profile"
+        android:icon="@drawable/icon"
+        android:summaryColumn="data2"
+        android:detailColumn="data3"
+        android:detailSocialSummary="true" />
+
+</ContactsSource>

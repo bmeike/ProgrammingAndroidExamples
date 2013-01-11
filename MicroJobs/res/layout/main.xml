@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffc5d1d4" 
+    >
+	<com.google.android.maps.MapView
+		android:id="@+id/mapmain"
+    	android:layout_width="match_parent" 
+    	android:layout_height="match_parent"
+    	android:clickable="true"
+    	android:apiKey="0P18K0TAE0dO06EiSUFV3K85OJrH6cC1uqSIEYg"
+    />
+	<TextView  
+	    android:id="@+id/lblMicroJobsToday" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:text="MicroJobs for You Today Near:"
+		android:textSize="20dp" 
+		android:textColor="#FF000000"
+		android:layout_centerHorizontal="true" 
+		android:gravity="top" 
+    />
+	<Spinner 
+		android:id="@+id/spnLocations" 
+		android:layout_width="250dp" 
+		android:layout_height="wrap_content" 
+		android:layout_centerHorizontal="true" 
+		android:layout_marginTop="2dp" 
+		android:layout_below="@+id/lblMicroJobsToday" 
+	/> 
+	<Button 
+		android:id="@+id/btnShowList" 
+		android:layout_width="150dp" 
+		android:layout_height="wrap_content" 
+		android:text="List Jobs" 
+		android:textSize="20sp" 
+		android:gravity="center_vertical" 
+		android:layout_centerInParent="true" 
+		android:layout_alignParentBottom="true" 
+	/> 
+</RelativeLayout>

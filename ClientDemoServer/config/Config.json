@@ -1,0 +1,12 @@
+{
+	"debug" : true,
+	"httpservletport" : 8080,
+	"httpservlets" : [
+		"com.oreilly.demo.android.pa.clientserver.server.servlet.LoginServlet",
+		"com.oreilly.demo.android.pa.clientserver.server.servlet.GetFriendsServlet",
+		"com.oreilly.demo.android.pa.clientserver.server.servlet.AddFriendServlet",
+		"com.oreilly.demo.android.pa.clientserver.server.servlet.DeleteFriendServlet",
+		"com.oreilly.demo.android.pa.clientserver.server.servlet.AddUserServlet"
+	],
+	"userdata" : "config/UsersDB.json"
+}

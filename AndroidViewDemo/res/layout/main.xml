@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/xform_v"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/xform_v_left"
+            android:orientation="vertical"
+            android:background="@drawable/bg0"
+            android:layout_width="0dp"
+            android:layout_weight=".05"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/xform_v_right"
+            android:orientation="vertical"
+            android:background="@drawable/bg0"
+            android:layout_width="0dp"
+            android:layout_weight=".05"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/efx_v"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/efx_v_left"
+            android:orientation="vertical"
+            android:background="@drawable/bg0"
+            android:layout_width="0dp"
+            android:layout_weight=".05"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/efx_v_right"
+            android:orientation="vertical"
+            android:background="@drawable/bg0"
+            android:layout_width="0dp"
+            android:layout_weight=".05"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.oreilly.demo.android.pa.viewdemo.widget.GLDemoWidget
+            android:id="@+id/efx_gl"
+            android:layout_width="match_parent"
+            android:layout_weight=".03"
+            android:layout_height="0dp" />    
+    <!-- 
+    -->    
+</LinearLayout>

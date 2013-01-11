@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.oreilly.demo.android.pa.sensordemo"
+      android:versionCode="1"
+      android:versionName="1.0">
+      
+    <!-- 
+    	Change the uses-sdk to 
+			<uses-sdk android:minSdkVersion="9" /> 
+		to run on a 2.3.1 device and be able to 
+    	detect android.nfc.action.NDEF_DISCOVERED intents (and thus read a nfc tag)
+    -->
+    <uses-sdk android:minSdkVersion="10" /> 
+    
+	<uses-feature android:name="android.hardware.nfc" android:required="true" />
+	<uses-permission android:name="android.permission.NFC" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+    
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".MainActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+		<activity android:name=".GestureView" />
+		<activity android:name=".GestureAdd" />
+		<activity android:name=".SensorAccel" />
+		<activity android:name=".SensorGyro" />
+		<activity android:name=".SensorLight" />
+		<activity android:name=".SensorMagnetic" />
+		<activity android:name=".SensorRotationVector" />
+		<activity android:name=".SensorPressure" />
+		<activity android:name=".SensorProximity" />
+		<activity android:name=".SensorTemp" />
+		<activity android:name=".SensorLinearAcceleration" />
+		<activity android:name=".SensorGravity" />
+		<activity android:name=".NFC" android:theme="@android:style/Theme.Dialog">
+			<intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+		</activity>
+		<activity android:name=".NFC233">
+            <!-- listen for android.nfc.action.NDEF_DISCOVERED -->
+			<intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <data android:mimeType="text/*" />
+            </intent-filter>
+            
+            <!-- 
+            	 Add a technology filter - Be sure to comment out the 
+            	 android.nfc.action.NDEF_DISCOVERED intent-filter or else 
+            	 that will get preference 
+             -->
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+
+            <meta-data android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfcfilter"
+            />
+		</activity>
+		
+		<activity android:name=".NFC40">
+            <intent-filter>
+				  <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+				  <category android:name="android.intent.category.DEFAULT"/>
+				  <data android:mimeType="application/com.oreilly.demo.android.pa.sensordemo"/>
+			</intent-filter>
+		</activity>
+
+        <service android:name=".Accessibility">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest> 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="80px">
+	<TextView android:text="Some text" android:id="@+id/TextView01"
+		android:layout_width="0px" android:layout_weight="1"
+		android:layout_height="match_parent" android:textSize="40dip"
+		android:padding="10dip" />
+	<CheckBox android:id="@+id/CheckBox01" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" style='"?android:attr/starStyle"' />
+	<ToggleButton android:id="@+id/ToggleButton01"
+		android:visibility="visible" android:height="60px"
+		android:layout_width="80px" android:layout_height="60px" />
+
+
+</LinearLayout>

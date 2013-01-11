@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MicroJobs</string>
+    <string name="show_list">Show List of Jobs</string>
+    <string name="list_name">List of MicroJobs</string>
+    <string name="jobs_detail_name">Job Detail</string>
+    <string name="emp_detail_name">Employer Detail</string>
+    <string name="add_job_name">Add Job</string>
+    <string name="edit_job_name">Edit Job</string>
+    <string name="map_menu_zoom_in">Zoom in</string> 
+    <string name="map_menu_zoom_out">Zoom out</string> 
+    <string name="map_menu_show_list">List jobs</string> 
+    <string name="map_menu_set_satellite">Toggle Satellite</string>
+    <string name="map_menu_streetview">Launch Street View</string>
+    <string name="map_menu_set_traffic">Toggle Traffic View</string>
+    <string name="list_menu_back_to_map">Back to Map</string>
+    <string name="list_menu_sort_by_title">Sort by Job Title</string>
+    <string name="list_menu_sort_by_employer">Sort by Employer</string>
+    <string name="list_menu_get_employer_detail">Show Employer Info</string>
+    <string name="list_menu_add_job">Add A New Job</string>
+    <string name="detail_menu_back_to_list">Back to List of Jobs</string>
+    <string name="detail_menu_employer_info">Detailed Employer Info</string>
+    <string name="detail_menu_delete_job">Delete This Job</string>
+    <string name="detail_menu_edit_job">Edit This Job</string>
+    <string name="emp_detail_menu_back_to_job_info">Back to Job Info</string>
+    <string name="db_name">MicroJobs</string>
+    <string name="MicroJobsDatabase_onCreate">"
+CREATE TABLE jobs (_id INTEGER PRIMARY KEY AUTOINCREMENT, employer_id INTEGER, title TEXT, description TEXT, start_time INTEGER, end_time INTEGER, status INTEGER);
+CREATE TABLE employers( _id INTEGER, employer_name TEXT, contact_name TEXT, website TEXT, rating INTEGER, street TEXT, city TEXT, state TEXT, zip TEXT, phone TEXT, email TEXT, latitude INTEGER, longitude INTEGER);
+CREATE TABLE workers( _id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, username TEXT, passhash TEXT, rating INTEGER, street TEXT, city TEXT, state TEXT, zip TEXT, phone TEXT, email TEXT, loc1_name TEXT, loc1_lat INTEGER, loc1_long INTEGER, loc2_name TEXT, loc2_lat INTEGER, loc2_long INTEGER, loc3_name TEXT, loc3_lat INTEGER, loc3_long INTEGER);
+CREATE TABLE status( _id INTEGER PRIMARY KEY AUTOINCREMENT, status TEXT);
+INSERT INTO status (_id , status) VALUES (NULL, 'Filled');
+INSERT INTO status (_id , status) VALUES (NULL, 'Applied For');
+INSERT INTO status (_id , status) VALUES (NULL, 'Open');
+INSERT INTO workers(_id, name, username, rating, passhash, street, city, state, zip, phone, email, loc1_name, loc1_lat, loc1_long, loc2_name, loc2_lat, loc2_long, loc3_name, loc3_lat, loc3_long) VALUES (NULL, 'Larry Dickman', 'LD',  50,'', '1 Main Street', 'Boston', 'MA', '01000', '6175551212','Larry@gmail.net', 'Boston', 42358897, -71057795, 'Cambridge, MA', 42359368, -71094208, 'GooglePlex', 37423269,-122084917);
+INSERT INTO employers (_id, employer_name, contact_name, website, rating, street, city, state, zip, phone, email, latitude, longitude) VALUES (1, 'Boston Pizza', 'Mike Dukakis', 'www.bostonpizza.com', 40, '40 Boylston Street', 'Boston', 'MA', '01000', '6175551212', 'jobs@BostonPizza.com', 42352299  , -71063979 );
+INSERT INTO employers (_id, employer_name, contact_name, website, rating, street, city, state, zip, phone, email, latitude, longitude) VALUES (2, 'New England Hardware', 'Bob Vila', 'www.newenglandhardware.com', 30, '100 Tremont Street', 'Boston', 'MA', '01000', '6175551212', 'jobs@NEH.com', 42357397 , -71061295);
+INSERT INTO employers (_id, employer_name, contact_name, website, rating, street, city, state, zip, phone, email, latitude, longitude) VALUES (3, 'Cheers Bar', 'Sam Neal', 'www.cheersbar.com', 50, '10 Newbury Street', 'Boston', 'MA', '01000', '6175551212', 'sam@Cheers.com', 42352466, -71071684);
+INSERT INTO employers (_id, employer_name, contact_name, website, rating, street, city, state, zip, phone, email, latitude, longitude) VALUES (4, 'West Coast Lumber', 'Harry Truman', 'www.westcoastlumber.com', 35, '455 W Evelyn Ave', 'Mountain View', 'CA', '94041', '6505551212', 'jobs@westcoastlumber.com', 37393133, -122074941);
+INSERT INTO employers (_id, employer_name, contact_name, website, rating, street, city, state, zip, phone, email, latitude, longitude) VALUES (5, 'Google', 'Eric Schmidt', 'www.google.com', 50, '1600 Amphitheatre Parkway', 'Mountain View', 'CA', '94041', '6502530000', 'jobs@google.com', 37423269, -122082667);
+INSERT INTO employers (_id, employer_name, contact_name, website, rating, street, city, state, zip, phone, email, latitude, longitude) VALUES (6, 'Shakes Electronics', 'Elvis Presley', 'www.shakes.com', 35, '340 Portage Ave', 'Palo Alto', 'CA', '94306', '6504962000', 'jobs@shakes.com', 37422404, -122137609);
+INSERT INTO jobs (_id, employer_id, title, description, start_time, end_time, status) VALUES (NULL, 1, 'Busboy', 'Need a person to help clean tables for a few hours.  No experience necessary', 0, 0, 3);
+INSERT INTO jobs (_id, employer_id, title, description, start_time, end_time, status) VALUES (NULL, 3, 'Bartender apprentice', 'Help our regular bartender during rush hours.  Must be over 21', 0, 0, 2);
+INSERT INTO jobs (_id, employer_id, title, description, start_time, end_time, status) VALUES (NULL, 2, 'General help', 'Someone to help stock shelves and open the store', 0,0,1);
+INSERT INTO jobs (_id, employer_id, title, description, start_time, end_time, status) VALUES (NULL, 4, 'Carpenter apprentice', 'Assist contract carpenters in assembly of backyard storage sheds.', 0, 0, 1);
+INSERT INTO jobs (_id, employer_id, title, description, start_time, end_time, status) VALUES (NULL, 4, 'Store help', 'Help stock shelves', 0, 0, 2);
+INSERT INTO jobs (_id, employer_id, title, description, start_time, end_time, status) VALUES (NULL, 5, 'CEO Standin', 'Need impersonator to stand in for Eric Schmidt while on vacation. Must look exactly like Eric Schmidt.', 0, 0, 3);
+INSERT INTO jobs (_id, employer_id, title, description, start_time, end_time, status) VALUES (NULL, 5, 'Microsoft Advocate', 'Need lightning rod to promote use of Microsoft tools within Google.  Short term position.', 0, 0, 1);
+INSERT INTO jobs (_id, employer_id, title, description, start_time, end_time, status) VALUES (NULL, 6, 'Customer support', 'Person to help TV customers understand that, no matter what their current problem, they need a new, bigger HD TV', 0, 0, 2);
+INSERT INTO jobs (_id, employer_id, title, description, start_time, end_time, status) VALUES (NULL, 6, 'Game tester', 'Person to test new XBox games for hidden features.', 0, 0, 3);
+INSERT INTO jobs (_id, employer_id, title, description, start_time, end_time, status) VALUES (NULL, 4, 'Carpentry teacher', 'Teach customers basic carpentry skills.  Must have done commercial work as a finish carpenter.', 0, 0, 1);
+INSERT INTO jobs (_id, employer_id, title, description, start_time, end_time, status) VALUES (NULL, 4, 'Medic', 'Skilled in basic First Aid to stop bleeding of carpentry students.', 0, 0, 1);
+INSERT INTO jobs (_id, employer_id, title, description, start_time, end_time, status) VALUES (NULL, 1, 'Kitchen help', 'Assist chef in high end pizza kitchen.  No experience necessary', 0, 0, 2);
+INSERT INTO jobs (_id, employer_id, title, description, start_time, end_time, status) VALUES (NULL, 2, 'Temporary Cashier', 'Must have experience using a cash register.', 0, 0, 1);
+"</string>
+    <string name="MicroJobsDatabase_onUpgrade">"
+DROP TABLE IF EXISTS jobs
+DROP TABLE IF EXISTS employers
+DROP TABLE IF EXISTS workers
+DROP TABLE IF EXISTS status
+"</string>
+</resources>

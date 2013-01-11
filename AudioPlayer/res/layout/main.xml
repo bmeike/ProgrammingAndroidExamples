@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<Button
+	android:id="@+id/audioplayer"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:text="Audio Player"
+    />
+<Button
+	android:id="@+id/audioplayerwmediacontroller"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:text="Audio Player W Media Controller"
+    />
+<Button
+	android:id="@+id/audioplayerwaudiotrack"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:text="Audio Player W Audio Track"
+    />
+<Button
+	android:id="@+id/videoplayer"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:text="Video Player"
+    />
+<Button
+	android:id="@+id/audiorecorder"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:text="Audio Recorder"
+    />
+<Button
+	android:id="@+id/audiorecorderwaudiorecord"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:text="Audio Recorder W AudioRecord"
+    />
+<Button
+	android:id="@+id/audiorecorderintent"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:text="Audio Recorder By Intent"
+    />
+<Button
+	android:id="@+id/videorecorder"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:text="Video Recorder"
+    />
+<Button
+	android:id="@+id/videorecorderintent"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:text="Video Recorder By Intent"
+    />
+
+</LinearLayout>

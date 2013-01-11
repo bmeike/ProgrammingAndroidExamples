@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/mainlayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<ImageButton
+	android:id="@+id/recordstop"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:src="@drawable/record"
+    />
+<ImageButton
+	android:id="@+id/play"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:src="@drawable/play"
+    android:visibility="gone"
+    />
+<TextView
+	android:id="@+id/time"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="#fff"
+    android:textColor="#000"
+    android:textSize="16dp"
+    android:gravity="center"
+    android:text="0 secs"
+    />
+<Button
+	android:id="@+id/register"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text="Register With System"
+    android:visibility="gone"
+    />
+</LinearLayout>
