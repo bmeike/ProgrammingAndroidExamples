@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Editable;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -18,7 +19,6 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import com.finchframework.finch.Finch;
-import com.finchframework.finch.views.MesgEditText;
 import com.oreilly.demo.android.pa.finchvideo.provider.FinchVideo;
 
 import java.io.FileNotFoundException;
@@ -33,7 +33,7 @@ import java.io.InputStream;
 public class FinchVideoActivity extends Activity {
     SimpleCursorAdapter mAdapter;
 
-    private MesgEditText mSearchText;
+    private EditText mSearchText;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -83,8 +83,7 @@ public class FinchVideoActivity extends Activity {
 
         searchList.setAdapter(mAdapter);
 
-        mSearchText = (MesgEditText) findViewById(R.id.video_search_box);
-        mSearchText.setMesgText(r.getString(R.string.finch_video_search));
+        mSearchText = (EditText) findViewById(R.id.video_search_box);
         mSearchText.setOnEditorActionListener(
             new EditText.OnEditorActionListener() {
                 @Override
@@ -137,15 +136,28 @@ public class FinchVideoActivity extends Activity {
 
     // sends the query to the finch video content provider
     void query() {
-        if (!mSearchText.searchEmpty()) {
+        String searchText = getText();
+        if (!searchEmpty(searchText)) {
             String queryString =
                 FinchVideo.Videos.QUERY_PARAM_NAME + "=" +
-                Uri.encode(mSearchText.getText().toString());
+                Uri.encode(searchText.toString());
             Uri queryUri =
                 Uri.parse(FinchVideo.Videos.CONTENT_URI + "?" +
                     queryString);
             Cursor c = managedQuery(queryUri, null, null, null, null);
             mAdapter.changeCursor(c);
         }
+    }
+
+    private String getText() {
+        Editable editable = mSearchText.getText();
+        if (editable != null) {
+            return editable.toString();
+        }
+        return null;
+    }
+
+    private boolean searchEmpty(String text) {
+        return (text != null) && ("".equals(text));
     }
 }
