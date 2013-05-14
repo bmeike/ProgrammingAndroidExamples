@@ -24,11 +24,14 @@ public abstract class RESTfulContentProvider extends ContentProvider {
     private Map<String, UriRequestTask> mRequestsInProgress =
             new HashMap<String, UriRequestTask>();
 
-    public RESTfulContentProvider(FileHandlerFactory fileHandlerFactory) {
+    public RESTfulContentProvider() {
+    }
+
+    public void setFileHandlerFactory(FileHandlerFactory fileHandlerFactory) {
         mFileHandlerFactory = fileHandlerFactory;
     }
 
-    public abstract Uri insert(Uri uri, ContentValues cv, SQLiteDatabase db);    
+    public abstract Uri insert(Uri uri, ContentValues cv, SQLiteDatabase db);
 
     private UriRequestTask getRequestTask(String queryText) {
         return mRequestsInProgress.get(queryText);
@@ -53,10 +56,10 @@ public abstract class RESTfulContentProvider extends ContentProvider {
      *
      * @param requestTag unique tag identifying this request.
      * @return The response handler created by a subclass used to parse the
-     * request response.
+     *         request response.
      */
     protected abstract ResponseHandler newResponseHandler(String requestTag);
-    
+
     UriRequestTask newQueryTask(String requestTag, String url) {
         UriRequestTask requestTask;
 
@@ -73,7 +76,6 @@ public abstract class RESTfulContentProvider extends ContentProvider {
      * Creates a new worker thread to carry out a RESTful network invocation.
      *
      * @param queryTag unique tag that identifies this request.
-     *
      * @param queryUri the complete URI that should be access by this request.
      */
     public void asyncQueryRequest(String queryTag, String queryUri) {

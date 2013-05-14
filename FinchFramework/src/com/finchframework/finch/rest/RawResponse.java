@@ -29,75 +29,101 @@ public class RawResponse implements HttpResponse {
             Log.d(Finch.LOG_TAG, "exception from raw input stream", e);
         }
     }
+
     public StatusLine getStatusLine() {
         return null;
     }
+
     public void setStatusLine(StatusLine statusLine) {
     }
+
     public void setStatusLine(ProtocolVersion protocolVersion,
                               int i) {
     }
+
     public void setStatusLine(ProtocolVersion protocolVersion,
                               int i, String s) {
     }
+
     public void setStatusCode(int i)
-            throws IllegalStateException
-    {
+            throws IllegalStateException {
     }
+
     public void setReasonPhrase(String s)
             throws IllegalStateException {
     }
+
     public HttpEntity getEntity() {
         return mDebugEntity;
     }
+
     public void setEntity(HttpEntity httpEntity) {
     }
+
     public Locale getLocale() {
         return null;
     }
+
     public void setLocale(Locale locale) {
     }
+
     public ProtocolVersion getProtocolVersion() {
         return null;
     }
+
     public boolean containsHeader(String s) {
         return false;
     }
+
     public Header[] getHeaders(String s) {
         return new Header[0];
     }
+
     public Header getFirstHeader(String s) {
         return null;
     }
+
     public Header getLastHeader(String s) {
         return null;
     }
+
     public Header[] getAllHeaders() {
         return new Header[0];
     }
+
     public void addHeader(Header header) {
     }
+
     public void addHeader(String s, String s1) {
     }
+
     public void setHeader(Header header) {
     }
+
     public void setHeader(String s, String s1) {
     }
+
     public void setHeaders(Header[] headers) {
     }
+
     public void removeHeader(Header header) {
     }
+
     public void removeHeaders(String s) {
     }
+
     public HeaderIterator headerIterator() {
         return null;
     }
+
     public HeaderIterator headerIterator(String s) {
         return null;
     }
+
     public HttpParams getParams() {
         return null;
     }
+
     public void setParams(HttpParams httpParams) {
     }
 };

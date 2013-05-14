@@ -7,17 +7,16 @@ import java.io.File;
  * The cache directory is set in the constructor to the file handler factory.
  */
 public class FileHandlerFactory {
-    private String mCacheDir;
+    private File mCacheDir;
 
-    public FileHandlerFactory(String cacheDir) {
+    public FileHandlerFactory(File cacheDir) {
         mCacheDir = cacheDir;
         init();
     }
 
     private void init() {
-        File cacheDir = new File(mCacheDir);
-        if (!cacheDir.exists()) {
-            cacheDir.mkdir();
+        if (!mCacheDir.exists()) {
+            mCacheDir.mkdir();
         }
     }
 
@@ -25,27 +24,14 @@ public class FileHandlerFactory {
         return new FileHandler(mCacheDir, id);
     }
 
-    // not really used since ContentResolver uses _data field.
-    public File getFile(String ID) {
-        String cachePath = getFileName(ID);
-
-        File cacheFile = new File(cachePath);
-        if (cacheFile.exists()) {
-            return cacheFile;
-        }
-        return null;
-    }
-
     public void delete(String ID) {
-        String cachePath = mCacheDir + "/" + ID;
-
-        File cacheFile = new File(cachePath);
+        File cacheFile = new File(mCacheDir, ID);
         if (cacheFile.exists()) {
             cacheFile.delete();
         }
     }
 
     public String getFileName(String ID) {
-        return mCacheDir + "/" + ID;
+        return new File(mCacheDir, ID).toString();
     }
 }

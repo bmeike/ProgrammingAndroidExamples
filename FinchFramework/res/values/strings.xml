@@ -2,7 +2,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <string name="app_name">FinchFramework</string>
-    
+
     <string name="connect">Connect a device</string>
     <string name="discoverable">Make discoverable</string>
 

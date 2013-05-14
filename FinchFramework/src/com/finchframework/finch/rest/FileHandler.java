@@ -14,26 +14,24 @@ import java.io.InputStream;
  */
 public class FileHandler implements ResponseHandler {
     private String mId;
-    private String mCacheDir;
+    private File mCacheDir;
 
-    public FileHandler(String cacheDir, String id) {
+    public FileHandler(File cacheDir, String id) {
         mCacheDir = cacheDir;
         mId = id;
     }
 
-    public
-    String getFileName(String ID) {
-        return mCacheDir + "/" + ID;
+    public File getFile(String ID) {
+        return new File(mCacheDir, ID);
     }
 
     public void handleResponse(HttpResponse response, Uri uri)
-            throws IOException
-    {
+            throws IOException {
         InputStream urlStream = response.getEntity().getContent();
         FileOutputStream fout =
-                new FileOutputStream(getFileName(mId));
+                new FileOutputStream(getFile(mId));
         byte[] bytes = new byte[256];
-        int r = 0;
+        int r;
         do {
             r = urlStream.read(bytes);
             if (r >= 0) {
