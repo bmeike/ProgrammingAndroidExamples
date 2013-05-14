@@ -16,6 +16,7 @@ import com.finchframework.finch.rest.FileHandlerFactory;
 import com.finchframework.finch.rest.RESTfulContentProvider;
 import com.finchframework.finch.rest.ResponseHandler;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 
 /**
@@ -31,8 +32,7 @@ public class FinchVideoContentProvider extends RESTfulContentProvider {
 
     public static final String VIDEOS_TABLE_NAME = "video";
 
-    private static final String FILE_CACHE_DIR =
-            "/data/data/com.oreilly.demo.android.pa.finchvideo/file_cache";
+    private static final String FINCH_VIDEO_FILE_CACHE = "finch_video_file_cache";
 
     private static final int VIDEOS = 1;
     private static final int VIDEO_ID = 2;
@@ -65,7 +65,7 @@ public class FinchVideoContentProvider extends RESTfulContentProvider {
                     "max-results=15&format=1&q=";
 
     private DatabaseHelper mOpenHelper;
-    private SQLiteDatabase mDb;    
+    private SQLiteDatabase mDb;
 
     private static class DatabaseHelper extends SQLiteOpenHelper {
         private DatabaseHelper(Context context, String name,
@@ -82,20 +82,20 @@ public class FinchVideoContentProvider extends RESTfulContentProvider {
         private void createTable(SQLiteDatabase sqLiteDatabase) {
             String createvideoTable =
                     "CREATE TABLE " + VIDEOS_TABLE_NAME + " (" +
-                    BaseColumns._ID +
+                            BaseColumns._ID +
                             " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    FinchVideo.Videos.TITLE + " TEXT, " +
-                    FinchVideo.Videos.DESCRIPTION + " TEXT, " +
-                    FinchVideo.Videos.THUMB_URI_NAME + " TEXT," +
-                    FinchVideo.Videos.THUMB_WIDTH_NAME + " TEXT," +
-                    FinchVideo.Videos.THUMB_HEIGHT_NAME + " TEXT," +
-                    FinchVideo.Videos.TIMESTAMP + " TEXT, " +
-                    FinchVideo.Videos.QUERY_TEXT_NAME + " TEXT, " +
-                    FinchVideo.Videos.MEDIA_ID_NAME + " TEXT UNIQUE," +
-                    FinchVideo.Videos.THUMB_CONTENT_URI_NAME +
+                            FinchVideo.Videos.TITLE + " TEXT, " +
+                            FinchVideo.Videos.DESCRIPTION + " TEXT, " +
+                            FinchVideo.Videos.THUMB_URI_NAME + " TEXT," +
+                            FinchVideo.Videos.THUMB_WIDTH_NAME + " TEXT," +
+                            FinchVideo.Videos.THUMB_HEIGHT_NAME + " TEXT," +
+                            FinchVideo.Videos.TIMESTAMP + " TEXT, " +
+                            FinchVideo.Videos.QUERY_TEXT_NAME + " TEXT, " +
+                            FinchVideo.Videos.MEDIA_ID_NAME + " TEXT UNIQUE," +
+                            FinchVideo.Videos.THUMB_CONTENT_URI_NAME +
                             " TEXT UNIQUE," +
-                    FinchVideo.Videos._DATA + " TEXT UNIQUE" +
-                    ");";
+                            FinchVideo.Videos._DATA + " TEXT UNIQUE" +
+                            ");";
             sqLiteDatabase.execSQL(createvideoTable);
         }
 
@@ -110,24 +110,22 @@ public class FinchVideoContentProvider extends RESTfulContentProvider {
     }
 
     public FinchVideoContentProvider() {
-        super(new FileHandlerFactory(FILE_CACHE_DIR));
     }
 
     public FinchVideoContentProvider(Context context) {
-        super(new FileHandlerFactory(FILE_CACHE_DIR));
-        init();
     }
 
     @Override
     public boolean onCreate() {
-        init();
-        return true;
-    }
+        FileHandlerFactory fileHandlerFactory =
+                new FileHandlerFactory(new File(getContext().getFilesDir(),
+                        FINCH_VIDEO_FILE_CACHE));
+        setFileHandlerFactory(fileHandlerFactory);
 
-    private void init() {
         mOpenHelper = new DatabaseHelper(getContext(), DATABASE_NAME, null);
         mDb = mOpenHelper.getWritableDatabase();
-        mFileHandlerFactory = new FileHandlerFactory(FILE_CACHE_DIR);
+
+        return true;
     }
 
     @Override
@@ -135,111 +133,111 @@ public class FinchVideoContentProvider extends RESTfulContentProvider {
         return mDb;
     }
 
-/**
- * Content provider query method that converts its parameters into a YouTube
- * RESTful search query.
- *
- * @param uri a reference to the query for videos, the query string can
- * contain, "q='key_words'".  The keywords are sent to the google YouTube
- * API where they are used to search the YouTube video database.
- * @param projection
- * @param where not used in this provider.
- * @param whereArgs not used in this provider.
- * @param sortOrder not used in this provider.
- * @return a cursor containing the results of a YouTube search query.
- */
-@Override
-public Cursor query(Uri uri, String[] projection, String where,
-                    String[] whereArgs, String sortOrder)
-{
-    Cursor queryCursor;
+    /**
+     * Content provider query method that converts its parameters into a YouTube
+     * RESTful search query.
+     *
+     * @param uri a reference to the query for videos, the query string can
+     * contain, "q='key_words'".  The keywords are sent to the google YouTube
+     * API where they are used to search the YouTube video database.
+     * @param projection
+     * @param where not used in this provider.
+     * @param whereArgs not used in this provider.
+     * @param sortOrder not used in this provider.
+     * @return a cursor containing the results of a YouTube search query.
+     */
+    @Override
+    public Cursor query(Uri uri, String[] projection, String where,
+                        String[] whereArgs, String sortOrder)
+    {
+        Cursor queryCursor;
 
-    int match = sUriMatcher.match(uri);
-    switch (match) {
-        case VIDEOS:
-            // the query is passed out of band of other information passed
-            // to this method -- its not an argument.
-            String queryText = uri.
-                    getQueryParameter(FinchVideo.Videos.QUERY_PARAM_NAME);
+        int match = sUriMatcher.match(uri);
+        switch (match) {
+            case VIDEOS:
+                // the query is passed out of band of other information passed
+                // to this method -- its not an argument.
+                String queryText = uri.
+                        getQueryParameter(FinchVideo.Videos.QUERY_PARAM_NAME);
 
-            if (queryText == null) {
-                // A null cursor is an acceptable argument to the method,
-                // CursorAdapter.changeCursor(Cursor c), which interprets
-                // the value by canceling all adapter state so that the
-                // component for which the cursor is adapting data will
-                // display no content.
-                return null;
-            }
+                if (queryText == null) {
+                    // A null cursor is an acceptable argument to the method,
+                    // CursorAdapter.changeCursor(Cursor c), which interprets
+                    // the value by canceling all adapter state so that the
+                    // component for which the cursor is adapting data will
+                    // display no content.
+                    return null;
+                }
 
-            String select = FinchVideo.Videos.QUERY_TEXT_NAME +
-                    " = '" +  queryText + "'";
+                String select = FinchVideo.Videos.QUERY_TEXT_NAME +
+                        " = '" +  queryText + "'";
 
-            // quickly return already matching data
-            queryCursor =
-                    mDb.query(VIDEOS_TABLE_NAME, projection,
-                            select,
-                            whereArgs,
-                            null,
-                            null, sortOrder);
+                // quickly return already matching data
+                queryCursor =
+                        mDb.query(VIDEOS_TABLE_NAME, projection,
+                                select,
+                                whereArgs,
+                                null,
+                                null, sortOrder);
 
-            // make the cursor observe the requested query
-            queryCursor.setNotificationUri(
-                    getContext().getContentResolver(), uri);
+                // make the cursor observe the requested query
+                queryCursor.setNotificationUri(
+                        getContext().getContentResolver(), uri);
 
-            /**
-             * Always try to update results with the latest data from the
-             * network.
-             *
-             * Spawning an asynchronous load task thread, guarantees that
-             * the load has no chance to block any content provider method,
-             * and therefore no chance to block the UI thread.
-             *
-             * While the request loads, we return the cursor with existing
-             * data to the client.
-             *
-             * If the existing cursor is empty, the UI will render no
-             * content until it receives URI notification.
-             *
-             * Content updates that arrive when the asynchronous network
-             * request completes will appear in the already returned cursor,
-             * since that cursor query will match that of
-             * newly arrived items.
-             */
-            if (!"".equals(queryText)) {
-                asyncQueryRequest(queryText, QUERY_URI + encode(queryText));
-            }
-            break;
-        case VIDEO_ID:
-        case THUMB_VIDEO_ID:
-            long videoID = ContentUris.parseId(uri);
-            queryCursor =
-                    mDb.query(VIDEOS_TABLE_NAME, projection,
-                            BaseColumns._ID + " = " + videoID,
-                            whereArgs, null, null, null);
-            queryCursor.setNotificationUri(
-                    getContext().getContentResolver(), uri);
-            break;
-        case THUMB_ID:
-            String uriString = uri.toString();
-            int lastSlash = uriString.lastIndexOf("/");
-            String mediaID = uriString.substring(lastSlash + 1);
+                /**
+                 * Always try to update results with the latest data from the
+                 * network.
+                 *
+                 * Spawning an asynchronous load task thread, guarantees that
+                 * the load has no chance to block any content provider method,
+                 * and therefore no chance to block the UI thread.
+                 *
+                 * While the request loads, we return the cursor with existing
+                 * data to the client.
+                 *
+                 * If the existing cursor is empty, the UI will render no
+                 * content until it receives URI notification.
+                 *
+                 * Content updates that arrive when the asynchronous network
+                 * request completes will appear in the already returned cursor,
+                 * since that cursor query will match that of
+                 * newly arrived items.
+                 */
+                if (!"".equals(queryText)) {
+                    asyncQueryRequest(queryText, QUERY_URI + encode(queryText));
+                }
+                break;
+            case VIDEO_ID:
+            case THUMB_VIDEO_ID:
+                long videoID = ContentUris.parseId(uri);
+                queryCursor =
+                        mDb.query(VIDEOS_TABLE_NAME, projection,
+                                BaseColumns._ID + " = " + videoID,
+                                whereArgs, null, null, null);
+                queryCursor.setNotificationUri(
+                        getContext().getContentResolver(), uri);
+                break;
+            case THUMB_ID:
+                String uriString = uri.toString();
+                int lastSlash = uriString.lastIndexOf("/");
+                String mediaID = uriString.substring(lastSlash + 1);
 
-            queryCursor =
-                    mDb.query(VIDEOS_TABLE_NAME, projection,
-                            FinchVideo.Videos.MEDIA_ID_NAME + " = " +
-                                    mediaID,
-                            whereArgs, null, null, null);
-            queryCursor.setNotificationUri(
-                    getContext().getContentResolver(), uri);
-            break;
+                queryCursor =
+                        mDb.query(VIDEOS_TABLE_NAME, projection,
+                                FinchVideo.Videos.MEDIA_ID_NAME + " = " +
+                                        mediaID,
+                                whereArgs, null, null, null);
+                queryCursor.setNotificationUri(
+                        getContext().getContentResolver(), uri);
+                break;
 
-        default:
-            throw new IllegalArgumentException("unsupported uri: " +
-                    QUERY_URI);
+            default:
+                throw new IllegalArgumentException("unsupported uri: " +
+                        QUERY_URI);
+        }
+
+        return queryCursor;
     }
-
-    return queryCursor;
-}
 
     /**
      * Provides a handler that can parse YouTube gData RSS content.
@@ -383,7 +381,7 @@ public Cursor query(Uri uri, String[] projection, String where,
             }
 
             throw new IllegalStateException("could not insert " +
-                "content values: " + values);
+                    "content values: " + values);
         }
 
         return ContentUris.withAppendedId(FinchVideo.Videos.CONTENT_URI, rowID);

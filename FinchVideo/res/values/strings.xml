@@ -2,8 +2,7 @@
 <resources>
     <string name="finch_video_app_name">Finch Video</string>
     <string name="finch_video_update_content">Update Content</string>
-    <string name="finch_video_search">Search Videos</string>
-    <string name="app_name">YouTube Video Example</string>
+    <string name="app_name">FinchVideo</string>
 
     <string name="simple_insert_text">Insert</string>
     <string name="title">Title</string>
