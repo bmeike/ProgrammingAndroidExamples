@@ -3,8 +3,8 @@
 .classpath
 .project
 .settings
+.metadata
 bin
 gen
 lint.xml
-/.metadata
 
