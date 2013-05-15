@@ -3,7 +3,7 @@
     android:id="@+id/root"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:background="@drawable/lt_grey"
+    android:background="@color/lt_grey"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:baselineAligned="false">
@@ -14,12 +14,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@drawable/white"
+        android:background="@color/white"
         />
     
   <LinearLayout
       android:orientation="horizontal"
-      android:background="@drawable/grey"
+      android:background="@color/grey"
       android:layout_width="match_parent"
       android:layout_height="wrap_content">
 
@@ -42,14 +42,14 @@
 
   <LinearLayout
       android:orientation="horizontal"
-      android:background="@drawable/dk_grey"
+      android:background="@color/dk_grey"
       android:layout_width="match_parent"
       android:layout_height="wrap_content">
 
     <Button
         android:id="@+id/button1"
         android:text="@string/labelRed"
-        android:textColor="@drawable/red"
+        android:textColor="@color/red"
         android:layout_height="wrap_content"
         android:layout_width="0dp"
         android:layout_weight="1"/>
@@ -57,7 +57,7 @@
     <Button
         android:id="@+id/button2"
         android:text="@string/labelGreen"
-        android:textColor="@drawable/green"
+        android:textColor="@color/green"
         android:layout_height="wrap_content"
         android:layout_width="0dp"
         android:layout_weight="1"/>

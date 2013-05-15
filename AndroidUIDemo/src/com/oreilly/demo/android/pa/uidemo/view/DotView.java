@@ -58,8 +58,6 @@ public class DotView extends View {
      * @see android.view.View#onDraw(android.graphics.Canvas)
      */
     @Override protected void onDraw(Canvas canvas) {
-        //canvas.drawColor(Color.WHITE);
-
         Paint paint = new Paint();
         paint.setStyle(Style.STROKE);
         paint.setColor(hasFocus() ? Color.BLUE : Color.GRAY);

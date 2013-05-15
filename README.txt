@@ -15,3 +15,5 @@ Start eclipse and use File > Import > "Existing project into workspace"
 
 Comments are welcome! Send problems and comments to programmingandroidexamples at callmeike dot net.
 
+Code for the 1st edition can be obtained by checking out the the tag v1.0
+
