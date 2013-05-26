@@ -22,48 +22,49 @@ import java.util.HashMap;
  */
 public class SimpleFinchVideoContentProvider extends ContentProvider {
     public static final String SIMPLE_VIDEO = "simple_video";
+    public static final String VIDEO_TABLE_NAME = "videos";
 
     private static final int VIDEOS = 1;
     private static final int VIDEO_ID = 2;
-
     private static UriMatcher sUriMatcher;
-
-    private static HashMap<String, String> sVideosProjectionMap;
-
     static {
         sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
         sUriMatcher.addURI(FinchVideo.SIMPLE_AUTHORITY, FinchVideo.SimpleVideos.VIDEO_NAME,
-                VIDEOS);
+        		VIDEOS);
         // use of the hash character indicates matching of an id
         sUriMatcher.addURI(FinchVideo.SIMPLE_AUTHORITY,
-                FinchVideo.SimpleVideos.VIDEO_NAME + "/#", VIDEO_ID);
-
-        // example projection map, not actually used in this application
-        sVideosProjectionMap = new HashMap<String, String>();
-        sVideosProjectionMap.put(BaseColumns._ID,
-                BaseColumns._ID);
-        sVideosProjectionMap.put(FinchVideo.Videos.TITLE,
-                FinchVideo.Videos.TITLE);
-        sVideosProjectionMap.put(FinchVideo.Videos.VIDEO,
-                FinchVideo.Videos.VIDEO);
-        sVideosProjectionMap.put(FinchVideo.Videos.DESCRIPTION,
-                FinchVideo.Videos.DESCRIPTION);
+        		FinchVideo.SimpleVideos.VIDEO_NAME + "/#", VIDEO_ID);
     }
 
-    public static final String VIDEO_TABLE_NAME = "videos";
-
-    public static final String DATABASE_NAME = SIMPLE_VIDEO + ".db";
-    static int DATABASE_VERSION = 2;
+    private static HashMap<String, String> sVideosProjectionMap;
+    static {
+        // example projection map, not actually used in this application
+        sVideosProjectionMap = new HashMap<String, String>();
+        sVideosProjectionMap.put(BaseColumns._ID, BaseColumns._ID);
+        sVideosProjectionMap.put(FinchVideo.Videos.TITLE, FinchVideo.Videos.TITLE);
+        sVideosProjectionMap.put(FinchVideo.Videos.VIDEO, FinchVideo.Videos.VIDEO);
+        sVideosProjectionMap.put(FinchVideo.Videos.DESCRIPTION, FinchVideo.Videos.DESCRIPTION);
+    }
 
     private static class SimpleVideoDbHelper extends SQLiteOpenHelper {
-        private SimpleVideoDbHelper(Context context, String name,
-                                    SQLiteDatabase.CursorFactory factory)
-        {
-            super(context, name, factory, DATABASE_VERSION);
+        private static final String DATABASE_NAME = SIMPLE_VIDEO + ".db";
+        private static int DATABASE_VERSION = 2;
+
+        SimpleVideoDbHelper(Context context) {
+            super(context, DATABASE_NAME, null, DATABASE_VERSION);
         }
 
         @Override
         public void onCreate(SQLiteDatabase sqLiteDatabase) {
+            createTable(sqLiteDatabase);
+        }
+
+        @Override
+        public void onUpgrade(SQLiteDatabase sqLiteDatabase,
+                              int oldv, int newv)
+        {
+            sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " +
+                    VIDEO_TABLE_NAME + ";");
             createTable(sqLiteDatabase);
         }
 
@@ -76,41 +77,30 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
                     FinchVideo.SimpleVideos.URI_NAME + " TEXT);";
             sqLiteDatabase.execSQL(qs);
         }
-
-        @Override
-        public void onUpgrade(SQLiteDatabase sqLiteDatabase,
-                              int oldv, int newv)
-        {
-            sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " +
-                    VIDEO_TABLE_NAME + ";");
-            createTable(sqLiteDatabase);
-        }
     }
 
-    private Context mContext;
+
     private SimpleVideoDbHelper mOpenDbHelper;
-
-    private SQLiteDatabase mDb;
-
-    public SimpleFinchVideoContentProvider() {
-    }
-
-    public SimpleFinchVideoContentProvider(Context context) {
-        mContext = context;
-        init();
-    }
 
     @Override
     public boolean onCreate() {
-        init();
+        mOpenDbHelper = new SimpleVideoDbHelper(getContext());
         return true;
     }
 
-    // allows object initialization to be reused.
-    private void init() {
-        mOpenDbHelper = new SimpleVideoDbHelper(getContext(),
-                DATABASE_NAME, null);
-        mDb = mOpenDbHelper.getWritableDatabase();
+    @Override
+    public String getType(Uri uri) {
+        switch (sUriMatcher.match(uri)) {
+            case VIDEOS:
+                return FinchVideo.SimpleVideos.CONTENT_TYPE;
+
+            case VIDEO_ID:
+                return FinchVideo.SimpleVideos.CONTENT_VIDEO_TYPE;
+
+            default:
+                throw new IllegalArgumentException("Unknown video type: " +
+                        uri);
+        }
     }
 
     @Override
@@ -128,13 +118,12 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
         int match = sUriMatcher.match(uri);
 
         Cursor c;
-
         switch (match) {
             case VIDEOS:
                 // query the database for all videos
-                c = mDb.query(VIDEO_TABLE_NAME, projection,
+                c = getDb().query(VIDEO_TABLE_NAME, projection,
                         where, whereArgs,
-                        null, null, sortOrder);
+                        null, null, orderBy);
 
                 c.setNotificationUri(getContext().getContentResolver(),
                         FinchVideo.SimpleVideos.CONTENT_URI);
@@ -142,11 +131,11 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
             case VIDEO_ID:
                 // query the database for a specific video
                 long videoID = ContentUris.parseId(uri);
-                c = mDb.query(VIDEO_TABLE_NAME, projection,
+                c = getDb().query(VIDEO_TABLE_NAME, projection,
                         BaseColumns._ID + " = " + videoID +
                                 (!TextUtils.isEmpty(where) ?
                                         " AND (" + where + ')' : ""),
-                        whereArgs, null, null, sortOrder);
+                        whereArgs, null, null, orderBy);
                 c.setNotificationUri(getContext().getContentResolver(),
                         FinchVideo.SimpleVideos.CONTENT_URI);
                 break;
@@ -155,21 +144,6 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
         }
 
         return c;
-    }
-
-    @Override
-    public String getType(Uri uri) {
-        switch (sUriMatcher.match(uri)) {
-            case VIDEOS:
-                return FinchVideo.SimpleVideos.CONTENT_TYPE;
-
-            case VIDEO_ID:
-                return FinchVideo.SimpleVideos.CONTENT_VIDEO_TYPE;
-
-            default:
-                throw new IllegalArgumentException("Unknown video type: " +
-                        uri);
-        }
     }
 
     @Override
@@ -206,12 +180,12 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
         // Make sure that the fields are all set
         if (!values.containsKey(FinchVideo.SimpleVideos.TITLE_NAME)) {
             Resources r = Resources.getSystem();
-            values.put(FinchVideo.SimpleVideos.URI_NAME,
+            values.put(FinchVideo.SimpleVideos.TITLE_NAME,
                     r.getString(android.R.string.untitled));
         }
 
         if (!values.containsKey(FinchVideo.SimpleVideos.DESCRIPTION_NAME)) {
-            values.put(FinchVideo.SimpleVideos.URI_NAME, "");
+            values.put(FinchVideo.SimpleVideos.DESCRIPTION_NAME, "");
         }
 
         if (!values.containsKey(FinchVideo.SimpleVideos.URI_NAME)) {
@@ -226,28 +200,25 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
 
         switch (match) {
             case VIDEOS:
-                affected = mDb.delete(VIDEO_TABLE_NAME,
+                affected = getDb().delete(VIDEO_TABLE_NAME,
                         (!TextUtils.isEmpty(where) ?
                                 " AND (" + where + ')' : ""),
                         whereArgs);
                 break;
             case VIDEO_ID:
                 long videoId = ContentUris.parseId(uri);
-                affected = mDb.delete(VIDEO_TABLE_NAME,
+                affected = getDb().delete(VIDEO_TABLE_NAME,
                         BaseColumns._ID + "=" + videoId
                                 + (!TextUtils.isEmpty(where) ?
                                 " AND (" + where + ')' : ""),
                         whereArgs);
-
-                // the call to notify the uri after deletion is explicit
-                getContext().getContentResolver().notifyChange(uri, null);
-
                 break;
             default:
                 throw new IllegalArgumentException("unknown video element: " +
                         uri);
         }
 
+        getContext().getContentResolver().notifyChange(uri, null);
         return affected;
     }
 
@@ -255,17 +226,17 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
     public int update(Uri uri, ContentValues values, String where,
                       String[] whereArgs)
     {
-        SQLiteDatabase db = mOpenDbHelper.getWritableDatabase();
         int affected;
+
         switch (sUriMatcher.match(uri)) {
             case VIDEOS:
-                affected = db.update(VIDEO_TABLE_NAME, values,
+                affected = getDb().update(VIDEO_TABLE_NAME, values,
                         where, whereArgs);
                 break;
 
             case VIDEO_ID:
                 String videoId = uri.getPathSegments().get(1);
-                affected = db.update(VIDEO_TABLE_NAME, values,
+                affected = getDb().update(VIDEO_TABLE_NAME, values,
                         BaseColumns._ID + "=" + videoId
                                 + (!TextUtils.isEmpty(where) ?
                                 " AND (" + where + ')' : ""),
@@ -277,6 +248,9 @@ public class SimpleFinchVideoContentProvider extends ContentProvider {
         }
 
         getContext().getContentResolver().notifyChange(uri, null);
+
         return affected;
     }
+
+    private SQLiteDatabase getDb() { return mOpenDbHelper.getWritableDatabase(); }
 }
