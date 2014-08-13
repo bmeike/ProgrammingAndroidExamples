@@ -1,15 +1,20 @@
+The simplest way to set up this project is to use the project and classpath
+files in the tools/ide/eclipse folders.  To do this:
+1) copy project and classpath files for the FinchFramework project into the
+   project root as .project and .classpath, respectively.
+2) import the FinchFramework project into your eclipse workspace
+   (be sure to use "Import Existing Project into Workspace", not "Import
+   Existing Android Code into Workspace"!)
+3) repeat steps 1 and 2 for the FinchVideo project
 
-Probably the simplest way to set up this project is to use the project and
-classpath files in the tools/ide/eclipse folders.  The more complete description
-is that need to set up the Finch Framework project
-($root/finch/framework/FinchFramework).  You need to be sure that the directory
-lib-src is on the build path.  You will also need to set up FinchWelcome as a library:
 
-1) import FinchWelcome into your workspace
-2) for FinchWelcome, check Properties > Android and verify that it is
-   a library project (bottom half of the dialog)
-3) in the project, use Android > Properties to add that project
-   to this one, as a library
+A more complete description is that you need to set up the FinchFramework
+project as an Android library:
+1) Set up this project.  It will have compile errors.
+2) import the FinchFramework into your workspace
+3) verify that the FinchFramework project is a library project:
+   check Properties > Android and look in the bottom half of the dialog
+4) Use Android > Properties > Add... in the lower pane, to add the
+   FinchFramework project to this one, as a library
    
-Using the normal eclipse project dependency mechanism will not work.
-
+Using the normal eclipse project dependency mechanism will not work!
